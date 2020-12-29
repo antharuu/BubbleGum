@@ -1,0 +1,44 @@
+@import 'variables';
+
+@each $color-name, $color-value in $base-colors {
+  $color: map-get($base-colors, 'dark');
+  @if lightness($color-value) < 60 {
+    $color: map-get($base-colors, white);
+  }
+
+  [_bg~='#{$color-name}-light'] {
+    background-color: lighten($color-value, $lighten-value);
+    color: $color;
+  }
+
+  [_bg~='#{$color-name}'] {
+    background-color: $color-value;
+    color: $color;
+  }
+
+  [_bg~='#{$color-name}-dark'] {
+    background-color: darken($color-value, $darken-value);
+    color: $color;
+  }
+}
+
+
+@for $size from 0 through $logic-max {
+  [_border~='#{$size}'] {
+    border: #{$size}px solid map-get($base-colors, 'secondary');
+  }
+}
+
+@each $color-name, $color-value in $base-colors {
+  [_border~='#{$color-name}-light'] {
+    border-color: lighten($color-value, $lighten-value);
+  }
+
+  [_border~='#{$color-name}'] {
+    border-color: $color-value;
+  }
+
+  [_border~='#{$color-name}-dark'] {
+    border-color: darken($color-value, $darken-value);
+  }
+}

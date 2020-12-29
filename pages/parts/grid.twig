@@ -1,0 +1,117 @@
+<p>Le fonctionnement de la grille est similaire à celui de bootstrap ou de plusieurs autres frameworks.</p>
+<p>La grille fonctionne sur 12 colones de base utilisant les flexboxs.</p>
+<p _muted="" _font="sm">Pour le moment nous n'utilisons pas de "container" mais il est possible que nous en ajoutions
+    dans une prochaine mise à jour.</p>
+<pre><code class="language-html">{{ '
+<div _row>
+    <div _col="4">
+        Une des trois colonnes
+    </div>
+    <div _col="4">
+        Une des trois colonnes
+    </div>
+    <div _col="4">
+        Une des trois colonnes
+    </div>
+</div>
+' | trim | e }}</code></pre>
+<p>Donnera: </p>
+
+<div _row>
+    <div _col="4" _bg="secondary-light" _padding="3" _border="2">
+        Une des trois colonnes
+    </div>
+    <div _col="4" _bg="secondary-light" _padding="3" _border="2">
+        Une des trois colonnes
+    </div>
+    <div _col="4" _bg="secondary-light" _padding="3" _border="2">
+        Une des trois colonnes
+    </div>
+</div>
+<p>Et donc :</p>
+<pre><code class="language-html">{{ '
+<div _row _justify_content="md-center">
+    <div _col="lg-2">
+        Largeur de 2 ?
+    </div>
+    <div _col>
+        Largeur de 12 (100%)
+    </div>
+    <div _col="lg-2">
+        Largeur de 2 ?
+    </div>
+</div>
+' | trim | e }}</code></pre>
+<p>Donnera: </p>
+<div _row _justify_content="md-center">
+    <div _col="lg-2" _bg="secondary-light" _padding="3" _border="2">
+        Largeur de 2 ?
+    </div>
+    <div _col _bg="secondary-light" _padding="3" _border="2">
+        Largeur de 12 (100%)
+    </div>
+    <div _col="10 md-8" _bg="secondary-light" _padding="3" _border="2">
+        Largeur de 8 ?
+    </div>
+</div>
+<p>Et donc ne centrera que à partir de la taille "md".</p>
+
+<div _row _justify_content="center">
+    <div _col="md-8" _bg="dark" _padding="2" _round="3" _margin="y-3">
+        <h3>Row</h3>
+        <p>S'écrit <code>_row=""</code> mais peut aussi s'écrire <code>_row</code> si vous gardez les valeurs par
+            défaut.</p>
+        <p>L'attribut <code>_row</code> peut prendre les valeurs suivantes <code>row</code>, <code>col</code> ou
+            <code>column</code> et vous pouvez utiliser <code>reverse</code> avec les deux.</p>
+        <p>Vous pouvez changer le <code>flex-wrap</code> aussi de la même manière <code>wrap</code>, <code>nowrap</code>
+            et
+            <code>wrap-reverse</code>.</p>
+        <p>Vous avez aussi acces à d'autres attibuts pour completer tout ça elles appliquent simplement l'attribut css
+            du
+            même nom:</p>
+        <p>Le <code>_justify_content</code> avec les valeurs suivantes: <code>start</code>, <code>end</code>,
+            <code>center</code>, <code>between</code>, <code>around</code> et <code>evenly</code>.</p>
+        <p>Le <code>_align_items</code> avec les valeurs suivantes: <code>stretch</code>, <code>start</code>,
+            <code>end</code>, <code>center</code> et <code>baseline</code>.</p>
+        <p>Et le <code>_align_content</code> avec les valeurs suivantes: <code>start</code>, <code>end</code>,
+            <code>center</code>, <code>between</code>, <code>around</code>, <code>evenly</code> et <code>stretch</code>.
+        </p>
+        <hr>
+        <p>Pour finir sur l'item enfant, vous pourez utiliser l'attibut <code>_align_self</code> avec les mêmes valeurs
+            que
+            pour <code>_align_items</code>, c'est à dire: <code>stretch</code>, <code>start</code>,
+            <code>end</code>, <code>center</code> et <code>baseline</code>.</p>
+    </div>
+</div>
+
+<p>Vous pouvez aussi afficher ou masquer des div, mais aussi selon la taille :</p>
+<pre><code class="language-html">{{ "
+<div _row>
+    <div _col _display=\"false md-true\">
+        Je n'apparait pas sur les petits écrans
+    </div>
+    <div _col _display=\"xl-false\">
+        Et moi sur les grands
+    </div>
+</div>
+" | trim | e }}</code></pre>
+<p>Donnera: </p>
+<div _row>
+    <div _col _display="false md-true" _bg="secondary-light" _padding="3" _border="2">
+        Je n'apparait pas sur les petits écrans
+    </div>
+    <div _col _display="xl-false" _bg="secondary-light" _padding="3" _border="2">
+        Et moi sur les grands
+    </div>
+</div>
+<div _row _justify_content="center">
+    <div _col="md-8" _bg="dark" _padding="2" _round="3" _margin="y-3">
+        <h3>Display</h3>
+        <p>Cet attribut est simple il s'écrit <code>_display=""</code> et peut prendre en valeur:
+            <code>true</code> ou <code>block</code> et <code>false</code> ou <code>none</code>.</p>
+        <p>Vous pouvez aussi lui donner une des valeur suivante: <code>flex</code>,
+            <code>inline</code>, <code>grid</code> ou <code>table</code>.</p>
+        <p>Et comme beaucoup d'attributs il est compatible avec les breakpoints de la grille, donc <code>_display="md-false
+                lg-true"</code> masquera sur la taille md et <code>_display="false lg-true"</code> n'affichera que sur des écrans de taille lg et plus.</p>
+    </div>
+</div>

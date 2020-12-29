@@ -1,0 +1,24 @@
+<p>La logique de bubblegum est d'avoir un framework complet rapide et simple à utiliser.</p>
+<p>Grandement inspiré de <a target="_blank" href="http://getbootstrap.com">Bootstrap</a> & <a target="_blank"
+                                                                                              href="http://tailwindcss.com">Tailwind</a>
+    il à pour but
+    de permettre une utilisation basique sans utiliser de css pour des choses simples.</p>
+<p>Ce framework n'as pas pour vocation de remplacer ou copier d'autres frameworks mais de proposer une approche
+    différentes, notement avec l'utilisation d'attributs plutot que de classes.</p>
+<p>Exemple, sur bootstrap: </p>
+<pre><code class="language-html">{{ "
+<div class=\"row justify-content-center\">
+    <div class=\"col-8 col-md-5\">
+        <h1 class=\"text-primary\">Un super exemple !</h1>
+    </div>
+</div>" | trim  | e }}</code></pre>
+<p>Et sur bubblegum: </p>
+<pre><code class="language-html">{{ "
+<div _row _justify_content=\"center\">
+    <div _col=\"8 md-5\">
+        <h1 _font=\"primary\">Un super exemple !</h1>
+    </div>
+</div>" | trim | e }}</code></pre>
+<p>Ainsi vous pouvez garder certaines de vos habitudes mais l'utilisation abusive de classes n'est plus un soucis, et
+    mieux encore vu que bubblugum n'utilise pas de classes vous pouvez aisément utiliser bootstrap ou un autre framework
+    css sans aucun probleme.</p>

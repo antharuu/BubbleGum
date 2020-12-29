@@ -1,0 +1,133 @@
+@import 'variables';
+
+@for $size from 0 through $logic-max {
+  [_margin~='#{$size}'] {
+    margin: $size * $base-margin;
+  }
+
+  [_margin~='l-#{$size}'] {
+    margin-left: $size * $base-margin;
+  }
+
+  [_margin~='r-#{$size}'] {
+    margin-right: $size * $base-margin;
+  }
+
+  [_margin~='t-#{$size}'] {
+    margin-top: $size * $base-margin;
+  }
+
+  [_margin~='b-#{$size}'] {
+    margin-bottom: $size * $base-margin;
+  }
+
+  [_margin~='y-#{$size}'] {
+    margin-bottom: $size * $base-margin;
+    margin-top: $size * $base-margin;
+  }
+
+  [_margin~='x-#{$size}'] {
+    margin-left: $size * $base-margin;
+    margin-right: $size * $base-margin;
+  }
+
+  @each $size-name, $size-value in $grid-breakpoints {
+    @media only screen and (min-width: $size-value) {
+      [_margin~='#{$size-name}-#{$size}'] {
+        margin: $size * $base-margin;
+      }
+
+      [_margin~='#{$size-name}-l-#{$size}'] {
+        margin-left: $size * $base-margin;
+      }
+
+      [_margin~='#{$size-name}-r-#{$size}'] {
+        margin-right: $size * $base-margin;
+      }
+
+      [_margin~='#{$size-name}-t-#{$size}'] {
+        margin-top: $size * $base-margin;
+      }
+
+      [_margin~='#{$size-name}-b-#{$size}'] {
+        margin-bottom: $size * $base-margin;
+      }
+
+      [_margin~='#{$size-name}-y-#{$size}'] {
+        margin-bottom: $size * $base-margin;
+        margin-top: $size * $base-margin;
+      }
+
+      [_margin~='#{$size-name}-x-#{$size}'] {
+        margin-left: $size * $base-margin;
+        margin-right: $size * $base-margin;
+      }
+    }
+  }
+}
+
+@for $size from 0 through $logic-max {
+  [_padding~='#{$size}'] {
+    padding: $size * $base-margin;
+  }
+
+  [_padding~='l-#{$size}'] {
+    padding-left: $size * $base-margin;
+  }
+
+  [_padding~='r-#{$size}'] {
+    padding-right: $size * $base-margin;
+  }
+
+  [_padding~='t-#{$size}'] {
+    padding-top: $size * $base-margin;
+  }
+
+  [_padding~='b-#{$size}'] {
+    padding-bottom: $size * $base-margin;
+  }
+
+  [_padding~='y-#{$size}'] {
+    padding-bottom: $size * $base-margin;
+    padding-top: $size * $base-margin;
+  }
+
+  [_padding~='x-#{$size}'] {
+    padding-left: $size * $base-margin;
+    padding-right: $size * $base-margin;
+  }
+
+  @each $size-name, $size-value in $grid-breakpoints {
+    @media only screen and (min-width: $size-value) {
+      [_padding~='#{$size-name}-#{$size}'] {
+        padding: $size * $base-margin;
+      }
+
+      [_padding~='#{$size-name}-l-#{$size}'] {
+        padding-left: $size * $base-margin;
+      }
+
+      [_padding~='#{$size-name}-r-#{$size}'] {
+        padding-right: $size * $base-margin;
+      }
+
+      [_padding~='#{$size-name}-t-#{$size}'] {
+        padding-top: $size * $base-margin;
+      }
+
+      [_padding~='#{$size-name}-b-#{$size}'] {
+        padding-bottom: $size * $base-margin;
+      }
+
+      [_padding~='#{$size-name}-y-#{$size}'] {
+        padding-bottom: $size * $base-margin;
+        padding-top: $size * $base-margin;
+      }
+
+      [_padding~='#{$size-name}-x-#{$size}'] {
+        padding-left: $size * $base-margin;
+        padding-right: $size * $base-margin;
+      }
+    }
+  }
+}

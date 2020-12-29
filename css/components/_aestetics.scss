@@ -1,0 +1,11 @@
+@import 'variables';
+
+[_round] {
+  border-radius: $base-margin;
+}
+
+@for $radius from 1 through $logic-max {
+  [_round='#{$radius}'] {
+    border-radius: $base-margin * $radius;
+  }
+}
