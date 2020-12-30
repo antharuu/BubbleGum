@@ -33,7 +33,7 @@ $logic = [
                 'wrap',
                 'wrap-reverse'
             ],
-            'justify_content' => [
+            'justify' => [
                 'start',
                 'end',
                 'center',
@@ -41,14 +41,14 @@ $logic = [
                 'around',
                 'evenly'
             ],
-            'align_items' => [
+            'items' => [
                 'stretch',
                 'start',
                 'end',
                 'center',
                 'baseline'
             ],
-            'align_content' => [
+            'content' => [
                 'start',
                 'end',
                 'center',
@@ -57,7 +57,7 @@ $logic = [
                 'evenly',
                 'stretch'
             ],
-            'align_self' => [
+            'self' => [
                 'stretch',
                 'start',
                 'end',

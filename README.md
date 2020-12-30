@@ -4,10 +4,10 @@
 Current version: 0.1 alpha
 
 ## /!\ WORK IN PROGRESS /!\
-- [ ] Grid
-    - [ ] Container
-    - [ ] Row
-    - [ ] Col
+- [x] Grid
+    - [x] Container
+    - [x] Row
+    - [x] Col
 - [ ] Display
     - [ ] Visible
     - [ ] Display

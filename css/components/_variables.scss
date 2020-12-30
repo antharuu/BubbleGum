@@ -1,15 +1,21 @@
+$bubblegum-prefix: '_';
+$size-prefix: ':';
+
+$all-sizes: false;
+
 $logic-max: 10;
 
 // GRID
 $grid-columns: 12 !default;
 $grid-breakpoints: (
         xs: 0,
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1280px,
-        2 xl: 1536px,
+        sm: 580px,
+        md: 770px,
+        lg: 990px,
+        xl: 1280px
 ) !default;
+
+$base-margin: 5px;
 
 $font-size: 1rem;
 $font-tags: h1, h2, h3, h4, h5, h6, p, span, code, i, a;
@@ -144,21 +150,3 @@ $color-danger-light: lighten(map-get($base-colors, danger), $lighten-value);
 $color-muted-dark: darken(map-get($base-colors, muted), $darken-value);
 $color-muted: map-get($base-colors, muted);
 $color-muted-light: lighten(map-get($base-colors, muted), $lighten-value);
-
-@mixin colorize($tag, $prefix: '', $suffix: '', $attribute: 'color') {
-  @each $color-name, $color-value in $base-colors {
-    [#{$tag}~='#{$prefix}#{$color-name}-light#{$suffix}'] {
-      #{$attribute}: lighten($color-value, $lighten-value);
-    }
-
-    [#{$tag}~='#{$prefix}#{$color-name}#{$suffix}'] {
-      #{$attribute}: $color-value;
-    }
-
-    [#{$tag}~='#{$prefix}#{$color-name}-dark#{$suffix}'] {
-      #{$attribute}: darken($color-value, $darken-value);
-    }
-  }
-}
-
-$base-margin: 5px;

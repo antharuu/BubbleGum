@@ -1,0 +1,26 @@
+@import 'variables';
+
+@mixin add-simple-property($attribute, $selector, $modified, $value, $is-child: false) {
+  $prefix: '';
+  @if (not $is-child) {
+    $prefix: '&';
+  }
+
+  #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$selector}'] {
+    #{$modified}: $value;
+  }
+
+  @if $all-sizes {
+    @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+      @media screen and (min-width: $breakpoint-value) {
+        #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$breakpoint-name}#{$size-prefix}#{$selector}'] {
+          #{$modified}: $value;
+        }
+      }
+    }
+  }
+}
+
+@mixin debug($color: red) {
+  border: 1px solid $color;
+}

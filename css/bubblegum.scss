@@ -1,19 +1,10 @@
-* {
-  box-sizing: border-box;
-}
+@import 'components/reset';
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-
+@import 'components/mixins';
 
 @import 'components/variables';
+
 @import 'components/grid';
+
 @import 'components/typo';
-@import 'components/colors';
-@import 'components/sizes';
-@import 'components/aestetics';
 

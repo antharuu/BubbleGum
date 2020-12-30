@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'mixins';
 
 %col {
   min-height: 1px;
@@ -20,314 +21,82 @@
   }
 }
 
-[_row] {
+[#{$bubblegum-prefix}container] {
   @extend %clearfix;
+  @include add-simple-property('container', 'full', 'max-width', none);
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 100%;
+
+}
+
+
+[#{$bubblegum-prefix}row] {
+  @extend %clearfix;
+
+  // Flex direction
+  @include add-simple-property('row', 'row', 'flex-direction', row);
+  @include add-simple-property('row', 'reverse', 'flex-direction', row-reverse);
+  @include add-simple-property('row', 'column ', 'flex-direction', column);
+  @include add-simple-property('row', 'col', 'flex-direction', column);
+
+  // Flex wrap
+  @include add-simple-property('row', 'nowrap', 'flex-wrap', nowrap);
+  @include add-simple-property('row', 'wrap', 'flex-wrap', wrap);
+  @include add-simple-property('row', 'wrap-reverse', 'flex-wrap', wrap-reverse);
+
+  // Justify content
+  @include add-simple-property('justify', 'start', 'justify-content', start);
+  @include add-simple-property('justify', 'end', 'justify-content', end);
+  @include add-simple-property('justify', 'center', 'justify-content', center);
+  @include add-simple-property('justify', 'between', 'justify-content', space-between);
+  @include add-simple-property('justify', 'around', 'justify-content', space-around);
+  @include add-simple-property('justify', 'evenly', 'justify-content', space-evenly);
+
+  // Align items
+  @include add-simple-property('items', 'stretch', 'align-items', stretch);
+  @include add-simple-property('items', 'start', 'align-items', start);
+  @include add-simple-property('items', 'end', 'align-items', end);
+  @include add-simple-property('items', 'center', 'align-items', center);
+  @include add-simple-property('items', 'baseline', 'align-items', baseline);
+
+  // Align content
+  @include add-simple-property('content', 'start', 'align-content', start);
+  @include add-simple-property('content', 'end', 'align-content', end);
+  @include add-simple-property('content', 'center', 'align-content', center);
+  @include add-simple-property('content', 'between', 'align-content', space-between);
+  @include add-simple-property('content', 'around', 'align-content', space-around);
+  @include add-simple-property('content', 'evenly', 'align-content', space-evenly);
+  @include add-simple-property('content', 'stretch', 'align-content', stretch);
+
+  // Align self
+  @include add-simple-property('self', 'stretch', 'align-self', stretch, true);
+  @include add-simple-property('self', 'start', 'align-self', start, true);
+  @include add-simple-property('self', 'end', 'align-self', end, true);
+  @include add-simple-property('self', 'center', 'align-self', center, true);
+  @include add-simple-property('self', 'baseline', 'align-self', baseline, true);
+
+  align-content: start;
   align-items: start;
   display: flex;
   flex-wrap: wrap;
-}
 
-[_row~='row'] {
-  flex-direction: row;
-}
-
-[_row~='reverse'] {
-  flex-direction: row-reverse;
-}
-
-[_row~='col'],
-[_row~='column'], {
-  flex-direction: column;
-
-  &[_row~='reverse'] {
-    flex-direction: column-reverse;
+  &[#{$bubblegum-prefix}row~='column'],
+  &[#{$bubblegum-prefix}row~='col'], {
+    @include add-simple-property('row', 'reverse', 'flex-direction', column-reverse);
   }
 }
 
-[_row~='nowrap'] {
-  flex-wrap: nowrap;
-}
-
-[_row~='wrap'] {
-  flex-wrap: wrap;
-}
-
-[_row~='wrap-reverse'] {
-  flex-wrap: wrap-reverse;
-}
-
-[_justify_content='start'] {
-  justify-content: start;
-}
-
-[_justify_content='end'] {
-  justify-content: end;
-}
-
-[_justify_content='center'] {
-  justify-content: center;
-}
-
-[_justify_content='between'] {
-  justify-content: space-between;
-}
-
-[_justify_content='around'] {
-  justify-content: space-around;
-}
-
-[_justify_content='evenly'] {
-  justify-content: space-evenly;
-}
-
-[_align_items='stretch'] {
-  align-items: stretch;
-}
-
-[_align_items='start'] {
-  align-items: flex-start;
-}
-
-[_align_items='end'] {
-  align-items: flex-end;
-}
-
-[_align_items='center'] {
-  align-items: center;
-}
-
-[_align_items='baseline'] {
-  align-items: baseline;
-}
-
-[_align_content='start'] {
-  align-content: flex-start;
-}
-
-[_align_content='end'] {
-  align-content: flex-end;
-}
-
-[_align_content='center'] {
-  align-content: center;
-}
-
-[_align_content='between'] {
-  align-content: space-between;
-}
-
-[_align_content='around'] {
-  align-content: space-around;
-}
-
-[_align_content='evenly'] {
-  align-content: space-evenly;
-}
-
-[_align_content='stretch'] {
-  align-content: stretch;
-}
-
-[_align_self='stretch'] {
-  align-self: stretch;
-}
-
-[_align_self='start'] {
-  align-self: flex-start;
-}
-
-[_align_self='end'] {
-  align-self: flex-end;
-}
-
-[_align_self='center'] {
-  align-self: center;
-}
-
-[_align_self='baseline'] {
-  align-self: baseline;
-}
-
-[_col] {
-  @extend %col;
-}
-
-@for $i from 1 through $grid-columns {
-  [_col~='#{$i}'] {
-    @extend %col;
-    width: $i / $grid-columns * 100%;
-  }
-
-  @each $size-name, $size-value in $grid-breakpoints {
-    [_col~='#{$size-name}-#{$i}'] {
-      @extend %col;
-    }
-  }
-}
-
-[_display~='none'],
-[_display~='false'] {
-  display: none;
-}
-
-[_display~='block'],
-[_display~='true'] {
-  display: block;
-}
-
-[_display~='flex'] {
-  display: flex;
-}
-
-[_display~='inline'] {
-  display: inline;
-}
-
-[_display~='grid'] {
-  display: grid;
-}
-
-[_display~='table'] {
-  display: table;
-}
-
-@each $size-name, $size-value in $grid-breakpoints {
-  @media only screen and (min-width: $size-value) {
-    [_display~='#{$size-name}-none'],
-    [_display~='#{$size-name}-false'] {
-      display: none;
-    }
-
-    [_display~='#{$size-name}-block'],
-    [_display~='#{$size-name}-true'] {
-      display: block;
-    }
-
-    [_row~='#{$size-name}-row'] {
-      flex-direction: row;
-    }
-
-    [_row~='#{$size-name}-reverse'] {
-      flex-direction: row-reverse;
-    }
-
-    [_row~='#{$size-name}-col'],
-    [_row~='#{$size-name}-column'], {
-      flex-direction: column;
-
-      &[_row~='#{$size-name}-reverse'] {
-        flex-direction: column-reverse;
-      }
-    }
-
-    [_row~='#{$size-name}-nowrap'] {
-      flex-wrap: nowrap;
-    }
-
-    [_row~='#{$size-name}-wrap'] {
-      flex-wrap: wrap;
-    }
-
-    [_row~='#{$size-name}-wrap-reverse'] {
-      flex-wrap: wrap-reverse;
-    }
-
-    [_justify_content='#{$size-name}-start'] {
-      justify-content: start;
-    }
-
-    [_justify_content='#{$size-name}-end'] {
-      justify-content: end;
-    }
-
-    [_justify_content='#{$size-name}-center'] {
-      justify-content: center;
-    }
-
-    [_justify_content='#{$size-name}-between'] {
-      justify-content: space-between;
-    }
-
-    [_justify_content='#{$size-name}-around'] {
-      justify-content: space-around;
-    }
-
-    [_justify_content='#{$size-name}-evenly'] {
-      justify-content: space-evenly;
-    }
-
-    [_align_items='#{$size-name}-stretch'] {
-      align-items: stretch;
-    }
-
-    [_align_items='#{$size-name}-start'] {
-      align-items: flex-start;
-    }
-
-    [_align_items='#{$size-name}-end'] {
-      align-items: flex-end;
-    }
-
-    [_align_items='#{$size-name}-center'] {
-      align-items: center;
-    }
-
-    [_align_items='#{$size-name}-baseline'] {
-      align-items: baseline;
-    }
-
-    [_align_content='#{$size-name}-start'] {
-      align-content: flex-start;
-    }
-
-    [_align_content='#{$size-name}-end'] {
-      align-content: flex-end;
-    }
-
-    [_align_content='#{$size-name}-center'] {
-      align-content: center;
-    }
-
-    [_align_content='#{$size-name}-between'] {
-      align-content: space-between;
-    }
-
-    [_align_content='#{$size-name}-around'] {
-      align-content: space-around;
-    }
-
-    [_align_content='#{$size-name}-evenly'] {
-      align-content: space-evenly;
-    }
-
-    [_align_content='#{$size-name}-stretch'] {
-      align-content: stretch;
-    }
-
-    [_align_self='#{$size-name}-stretch'] {
-      align-self: stretch;
-    }
-
-    [_align_self='#{$size-name}-start'] {
-      align-self: flex-start;
-    }
-
-    [_align_self='#{$size-name}-end'] {
-      align-self: flex-end;
-    }
-
-    [_align_self='#{$size-name}-center'] {
-      align-self: center;
-    }
-
-    [_align_self='#{$size-name}-baseline'] {
-      align-self: baseline;
-    }
-
-    @for $i from 1 through $grid-columns {
-      [_col~='#{$size-name}-#{$i}'] {
-        width: $i / $grid-columns * 100%;
-      }
-    }
+[#{$bubblegum-prefix}col] {
+  @include debug(blue);
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @for $size from 1 through $grid-columns {
+    @include add-simple-property('col', #{$size}, 'width', $size / $grid-columns * 100%);
+    @include add-simple-property('push', #{$size}, 'left', $size / $grid-columns * 100%);
+    @include add-simple-property('pull', #{$size}, 'left', 0 - $size / $grid-columns * 100%);
   }
 }
