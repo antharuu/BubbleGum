@@ -8,13 +8,13 @@ Current version: 0.1 alpha
     - [x] Container
     - [x] Row
     - [x] Col
-- [ ] Display
-    - [ ] Visible
-    - [ ] Display
-- [ ] Positions
-- [ ] Margins
-    - [ ] Margin
-    - [ ] Padding
+- [x] Display
+    - [x] Visible
+    - [x] Display
+- [x] Positions
+- [x] Margins
+    - [x] Margin
+    - [x] Padding
 - [ ] Colors
 - [ ] Typo
 - [ ] Medias

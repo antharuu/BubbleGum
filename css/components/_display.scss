@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+
+// Visible
+@include add-simple-property('visible', 'show', 'display', block, true);
+@include add-simple-property('visible', 'hide', 'display', none, true);
+
+// Display
+@include add-simple-property('display', 'flex', 'display', flex, true);
+@include add-simple-property('display', 'none', 'display', none, true);
+@include add-simple-property('display', 'block', 'display', block, true);
+@include add-simple-property('display', 'inline', 'display', inline, true);
+@include add-simple-property('display', 'flow', 'display', flow, true);
+@include add-simple-property('display', 'ruby', 'display', ruby, true);
+@include add-simple-property('display', 'grid', 'display', grid, true);
+@include add-simple-property('display', 'table', 'display', table, true);
+@include add-simple-property('display', 'contents', 'display', contents, true);

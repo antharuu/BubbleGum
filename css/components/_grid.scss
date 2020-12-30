@@ -27,7 +27,6 @@
   margin: 0 auto;
   max-width: 1280px;
   width: 100%;
-
 }
 
 
@@ -88,15 +87,12 @@
 }
 
 [#{$bubblegum-prefix}col] {
-  @include debug(blue);
-  padding: 5px;
-  position: relative;
-  text-align: center;
-  width: 100%;
+  @include debug();
+  @include add-col-property('col', 'width');
+  @include add-col-property('push', 'left');
+  @include add-col-property('pull', 'left', false);
 
-  @for $size from 1 through $grid-columns {
-    @include add-simple-property('col', #{$size}, 'width', $size / $grid-columns * 100%);
-    @include add-simple-property('push', #{$size}, 'left', $size / $grid-columns * 100%);
-    @include add-simple-property('pull', #{$size}, 'left', 0 - $size / $grid-columns * 100%);
-  }
+  padding: 0 $grid-gutter;
+  position: relative;
+  width: 100%;
 }

@@ -21,6 +21,76 @@
   }
 }
 
-@mixin debug($color: red) {
-  border: 1px solid $color;
+@mixin add-col-property($attribute, $modified, $positive: true, $is-child: false) {
+  $prefix: '';
+  @if (not $is-child) {
+    $prefix: '&';
+  }
+  @for $size from 1 through $grid-columns {
+    $value: $size / $grid-columns * 100%;
+    @if (not $positive) {
+      $value: 0 - $value;
+    }
+
+    #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$size}'] {
+      #{$modified}: $value;
+    }
+  }
+
+  @if $all-sizes {
+    @for $size from 1 through $grid-columns {
+      $value: $size / $grid-columns * 100%;
+      @if (not $positive) {
+        $value: 0 - $value;
+      }
+
+      @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+        @media screen and (min-width: $breakpoint-value) {
+          #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$breakpoint-name}#{$size-prefix}#{$size}'] {
+            #{$modified}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin add-margin-property($attribute, $modified, $positive: true, $is-child: false, $prefix-attr: '') {
+  $prefix: '';
+  @if (not $is-child) {
+    $prefix: '&';
+  }
+  @for $size from 0 through $logic-max {
+    $value: $base-margin * $size;
+    @if (not $positive) {
+      $value: 0 - $value;
+    }
+
+    #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$prefix-attr}#{$size}'] {
+      #{$modified}: $value;
+    }
+  }
+
+  @if $all-sizes {
+    @for $size from 0 through $logic-max {
+      $value: $base-margin * $size;
+      @if (not $positive) {
+        $value: 0 - $value;
+      }
+
+      @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
+        @media screen and (min-width: $breakpoint-value) {
+          #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$breakpoint-name}#{$size-prefix}#{$prefix-attr}#{$size}'] {
+            #{$modified}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin debug($color: #f00) {
+  @if $debug {
+    border: 1px solid $color;
+  }
 }

@@ -81,6 +81,7 @@ $logic = [
         'display' => [
             '_' => [
                 'flex',
+                'none',
                 'block',
                 'inline',
                 'flow',
@@ -106,7 +107,16 @@ $logic = [
                 'none'
             ],
             'z' => ['auto', 0, 1, 3, 10],
-            'align' => ['wrapper', 'left', 'center', 'right']
+            'vertical' => [
+                "baseline",
+                "sub",
+                "super",
+                "text-top",
+                "text-bottom",
+                "middle",
+                "top",
+                "bottom"
+            ]
         ]
     ],
     'margins' => [

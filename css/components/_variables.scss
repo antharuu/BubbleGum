@@ -1,7 +1,9 @@
 $bubblegum-prefix: '_';
 $size-prefix: ':';
 
-$all-sizes: false;
+$debug: true;
+
+$all-sizes: true;
 
 $logic-max: 10;
 
@@ -15,6 +17,7 @@ $grid-breakpoints: (
         xl: 1280px
 ) !default;
 
+$grid-gutter: 20px;
 $base-margin: 5px;
 
 $font-size: 1rem;

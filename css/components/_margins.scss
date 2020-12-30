@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'mixins';
+
+// Margin
+@include add-margin-property('margin', 'margin', true, true);
+@include add-margin-property('margin', 'margin-left', true, true, 'l-');
+@include add-margin-property('margin', 'margin-right', true, true, 'r-');
+@include add-margin-property('margin', 'margin-top', true, true, 't-');
+@include add-margin-property('margin', 'margin-bottom', true, true, 'b-');
+
+@include add-margin-property('margin', 'margin-top', true, true, 'y-');
+@include add-margin-property('margin', 'margin-bottom', true, true, 'y-');
+
+@include add-margin-property('margin', 'margin-left', true, true, 'x-');
+@include add-margin-property('margin', 'margin-right', true, true, 'x-');

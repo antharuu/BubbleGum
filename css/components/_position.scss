@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'mixins';
+
+// Position
+@include add-simple-property('pos', 'static', 'position', static, true);
+@include add-simple-property('pos', 'relative', 'position', relative, true);
+@include add-simple-property('pos', 'absolute', 'position', absolute, true);
+@include add-simple-property('pos', 'fixed', 'position', fixed, true);
+@include add-simple-property('pos', 'sticky', 'position', sticky, true);
+
+// Float
+@include add-simple-property('float', 'left', 'float', left, true);
+@include add-simple-property('float', 'right', 'float', right, true);
+@include add-simple-property('float', 'none', 'float', none, true);
+
+// Z index
+@for $i from 0 through $logic-max {
+  @include add-simple-property('z', $i, 'z-index', $i, true);
+}
+
+// Vertical align
+@include add-simple-property('vertical', 'baseline', 'vertical-align', baseline, true);
+@include add-simple-property('vertical', 'sub', 'vertical-align', sub, true);
+@include add-simple-property('vertical', 'super', 'vertical-align', super, true);
+@include add-simple-property('vertical', 'text-top', 'vertical-align', text-top, true);
+@include add-simple-property('vertical', 'text-bottom', 'vertical-align', text-bottom, true);
+@include add-simple-property('vertical', 'middle', 'vertical-align', middle, true);
+@include add-simple-property('vertical', 'top', 'vertical-align', top, true);
+@include add-simple-property('vertical', 'bottom', 'vertical-align', bottom, true);
