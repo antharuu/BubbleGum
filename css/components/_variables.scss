@@ -3,9 +3,9 @@ $size-prefix: ':';
 
 $debug: true;
 
-$all-sizes: true;
+$all-sizes: false;
 
-$logic-max: 10;
+$logic-max: 5;
 
 // GRID
 $grid-columns: 12 !default;
@@ -24,132 +24,39 @@ $font-size: 1rem;
 $font-tags: h1, h2, h3, h4, h5, h6, p, span, code, i, a;
 
 // COLORS
-$darken-value: 15;
-$lighten-value: 15;
+$color-variants: 5;
+
 $base-colors: (
-        black: #1a1d2d,
-        purple: #5d275d,
-        red: #b13e53,
-        orange: #ef7d57,
-        yellow: #ffcd75,
-        lime: #a7f070,
-        green: #38b764,
-        teal: #257179,
-        darkblue: #29366f,
-        blue: #3b5dc9,
-        lightblue: #41a6f6,
-        sky: #73eff7,
-        white: #f4f4f4,
-        lightgrey: #94b0c2,
-        grey: #566c86,
-        darkgrey: #333c57,
-        dark: #1a1d2d,
-        light: #94b0c2,
-        primary: #3b5dc9,
-        secondary: #94b0c2,
-        success: #38b764,
-        info: #41a6f6,
-        warning: #ef7d57,
-        danger: #b13e53,
-        muted: #566c86,
+        'red': #f24236,
+        'pink': #e43f6f,
+        'purple': #6564db,
+        'indigo': #473bf0,
+        'blue': #3169c4,
+        'cyan': #1fa6c1,
+        'teal': #00bfb2,
+        'green': #3ccd65,
+        'lime': #aad922,
+        'yellow': #f7b32b,
+        'amber': #ff7f11,
+        'orange': #f34213,
+        'brown': #823329,
+        'grey': #7179ad,
+        'black': #1a1d2d,
+        'white': #fbfaf8,
+        'transparent': transparent
 ) !default;
 
-$color-black-dark: darken(map-get($base-colors, black), $darken-value);
-$color-black: map-get($base-colors, black);
-$color-black-light: lighten(map-get($base-colors, black), $lighten-value);
+$theme-colors: (
+        'dark': map-get($base-colors, 'black'),
+        'light': map-get($base-colors, 'white'),
+        'primary': map-get($base-colors, 'teal'),
+        'secondary': map-get($base-colors, 'grey'),
+        'success': map-get($base-colors, 'green'),
+        'info': map-get($base-colors, 'cyan'),
+        'warning': map-get($base-colors, 'amber'),
+        'danger': map-get($base-colors, 'red'),
+        'muted': lighten(map-get($base-colors, 'red'), 30)
+) !default;
 
-$color-purple-dark: darken(map-get($base-colors, purple), $darken-value);
-$color-purple: map-get($base-colors, purple);
-$color-purple-light: lighten(map-get($base-colors, purple), $lighten-value);
+$all-colors: map-merge($base-colors, $theme-colors);
 
-$color-red-dark: darken(map-get($base-colors, red), $darken-value);
-$color-red: map-get($base-colors, red);
-$color-red-light: lighten(map-get($base-colors, red), $lighten-value);
-
-$color-orange-dark: darken(map-get($base-colors, orange), $darken-value);
-$color-orange: map-get($base-colors, orange);
-$color-orange-light: lighten(map-get($base-colors, orange), $lighten-value);
-
-$color-yellow-dark: darken(map-get($base-colors, yellow), $darken-value);
-$color-yellow: map-get($base-colors, yellow);
-$color-yellow-light: lighten(map-get($base-colors, yellow), $lighten-value);
-
-$color-lime-dark: darken(map-get($base-colors, lime), $darken-value);
-$color-lime: map-get($base-colors, lime);
-$color-lime-light: lighten(map-get($base-colors, lime), $lighten-value);
-
-$color-green-dark: darken(map-get($base-colors, green), $darken-value);
-$color-green: map-get($base-colors, green);
-$color-green-light: lighten(map-get($base-colors, green), $lighten-value);
-
-$color-teal-dark: darken(map-get($base-colors, teal), $darken-value);
-$color-teal: map-get($base-colors, teal);
-$color-teal-light: lighten(map-get($base-colors, teal), $lighten-value);
-
-$color-darkblue-dark: darken(map-get($base-colors, darkblue), $darken-value);
-$color-darkblue: map-get($base-colors, darkblue);
-$color-darkblue-light: lighten(map-get($base-colors, darkblue), $lighten-value);
-
-$color-blue-dark: darken(map-get($base-colors, blue), $darken-value);
-$color-blue: map-get($base-colors, blue);
-$color-blue-light: lighten(map-get($base-colors, blue), $lighten-value);
-
-$color-lightblue-dark: darken(map-get($base-colors, lightblue), $darken-value);
-$color-lightblue: map-get($base-colors, lightblue);
-$color-lightblue-light: lighten(map-get($base-colors, lightblue), $lighten-value);
-
-$color-sky-dark: darken(map-get($base-colors, sky), $darken-value);
-$color-sky: map-get($base-colors, sky);
-$color-sky-light: lighten(map-get($base-colors, sky), $lighten-value);
-
-$color-white-dark: darken(map-get($base-colors, white), $darken-value);
-$color-white: map-get($base-colors, white);
-$color-white-light: lighten(map-get($base-colors, white), $lighten-value);
-
-$color-lightgrey-dark: darken(map-get($base-colors, lightgrey), $darken-value);
-$color-lightgrey: map-get($base-colors, lightgrey);
-$color-lightgrey-light: lighten(map-get($base-colors, lightgrey), $lighten-value);
-
-$color-grey-dark: darken(map-get($base-colors, grey), $darken-value);
-$color-grey: map-get($base-colors, grey);
-$color-grey-light: lighten(map-get($base-colors, grey), $lighten-value);
-
-$color-darkgrey-dark: darken(map-get($base-colors, darkgrey), $darken-value);
-$color-darkgrey: map-get($base-colors, darkgrey);
-$color-darkgrey-light: lighten(map-get($base-colors, darkgrey), $lighten-value);
-
-$color-dark-dark: darken(map-get($base-colors, dark), $darken-value);
-$color-dark: map-get($base-colors, dark);
-$color-dark-light: lighten(map-get($base-colors, dark), $lighten-value);
-
-$color-light-dark: darken(map-get($base-colors, light), $darken-value);
-$color-light: map-get($base-colors, light);
-$color-light-light: lighten(map-get($base-colors, light), $lighten-value);
-
-$color-primary-dark: darken(map-get($base-colors, primary), $darken-value);
-$color-primary: map-get($base-colors, primary);
-$color-primary-light: lighten(map-get($base-colors, primary), $lighten-value);
-
-$color-secondary-dark: darken(map-get($base-colors, secondary), $darken-value);
-$color-secondary: map-get($base-colors, secondary);
-$color-secondary-light: lighten(map-get($base-colors, secondary), $lighten-value);
-
-$color-success-dark: darken(map-get($base-colors, success), $darken-value);
-$color-success: map-get($base-colors, success);
-$color-success-light: lighten(map-get($base-colors, success), $lighten-value);
-
-$color-info-dark: darken(map-get($base-colors, info), $darken-value);
-$color-info: map-get($base-colors, info);
-$color-info-light: lighten(map-get($base-colors, info), $lighten-value);
-
-$color-warning-dark: darken(map-get($base-colors, warning), $darken-value);
-$color-warning: map-get($base-colors, warning);
-$color-warning-light: lighten(map-get($base-colors, warning), $lighten-value);
-
-$color-danger-dark: darken(map-get($base-colors, danger), $darken-value);
-$color-danger: map-get($base-colors, danger);
-$color-danger-light: lighten(map-get($base-colors, danger), $lighten-value);
-
-$color-muted-dark: darken(map-get($base-colors, muted), $darken-value);
-$color-muted: map-get($base-colors, muted);
-$color-muted-light: lighten(map-get($base-colors, muted), $lighten-value);

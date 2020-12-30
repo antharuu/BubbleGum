@@ -72,13 +72,15 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="6">
+          <list size="8">
             <item index="0" class="java.lang.String" itemvalue="_container" />
             <item index="1" class="java.lang.String" itemvalue="_col" />
             <item index="2" class="java.lang.String" itemvalue="_justify" />
             <item index="3" class="java.lang.String" itemvalue="_content" />
             <item index="4" class="java.lang.String" itemvalue="_push" />
             <item index="5" class="java.lang.String" itemvalue="_float" />
+            <item index="6" class="java.lang.String" itemvalue="_padding" />
+            <item index="7" class="java.lang.String" itemvalue="_debug" />
           </list>
         </value>
       </option>

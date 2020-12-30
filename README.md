@@ -15,8 +15,8 @@ Current version: 0.1 alpha
 - [x] Margins
     - [x] Margin
     - [x] Padding
-- [ ] Colors
-- [ ] Typo
+- [x] Colors
+- [x] Typo
 - [ ] Medias
 - [ ] Shadow
 - [ ] Table

@@ -89,8 +89,55 @@
   }
 }
 
+@function get-contrasted($color) {
+  @if lightness($color) < 50 {
+    @return map-get($all-colors, 'white');
+  } @else {
+    @return map-get($all-colors, 'black');
+  }
+}
+
+@mixin add-color-property($attribute, $modified, $is-child: false) {
+  $prefix: '';
+  @if (not $is-child) {
+    $prefix: '&';
+  }
+
+  @each $color-name, $value in $all-colors {
+    #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$color-name}'] {
+      @extend %#{$modified}-#{$color-name};
+
+      &[#{$bubblegum-prefix}#{$attribute}~='light'] {
+        @extend %#{$modified}-#{$color-name}-light-1;
+      }
+
+      @for $i from 1 through $logic-max {
+        &[#{$bubblegum-prefix}#{$attribute}~='light-#{$i}'] {
+          @extend %#{$modified}-#{$color-name}-light-#{$i};
+        }
+      }
+
+      &[#{$bubblegum-prefix}#{$attribute}~='dark'] {
+        @extend %#{$modified}-#{$color-name}-dark-1;
+      }
+
+      @for $i from 1 through $logic-max {
+        &[#{$bubblegum-prefix}#{$attribute}~='dark-#{$i}'] {
+          @extend %#{$modified}-#{$color-name}-dark-#{$i};
+        }
+      }
+    }
+  }
+}
+
 @mixin debug($color: #f00) {
   @if $debug {
     border: 1px solid $color;
   }
 }
+
+[_debug] {
+  @include debug();
+  @include add-color-property('debug', 'border-color');
+}
+

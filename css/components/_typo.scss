@@ -1,5 +1,126 @@
 @import 'variables';
 
 html {
+  color: map-get($all-colors, 'black');
   font-family: 'Quicksand Regular', sans-serif;
+}
+
+%font-family-light {
+  font-family: 'Quicksand Light', sans-serif;
+}
+
+%font-family-medium {
+  font-family: 'Quicksand Medium', sans-serif;
+}
+
+%font-family-regular {
+  font-family: 'Quicksand Regular', sans-serif;
+}
+
+%font-family-bold {
+  font-family: 'Quicksand Bold', sans-serif;
+}
+
+%font-family-semibold {
+  font-family: 'Quicksand SemiBold', sans-serif;
+}
+
+%font-family-code {
+  font-family: 'Fira Code', sans-serif;
+}
+
+%titles {
+  @extend %font-family-semibold;
+  line-height: 1.2;
+  margin-bottom: .5rem;
+}
+
+h6 {
+  @extend %titles;
+  font-size: 1.25rem;
+}
+
+h5 {
+  @extend %titles;
+  font-size: 1.5rem;
+}
+
+h4 {
+  @extend %titles;
+  font-size: 1.75rem;
+}
+
+h3 {
+  @extend %titles;
+  font-size: calc(2rem + .3vw);
+}
+
+h2 {
+  @extend %titles;
+  font-size: calc(2.25rem + .45vw);
+}
+
+h1 {
+  @extend %titles;
+  font-size: calc(2.5rem + .6vw);
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+mark {
+  @extend %background-color-yellow-light-5;
+  padding: .2em;
+}
+
+small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+b,
+strong {
+  @extend %font-family-bold;
+}
+
+em {
+  font-style: italic;
+}
+
+abbr[data-original-title],
+abbr[title] {
+  border-bottom: 0;
+  cursor: help;
+  text-decoration: underline;
+}
+
+@include add-simple-property('font', 'left', 'text-align', left, true);
+@include add-simple-property('font', 'center', 'text-align', center, true);
+@include add-simple-property('font', 'right', 'text-align', right, true);
+@include add-simple-property('font', 'justify', 'text-align', justify, true);
+
+[_font~='light'] {
+  @extend %font-family-light;
+}
+
+[_font~='regular'] {
+  @extend %font-family-regular;
+}
+
+[_font~='medium'] {
+  @extend %font-family-medium;
+}
+
+[_font~='bold'] {
+  @extend %font-family-bold;
+}
+
+[_font~='semibold'] {
+  @extend %font-family-semibold;
+}
+
+[_font~='code'] {
+  @extend %font-family-code;
 }

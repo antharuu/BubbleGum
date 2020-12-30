@@ -2,7 +2,6 @@ code[class*="language-"],
 pre[class*="language-"] {
   background: none;
   border-radius: 5px;
-  color: #f4f4f4;
   font-family: 'Fira Code', monospace;
   font-size: 1em;
   hyphens: none;
@@ -34,19 +33,19 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #566c86; }
+  color: #94b0c2; }
 
 .token.punctuation {
-  color: #94b0c2; }
+  color: #bbbbbb; }
 
 .token.tag,
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-  color: #cd6f80; }
+  color: #b13e53; }
 
 .token.function-name {
-  color: #778fda; }
+  color: #41a6f6; }
 
 .token.boolean,
 .token.number,
@@ -57,14 +56,14 @@ pre[class*="language-"] {
 .token.class-name,
 .token.constant,
 .token.symbol {
-  color: #ffcd75; }
+  color: #f8c555; }
 
 .token.selector,
 .token.important,
 .token.atrule,
 .token.keyword,
 .token.builtin {
-  color: #933e93; }
+  color: #cc99cd; }
 
 .token.string,
 .token.char,

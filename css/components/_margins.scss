@@ -13,3 +13,17 @@
 
 @include add-margin-property('margin', 'margin-left', true, true, 'x-');
 @include add-margin-property('margin', 'margin-right', true, true, 'x-');
+
+// Padding
+@include add-margin-property('padding', 'padding', true, true);
+@include add-margin-property('padding', 'padding-left', true, true, 'l-');
+@include add-margin-property('padding', 'padding-right', true, true, 'r-');
+@include add-margin-property('padding', 'padding-top', true, true, 't-');
+@include add-margin-property('padding', 'padding-bottom', true, true, 'b-');
+
+@include add-margin-property('padding', 'padding-top', true, true, 'y-');
+@include add-margin-property('padding', 'padding-bottom', true, true, 'y-');
+
+@include add-margin-property('padding', 'padding-left', true, true, 'x-');
+@include add-margin-property('padding', 'padding-right', true, true, 'x-');
+
