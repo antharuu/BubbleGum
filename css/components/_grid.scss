@@ -87,7 +87,6 @@
 }
 
 [#{$bubblegum-prefix}col] {
-  @include debug();
   @include add-col-property('col', 'width');
   @include add-col-property('push', 'left');
   @include add-col-property('pull', 'left', false);

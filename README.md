@@ -17,8 +17,8 @@ Current version: 0.1 alpha
     - [x] Padding
 - [x] Colors
 - [x] Typo
-- [ ] Medias
-- [ ] Shadow
+- [x] Medias
+- [x] Shadow
 - [ ] Table
 - [ ] Buttons
 - [ ] Nav

@@ -55,33 +55,31 @@
   }
 }
 
-@mixin add-margin-property($attribute, $modified, $positive: true, $is-child: false, $prefix-attr: '') {
+@mixin add-margin-property($attribute, $modified, $is-child: false, $prefix-attr: '') {
   $prefix: '';
   @if (not $is-child) {
     $prefix: '&';
   }
+
+  #{$prefix}[#{$bubblegum-prefix}#{$attribute}] {
+    @extend %margin-#{$modified}-1;
+  }
+
   @for $size from 0 through $logic-max {
     $value: $base-margin * $size;
-    @if (not $positive) {
-      $value: 0 - $value;
-    }
 
     #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$prefix-attr}#{$size}'] {
-      #{$modified}: $value;
+      @extend %margin-#{$modified}-#{$size};
     }
   }
 
   @if $all-sizes {
     @for $size from 0 through $logic-max {
       $value: $base-margin * $size;
-      @if (not $positive) {
-        $value: 0 - $value;
-      }
-
       @each $breakpoint-name, $breakpoint-value in $grid-breakpoints {
         @media screen and (min-width: $breakpoint-value) {
           #{$prefix}[#{$bubblegum-prefix}#{$attribute}~='#{$breakpoint-name}#{$size-prefix}#{$prefix-attr}#{$size}'] {
-            #{$modified}: $value;
+            @extend %margin-#{$modified}-#{$size};
           }
         }
       }
