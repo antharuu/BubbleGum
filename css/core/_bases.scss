@@ -92,3 +92,7 @@ html,
 body {
   background-color: $COLOR-light;
 }
+
+* {
+  box-sizing: border-box;
+}

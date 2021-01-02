@@ -48,7 +48,6 @@
     align-items: start;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 (0 - $GRID-gutter / 2);
 
     &#{selector('row', 'row', $size)} {
       flex-direction: row;

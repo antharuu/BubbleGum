@@ -1,0 +1,6 @@
+@include add-breakpoints using($size) {
+  #{selector('responsive', '', $size)} {
+    max-width: 100%;
+    height: auto;
+  }
+}
