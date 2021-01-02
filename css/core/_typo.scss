@@ -9,6 +9,7 @@
   }
 
   @include add-color using($color) {
+    #{selector('color', $color, $size)},
     #{selector('font', $color, $size)} {
       color: color-value($color);
     }
@@ -16,11 +17,13 @@
 
   @if $CONFIG_colors_variants {
     @include add-logic using($i) {
+      #{selector('color', '#{$color}-light-#{$i}', $size)},
       #{selector('font', '#{$color}-light-#{$i}', $size)} {
         color: color-value($color, $i, true);
       }
     }
     @include add-logic using($i) {
+      #{selector('color', '#{$color}-dark-#{$i}', $size)},
       #{selector('font', '#{$color}-dark-#{$i}', $size)} {
         color: color-value($color, $i, false);
       }
@@ -70,12 +73,18 @@
     background-color: color-value('yellow', 4);
     color: $COLOR-dark;
   }
-  #{selector('font', 'linethrough', $size)},
-  #{selector('font', 'del', $size)}, {
+
+  #{selector('decoration', 'linethrough', $size)},
+  #{selector('decoration', 'del', $size)} {
     text-decoration: line-through;
   }
-  #{selector('font', 'underline', $size)},
-  #{selector('font', 'line', $size)}, {
+  #{selector('decoration', 'underline', $size)},
+  #{selector('decoration', 'line', $size)} {
     text-decoration: underline;
   }
+
+  #{selector('decoration', 'none', $size)} {
+    text-decoration: none;
+  }
+
 }
