@@ -10,7 +10,7 @@ $twig = new Environment($loader, [
     'cache' => false,
 ]);
 
-$version = '0.2 alpha';
+$version = '0.3 alpha';
 
 $separator = [
     'size' => ':'

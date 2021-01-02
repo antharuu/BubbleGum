@@ -2,9 +2,9 @@
 
 Simple and efficiency Css framework
 
-Current version: 0.2 alpha
+Current version: 0.3 alpha
 
-### A complete documentation will be done once I have completed version 1.0.
+### A complete documentation will be done once I have completed the version 1.0.
 
 ## USAGE
 
@@ -69,23 +69,23 @@ to use.
     - [x] Row
     - [x] Col
 - [x] Display
-    - [x] Visible
-    - [x] Display
+  - [x] Visible
+  - [x] Display
 - [x] Positions
 - [x] Margins
-    - [x] Margin
-    - [x] Padding
+  - [x] Margin
+  - [x] Padding
 - [x] Colors
 - [x] Typo
-- [ ] Medias
-- [ ] Shadow
+- [x] Medias
+- [x] Shadow
 - [ ] Table
 - [ ] Buttons
 - [ ] Nav
-    - [ ] Breadcrumb
-    - [ ] Footer
-    - [ ] Navbar
-    - [ ] Pagination
+  - [ ] Breadcrumb
+  - [ ] Footer
+  - [ ] Navbar
+  - [ ] Pagination
 - [ ] Cards
 - [ ] List
 - [ ] Progress
