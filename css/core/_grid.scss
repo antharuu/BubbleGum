@@ -77,98 +77,98 @@
     &#{selector('row', 'wrap-reverse', $size)} {
       flex-wrap: wrap-reverse;
     }
+  }
 
-    &#{selector('justify', 'start', $size)} {
-      justify-content: start;
-    }
+  #{selector('justify', 'start', $size)} {
+    justify-content: start;
+  }
 
-    &#{selector('justify', 'end', $size)} {
-      justify-content: end;
-    }
+  #{selector('justify', 'end', $size)} {
+    justify-content: end;
+  }
 
-    &#{selector('justify', 'center', $size)} {
-      justify-content: center;
-    }
+  #{selector('justify', 'center', $size)} {
+    justify-content: center;
+  }
 
-    &#{selector('justify', 'between', $size)} {
-      justify-content: space-between;
-    }
+  #{selector('justify', 'between', $size)} {
+    justify-content: space-between;
+  }
 
-    &#{selector('justify', 'around', $size)} {
-      justify-content: space-around;
-    }
+  #{selector('justify', 'around', $size)} {
+    justify-content: space-around;
+  }
 
-    &#{selector('justify', 'evenly', $size)} {
-      justify-content: space-evenly;
-    }
+  #{selector('justify', 'evenly', $size)} {
+    justify-content: space-evenly;
+  }
 
-    &#{selector('items', 'stretch', $size)} {
-      align-items: stretch;
-    }
+  #{selector('items', 'stretch', $size)} {
+    align-items: stretch;
+  }
 
-    &#{selector('items', 'start', $size)} {
-      align-items: start;
-    }
+  #{selector('items', 'start', $size)} {
+    align-items: start;
+  }
 
-    &#{selector('items', 'end', $size)} {
-      align-items: end;
-    }
+  #{selector('items', 'end', $size)} {
+    align-items: end;
+  }
 
-    &#{selector('items', 'center', $size)} {
-      align-items: center;
-    }
+  #{selector('items', 'center', $size)} {
+    align-items: center;
+  }
 
-    &#{selector('items', 'baseline', $size)} {
-      align-items: baseline;
-    }
+  #{selector('items', 'baseline', $size)} {
+    align-items: baseline;
+  }
 
-    &#{selector('content', 'start', $size)} {
-      align-content: start;
-    }
+  #{selector('content', 'start', $size)} {
+    align-content: start;
+  }
 
-    &#{selector('content', 'end', $size)} {
-      align-content: end;
-    }
+  #{selector('content', 'end', $size)} {
+    align-content: end;
+  }
 
-    &#{selector('content', 'center', $size)} {
-      align-content: center;
-    }
+  #{selector('content', 'center', $size)} {
+    align-content: center;
+  }
 
-    &#{selector('content', 'between', $size)} {
-      align-content: space-between;
-    }
+  #{selector('content', 'between', $size)} {
+    align-content: space-between;
+  }
 
-    &#{selector('content', 'around', $size)} {
-      align-content: space-around;
-    }
+  #{selector('content', 'around', $size)} {
+    align-content: space-around;
+  }
 
-    &#{selector('content', 'evenly', $size)} {
-      align-content: space-evenly;
-    }
+  #{selector('content', 'evenly', $size)} {
+    align-content: space-evenly;
+  }
 
-    &#{selector('content', 'stretch', $size)} {
-      align-content: stretch;
-    }
+  #{selector('content', 'stretch', $size)} {
+    align-content: stretch;
+  }
 
-    > #{selector('self', 'stretch', $size)} {
-      align-self: stretch;
-    }
+  #{selector('self', 'stretch', $size)} {
+    align-self: stretch;
+  }
 
-    > #{selector('self', 'start', $size)} {
-      align-self: start;
-    }
+  #{selector('self', 'start', $size)} {
+    align-self: start;
+  }
 
-    > #{selector('self', 'end', $size)} {
-      align-self: end;
-    }
+  #{selector('self', 'end', $size)} {
+    align-self: end;
+  }
 
-    > #{selector('self', 'center', $size)} {
-      align-self: center;
-    }
+  #{selector('self', 'center', $size)} {
+    align-self: center;
+  }
 
-    > #{selector('self', 'baseline', $size)} {
-      align-self: baseline;
-    }
+  #{selector('self', 'baseline', $size)} {
+    align-self: baseline;
   }
 
   #{selector('col')} {

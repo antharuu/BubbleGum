@@ -696,6 +696,11 @@ body {
   margin-right: 0px;
 }
 
+[_round~="0"],
+[_r~="0"] {
+  border-radius: 0px;
+}
+
 [_margin~="1"],
 [_m~="1"] {
   margin: 5px;
@@ -768,6 +773,11 @@ body {
 [_p~=x-1] {
   margin-left: 5px;
   margin-right: 5px;
+}
+
+[_round~="1"],
+[_r~="1"] {
+  border-radius: 5px;
 }
 
 [_margin~="2"],
@@ -844,6 +854,11 @@ body {
   margin-right: 10px;
 }
 
+[_round~="2"],
+[_r~="2"] {
+  border-radius: 10px;
+}
+
 [_margin~="3"],
 [_m~="3"] {
   margin: 15px;
@@ -916,6 +931,11 @@ body {
 [_p~=x-3] {
   margin-left: 15px;
   margin-right: 15px;
+}
+
+[_round~="3"],
+[_r~="3"] {
+  border-radius: 15px;
 }
 
 [_margin~="4"],
@@ -992,6 +1012,11 @@ body {
   margin-right: 20px;
 }
 
+[_round~="4"],
+[_r~="4"] {
+  border-radius: 20px;
+}
+
 [_margin~="5"],
 [_m~="5"] {
   margin: 25px;
@@ -1064,6 +1089,11 @@ body {
 [_p~=x-5] {
   margin-left: 25px;
   margin-right: 25px;
+}
+
+[_round~="5"],
+[_r~="5"] {
+  border-radius: 25px;
 }
 
 [_margin~="6"],
@@ -1140,6 +1170,11 @@ body {
   margin-right: 30px;
 }
 
+[_round~="6"],
+[_r~="6"] {
+  border-radius: 30px;
+}
+
 [_margin~="7"],
 [_m~="7"] {
   margin: 35px;
@@ -1212,6 +1247,11 @@ body {
 [_p~=x-7] {
   margin-left: 35px;
   margin-right: 35px;
+}
+
+[_round~="7"],
+[_r~="7"] {
+  border-radius: 35px;
 }
 
 [_margin~="8"],
@@ -1288,6 +1328,11 @@ body {
   margin-right: 40px;
 }
 
+[_round~="8"],
+[_r~="8"] {
+  border-radius: 40px;
+}
+
 [_margin~="9"],
 [_m~="9"] {
   margin: 45px;
@@ -1360,6 +1405,11 @@ body {
 [_p~=x-9] {
   margin-left: 45px;
   margin-right: 45px;
+}
+
+[_round~="9"],
+[_r~="9"] {
+  border-radius: 45px;
 }
 
 [_margin~="10"],
@@ -1436,108 +1486,9 @@ body {
   margin-right: 50px;
 }
 
-[_bg~=red] {
-  background-color: #f24236;
-}
-
-[_bg~=pink] {
-  background-color: #e43f6f;
-}
-
-[_bg~=purple] {
-  background-color: #6564db;
-}
-
-[_bg~=indigo] {
-  background-color: #473bf0;
-}
-
-[_bg~=blue] {
-  background-color: #3169c4;
-}
-
-[_bg~=cyan] {
-  background-color: #1fa6c1;
-}
-
-[_bg~=teal] {
-  background-color: #00bfb2;
-}
-
-[_bg~=green] {
-  background-color: #3ccd65;
-}
-
-[_bg~=lime] {
-  background-color: #aad922;
-}
-
-[_bg~=yellow] {
-  background-color: #f7b32b;
-}
-
-[_bg~=amber] {
-  background-color: #ff7f11;
-}
-
-[_bg~=orange] {
-  background-color: #f34213;
-}
-
-[_bg~=brown] {
-  background-color: #823329;
-}
-
-[_bg~=grey] {
-  background-color: #7179ad;
-}
-
-[_bg~=black] {
-  background-color: #1a1d2d;
-}
-
-[_bg~=white] {
-  background-color: #fbfaf8;
-}
-
-[_bg~=transparent] {
-  background-color: transparent;
-}
-
-[_bg~=dark] {
-  background-color: #1a1d2d;
-}
-
-[_bg~=light] {
-  background-color: #fbfaf8;
-}
-
-[_bg~=primary] {
-  background-color: #00bfb2;
-}
-
-[_bg~=secondary] {
-  background-color: #7179ad;
-}
-
-[_bg~=success] {
-  background-color: #3ccd65;
-}
-
-[_bg~=info] {
-  background-color: #1fa6c1;
-}
-
-[_bg~=warning] {
-  background-color: #ff7f11;
-}
-
-[_bg~=danger] {
-  background-color: #f24236;
-}
-
-[_bg~=muted] {
-  background-color: #6a74a9;
+[_round~="10"],
+[_r~="10"] {
+  border-radius: 50px;
 }
 
 [_bg~=red] {
@@ -4138,6 +4089,338 @@ body {
 
 [_bg~=muted] {
   background-color: #6a74a9;
+}
+
+[_bg~=red] {
+  background-color: #f24236;
+}
+
+[_bg~=pink] {
+  background-color: #e43f6f;
+}
+
+[_bg~=purple] {
+  background-color: #6564db;
+}
+
+[_bg~=indigo] {
+  background-color: #473bf0;
+}
+
+[_bg~=blue] {
+  background-color: #3169c4;
+}
+
+[_bg~=cyan] {
+  background-color: #1fa6c1;
+}
+
+[_bg~=teal] {
+  background-color: #00bfb2;
+}
+
+[_bg~=green] {
+  background-color: #3ccd65;
+}
+
+[_bg~=lime] {
+  background-color: #aad922;
+}
+
+[_bg~=yellow] {
+  background-color: #f7b32b;
+}
+
+[_bg~=amber] {
+  background-color: #ff7f11;
+}
+
+[_bg~=orange] {
+  background-color: #f34213;
+}
+
+[_bg~=brown] {
+  background-color: #823329;
+}
+
+[_bg~=grey] {
+  background-color: #7179ad;
+}
+
+[_bg~=black] {
+  background-color: #1a1d2d;
+}
+
+[_bg~=white] {
+  background-color: #fbfaf8;
+}
+
+[_bg~=transparent] {
+  background-color: transparent;
+}
+
+[_bg~=dark] {
+  background-color: #1a1d2d;
+}
+
+[_bg~=light] {
+  background-color: #fbfaf8;
+}
+
+[_bg~=primary] {
+  background-color: #00bfb2;
+}
+
+[_bg~=secondary] {
+  background-color: #7179ad;
+}
+
+[_bg~=success] {
+  background-color: #3ccd65;
+}
+
+[_bg~=info] {
+  background-color: #1fa6c1;
+}
+
+[_bg~=warning] {
+  background-color: #ff7f11;
+}
+
+[_bg~=danger] {
+  background-color: #f24236;
+}
+
+[_bg~=muted] {
+  background-color: #6a74a9;
+}
+
+h1,
+[_font~=h1] {
+  font-size: 38px;
+}
+
+h2,
+[_font~=h2] {
+  font-size: 34px;
+}
+
+h3,
+[_font~=h3] {
+  font-size: 29px;
+}
+
+h4,
+[_font~=h4] {
+  font-size: 24px;
+}
+
+h5,
+[_font~=h5] {
+  font-size: 19px;
+}
+
+h6,
+[_font~=h6] {
+  font-size: 14px;
+}
+
+[_color~=red],
+[_font~=red] {
+  color: #f24236;
+}
+
+[_color~=pink],
+[_font~=pink] {
+  color: #e43f6f;
+}
+
+[_color~=purple],
+[_font~=purple] {
+  color: #6564db;
+}
+
+[_color~=indigo],
+[_font~=indigo] {
+  color: #473bf0;
+}
+
+[_color~=blue],
+[_font~=blue] {
+  color: #3169c4;
+}
+
+[_color~=cyan],
+[_font~=cyan] {
+  color: #1fa6c1;
+}
+
+[_color~=teal],
+[_font~=teal] {
+  color: #00bfb2;
+}
+
+[_color~=green],
+[_font~=green] {
+  color: #3ccd65;
+}
+
+[_color~=lime],
+[_font~=lime] {
+  color: #aad922;
+}
+
+[_color~=yellow],
+[_font~=yellow] {
+  color: #f7b32b;
+}
+
+[_color~=amber],
+[_font~=amber] {
+  color: #ff7f11;
+}
+
+[_color~=orange],
+[_font~=orange] {
+  color: #f34213;
+}
+
+[_color~=brown],
+[_font~=brown] {
+  color: #823329;
+}
+
+[_color~=grey],
+[_font~=grey] {
+  color: #7179ad;
+}
+
+[_color~=black],
+[_font~=black] {
+  color: #1a1d2d;
+}
+
+[_color~=white],
+[_font~=white] {
+  color: #fbfaf8;
+}
+
+[_color~=transparent],
+[_font~=transparent] {
+  color: transparent;
+}
+
+[_color~=dark],
+[_font~=dark] {
+  color: #1a1d2d;
+}
+
+[_color~=light],
+[_font~=light] {
+  color: #fbfaf8;
+}
+
+[_color~=primary],
+[_font~=primary] {
+  color: #00bfb2;
+}
+
+[_color~=secondary],
+[_font~=secondary] {
+  color: #7179ad;
+}
+
+[_color~=success],
+[_font~=success] {
+  color: #3ccd65;
+}
+
+[_color~=info],
+[_font~=info] {
+  color: #1fa6c1;
+}
+
+[_color~=warning],
+[_font~=warning] {
+  color: #ff7f11;
+}
+
+[_color~=danger],
+[_font~=danger] {
+  color: #f24236;
+}
+
+[_color~=muted],
+[_font~=muted] {
+  color: #6a74a9;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 /******************************************************
@@ -4236,204 +4519,6 @@ pre[_code] {
 }
 .token.inserted {
   color: #3ccd65;
-}
-
-h1,
-[_font~=h1] {
-  font-size: 38px;
-}
-
-h2,
-[_font~=h2] {
-  font-size: 34px;
-}
-
-h3,
-[_font~=h3] {
-  font-size: 29px;
-}
-
-h4,
-[_font~=h4] {
-  font-size: 24px;
-}
-
-h5,
-[_font~=h5] {
-  font-size: 19px;
-}
-
-h6,
-[_font~=h6] {
-  font-size: 14px;
-}
-
-[_font~=red] {
-  color: #f24236;
-}
-
-[_font~=pink] {
-  color: #e43f6f;
-}
-
-[_font~=purple] {
-  color: #6564db;
-}
-
-[_font~=indigo] {
-  color: #473bf0;
-}
-
-[_font~=blue] {
-  color: #3169c4;
-}
-
-[_font~=cyan] {
-  color: #1fa6c1;
-}
-
-[_font~=teal] {
-  color: #00bfb2;
-}
-
-[_font~=green] {
-  color: #3ccd65;
-}
-
-[_font~=lime] {
-  color: #aad922;
-}
-
-[_font~=yellow] {
-  color: #f7b32b;
-}
-
-[_font~=amber] {
-  color: #ff7f11;
-}
-
-[_font~=orange] {
-  color: #f34213;
-}
-
-[_font~=brown] {
-  color: #823329;
-}
-
-[_font~=grey] {
-  color: #7179ad;
-}
-
-[_font~=black] {
-  color: #1a1d2d;
-}
-
-[_font~=white] {
-  color: #fbfaf8;
-}
-
-[_font~=transparent] {
-  color: transparent;
-}
-
-[_font~=dark] {
-  color: #1a1d2d;
-}
-
-[_font~=light] {
-  color: #fbfaf8;
-}
-
-[_font~=primary] {
-  color: #00bfb2;
-}
-
-[_font~=secondary] {
-  color: #7179ad;
-}
-
-[_font~=success] {
-  color: #3ccd65;
-}
-
-[_font~=info] {
-  color: #1fa6c1;
-}
-
-[_font~=warning] {
-  color: #ff7f11;
-}
-
-[_font~=danger] {
-  color: #f24236;
-}
-
-[_font~=muted] {
-  color: #6a74a9;
-}
-
-[_font~=left] {
-  text-align: left;
-}
-
-[_font~=right] {
-  text-align: right;
-}
-
-[_font~=center] {
-  text-align: center;
-}
-
-[_font~=justify] {
-  text-align: justify;
-}
-
-[_font~=lower] {
-  text-transform: lowercase;
-}
-
-[_font~=upper] {
-  text-transform: uppercase;
-}
-
-[_font~=capitalize] {
-  text-transform: capitalize;
-}
-
-[_font~=bold] {
-  font-weight: bold;
-}
-
-[_font~=bolder] {
-  font-weight: bolder;
-}
-
-[_font~=lighter] {
-  font-weight: lighter;
-}
-
-[_font~=normal] {
-  font-weight: normal;
-}
-
-[_font~=italic] {
-  font-style: italic;
-}
-
-[_font~=mark],
-[_font~=hilight] {
-  background-color: #f9c866;
-  color: #1a1d2d;
-}
-
-[_font~=linethrough],
-[_font~=del] {
-  text-decoration: line-through;
-}
-
-[_font~=underline],
-[_font~=line] {
-  text-decoration: underline;
 }
 
 /*# sourceMappingURL=bubblegum.css.map */
