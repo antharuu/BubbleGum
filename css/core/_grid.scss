@@ -180,6 +180,13 @@
       &#{selector('col', $col, $size)} {
         width: $col / $GRID-columns * 100%;
       }
+      &#{selector('col', 'push-#{$col}', $size)} {
+        left: $col / $GRID-columns * 100%;
+      }
+
+      &#{selector('col', 'pull-#{$col}', $size)} {
+        left: 0 - $col / $GRID-columns * 100%;
+      }
 
       &#{selector('push', $col, $size)} {
         left: $col / $GRID-columns * 100%;
