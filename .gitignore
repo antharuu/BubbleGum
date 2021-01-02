@@ -4,3 +4,4 @@
 *.scss.map
 vendor
 node_modules
+/vendor/
