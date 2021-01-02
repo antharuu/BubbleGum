@@ -1,0 +1,23 @@
+{
+  "name": "bubblegum",
+  "version": "0.0.1",
+  "description": "CSS Framework",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "compile-sass": "sass css/bubblegum.scss:css/bubblegum.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antharuu/BubbleGum.git"
+  },
+  "author": "Antharuu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/antharuu/BubbleGum/issues"
+  },
+  "homepage": "https://github.com/antharuu/BubbleGum#readme",
+  "devDependencies": {
+    "sass": "^1.32.0"
+  }
+}

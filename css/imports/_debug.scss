@@ -1,0 +1,6 @@
+@import 'configuration';
+@import 'variables';
+
+#{selector('debug')} {
+  border: 1px solid red;
+}

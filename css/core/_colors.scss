@@ -1,0 +1,22 @@
+@include add-breakpoints using($size) {
+  @include add-color using($color) {
+    @include add-color using($color) {
+      #{selector('bg', $color, $size)} {
+        background-color: color-value($color);
+      }
+    }
+
+    @if $CONFIG_colors_variants {
+      @include add-logic using($i) {
+        #{selector('bg', '#{$color}-light-#{$i}', $size)} {
+          background-color: color-value($color, $i, true);
+        }
+      }
+      @include add-logic using($i) {
+        #{selector('bg', '#{$color}-dark-#{$i}', $size)} {
+          background-color: color-value($color, $i, false);
+        }
+      }
+    }
+  }
+}

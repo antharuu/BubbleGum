@@ -1,0 +1,81 @@
+@include add-breakpoints using($size) {
+  @include add-logic using($i) {
+    @if $i >= 1 and $i <= 6 {
+      h#{$i},
+      #{selector('font', 'h#{$i}', $size)} {
+        font-size: round($FONT-size * (9 - $i) *  0.3);
+      }
+    }
+  }
+
+  @include add-color using($color) {
+    #{selector('font', $color, $size)} {
+      color: color-value($color);
+    }
+  }
+
+  @if $CONFIG_colors_variants {
+    @include add-logic using($i) {
+      #{selector('font', '#{$color}-light-#{$i}', $size)} {
+        color: color-value($color, $i, true);
+      }
+    }
+    @include add-logic using($i) {
+      #{selector('font', '#{$color}-dark-#{$i}', $size)} {
+        color: color-value($color, $i, false);
+      }
+    }
+  }
+
+  #{selector('font', 'left', $size)} {
+    text-align: left;
+  }
+  #{selector('font', 'right', $size)} {
+    text-align: right;
+  }
+  #{selector('font', 'center', $size)} {
+    text-align: center;
+  }
+  #{selector('font', 'justify', $size)} {
+    text-align: justify;
+  }
+
+  #{selector('font', 'lower', $size)} {
+    text-transform: lowercase;
+  }
+  #{selector('font', 'upper', $size)} {
+    text-transform: uppercase;
+  }
+  #{selector('font', 'capitalize', $size)} {
+    text-transform: capitalize;
+  }
+
+  #{selector('font', 'bold', $size)} {
+    font-weight: bold;
+  }
+  #{selector('font', 'bolder', $size)} {
+    font-weight: bolder;
+  }
+  #{selector('font', 'lighter', $size)} {
+    font-weight: lighter;
+  }
+  #{selector('font', 'normal', $size)} {
+    font-weight: normal;
+  }
+  #{selector('font', 'italic', $size)} {
+    font-style: italic;
+  }
+  #{selector('font', 'mark', $size)},
+  #{selector('font', 'hilight', $size)} {
+    background-color: color-value('yellow', 4);
+    color: $COLOR-dark;
+  }
+  #{selector('font', 'linethrough', $size)},
+  #{selector('font', 'del', $size)}, {
+    text-decoration: line-through;
+  }
+  #{selector('font', 'underline', $size)},
+  #{selector('font', 'line', $size)}, {
+    text-decoration: underline;
+  }
+}

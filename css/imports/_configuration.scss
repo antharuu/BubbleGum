@@ -1,0 +1,17 @@
+$CONFIG_attribute_prefix: '_';
+$CONFIG_attribute_size_symbol: ':';
+
+$CONFIG_light_mode: true;
+
+$CONFIG_breakpoints: true;
+$CONFIG_colors_variants: true;
+
+$CONFIG_logic_max: 10;
+
+$CONFIG_show_debug_variables: false;
+
+@if $CONFIG_light_mode {
+  $CONFIG_breakpoints: false;
+  $CONFIG_colors_variants: false;
+  $CONFIG_logic_max: 10;
+}

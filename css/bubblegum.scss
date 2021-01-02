@@ -1,33 +1,23 @@
-@import 'components/reset';
+/******************************************************
+*  Bubblegum framework by Antharuu
+******************************************************/
 
-@import 'components/mixins';
+@import 'imports/configuration';
 
-:root {
-  --color-amber: #ff7f11;
-  --color-black: #1a1d2d;
-  --color-blue: #3169c4;
-  --color-brown: #823329;
-  --color-cyan: #1fa6c1;
-  --color-green: #3ccd65;
-  --color-grey: #7179ad;
-  --color-indigo: #473bf0;
-  --color-lime: #aad922;
-  --color-orange: #f34213;
-  --color-pink: #e43f6f;
-  --color-purple: #6564db;
-  --color-red: #f24236;
-  --color-teal: #00bfb2;
-  --color-white: #fbfaf8;
-  --color-yellow: #f7b32b;
-}
+@import 'imports/variables';
+@import 'imports/functions';
+@import 'imports/mixins';
 
-@import 'components/variables';
+@import 'core/reset';
+@import 'core/bases';
+@import 'core/grid';
+@import 'core/display';
+@import 'core/positions';
+@import 'core/margins';
+@import 'core/colors';
 
-@import 'components/grid';
-@import 'components/display';
-@import 'components/position';
-@import 'components/margins';
-@import 'components/colors';
-@import 'components/medias';
+@import 'bundle/prism';
 
-@import 'components/typo';
+@import 'core/typo';
+
+@import 'imports/breakpoints';

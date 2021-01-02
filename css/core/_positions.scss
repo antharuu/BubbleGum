@@ -1,0 +1,66 @@
+@include add-breakpoints using($size) {
+  #{selector('pos', 'static', $size)},
+  #{selector('position', 'static', $size)} {
+    position: static;
+  }
+  #{selector('pos', 'relative', $size)},
+  #{selector('position', 'relative', $size)} {
+    position: relative;
+  }
+  #{selector('pos', 'absolute', $size)},
+  #{selector('position', 'absolute', $size)} {
+    position: absolute;
+  }
+  #{selector('pos', 'fixed', $size)},
+  #{selector('position', 'fixed', $size)} {
+    position: fixed;
+  }
+  #{selector('pos', 'sticky', $size)},
+  #{selector('position', 'sticky', $size)} {
+    position: sticky;
+  }
+
+  #{selector('float', 'left', $size)} {
+    float: left;
+  }
+  #{selector('float', 'right', $size)} {
+    float: right;
+  }
+  #{selector('float', 'none', $size)} {
+    float: none;
+  }
+
+  #{selector('z', 'auto', $size)} {
+    z-index: auto;
+  }
+  @include add-logic using($i) {
+    #{selector('z', $i, $size)} {
+      z-index: $i;
+    }
+  }
+
+  #{selector('vertical', 'baseline', $size)} {
+    vertical-align: baseline;
+  }
+  #{selector('vertical', 'sub', $size)} {
+    vertical-align: sub;
+  }
+  #{selector('vertical', 'super', $size)} {
+    vertical-align: super;
+  }
+  #{selector('vertical', 'text-top', $size)} {
+    vertical-align: text-top;
+  }
+  #{selector('vertical', 'text-bottom', $size)} {
+    vertical-align: text-bottom;
+  }
+  #{selector('vertical', 'middle', $size)} {
+    vertical-align: middle;
+  }
+  #{selector('vertical', 'top', $size)} {
+    vertical-align: top;
+  }
+  #{selector('vertical', 'bottom', $size)} {
+    vertical-align: bottom;
+  }
+}

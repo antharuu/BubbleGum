@@ -10,7 +10,7 @@ $twig = new Environment($loader, [
     'cache' => false,
 ]);
 
-$version = '0.1 alpha';
+$version = '0.2 alpha';
 
 $separator = [
     'size' => ':'
@@ -20,7 +20,7 @@ $sizes = ['xs', 'md'];
 
 $logic = [
     'grid' => [
-        'container' => ['_' => ['', 'full']],
+        'container' => ['_' => ['', 'full', 'limited']],
         'row' => [
             '_' => [
                 '',

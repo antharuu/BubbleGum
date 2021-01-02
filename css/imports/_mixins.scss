@@ -1,0 +1,40 @@
+@import 'configuration';
+@import 'variables';
+@import 'functions';
+
+@mixin font-face($name, $file) {
+  $dir: 'fonts/';
+
+  @font-face {
+    font-family: "#{$name}";
+    src: url("#{$dir}#{$file}.eot");
+    src: url("#{$dir}#{$file}.eot?#iefix") format('embedded-opentype'),
+    url("#{$dir}#{$file}.woff") format('woff'),
+    url("#{$dir}#{$file}.ttf") format('truetype'),
+    url("#{$dir}#{$file}.svg?#webfont") format('svg');
+  }
+}
+
+@mixin add-breakpoints {
+  @content('');
+
+  @if $CONFIG_breakpoints {
+    @each $b-name, $size in $GRID-breakpoints {
+      @media screen and (min-width: $size) {
+        @content($b-name);
+      }
+    }
+  }
+}
+
+@mixin add-logic {
+  @for $i from 0 through $CONFIG_logic_max {
+    @content($i);
+  }
+}
+
+@mixin add-color {
+  @each $c-name, $color in $COLORS-all {
+    @content($c-name);
+  }
+}

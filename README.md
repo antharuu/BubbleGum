@@ -1,7 +1,7 @@
 # Bubblegum
  Simple and efficiency Css framework
 
-Current version: 0.1 alpha
+Current version: 0.2 alpha
 
 ## /!\ WORK IN PROGRESS /!\
 - [x] Grid
@@ -17,8 +17,8 @@ Current version: 0.1 alpha
     - [x] Padding
 - [x] Colors
 - [x] Typo
-- [x] Medias
-- [x] Shadow
+- [ ] Medias
+- [ ] Shadow
 - [ ] Table
 - [ ] Buttons
 - [ ] Nav

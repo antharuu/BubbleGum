@@ -1,0 +1,40 @@
+@include add-breakpoints using($size) {
+  #{selector('show', '', $size)},
+  #{selector('show', 'true', $size)},
+  #{selector('hide', 'false', $size)} {
+    display: block;
+  }
+  #{selector('hide', '', $size)},
+  #{selector('hide', 'true', $size)},
+  #{selector('show', 'false', $size)} {
+    display: none;
+  }
+
+  #{selector('display', 'flex', $size)} {
+    display: flex;
+  }
+  #{selector('display', 'none', $size)} {
+    display: none;
+  }
+  #{selector('display', 'block', $size)} {
+    display: block;
+  }
+  #{selector('display', 'inline', $size)} {
+    display: inline;
+  }
+  #{selector('display', 'flow', $size)} {
+    display: flow;
+  }
+  #{selector('display', 'ruby', $size)} {
+    display: ruby;
+  }
+  #{selector('display', 'grid', $size)} {
+    display: grid;
+  }
+  #{selector('display', 'table', $size)} {
+    display: table;
+  }
+  #{selector('display', 'contents', $size)} {
+    display: contents;
+  }
+}
