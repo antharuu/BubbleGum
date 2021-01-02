@@ -64,5 +64,11 @@
       margin-left: margin-calc($i);
       margin-right: margin-calc($i);
     }
+
+
+    #{selector('round', $i, $size)},
+    #{selector('r', $i, $size)} {
+      border-radius: margin-calc($i);
+    }
   }
 }
