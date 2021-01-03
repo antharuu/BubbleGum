@@ -1,5 +1,15 @@
 {
-    "require": {
-        "twig/twig": "^3.1"
+  "name": "antharuu/bubblegum",
+  "description": "Simple but different CSS Framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Antharuu",
+      "email": "antho.eclips@gmail.com"
     }
+  ],
+  "require": {
+    "twig/twig": "^3.1"
+  }
 }
