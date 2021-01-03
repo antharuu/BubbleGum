@@ -84,7 +84,7 @@ to use.
 - [x] Buttons
 - [ ] Nav
   - [x] Breadcrumb
-  - [ ] Footer
+  - [x] Footer
   - [ ] Navbar
   - [ ] Pagination
 - [ ] Cards
