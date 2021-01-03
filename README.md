@@ -2,6 +2,7 @@
 
 Simple and efficiency Css framework
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4d29b2e75bb7432c81708eecec2861ea)](https://app.codacy.com/gh/antharuu/BubbleGum?utm_source=github.com&utm_medium=referral&utm_content=antharuu/BubbleGum&utm_campaign=Badge_Grade)
 [![GitHub issues](https://img.shields.io/badge/Version-0.4%20alpha-orange?style=for-the-badge)](https://github.com/antharuu/BubbleGum/issues)
 
 ### A complete documentation will be done once I have completed the version 1.0.
