@@ -2,9 +2,7 @@
 
 Simple and efficiency Css framework
 
-[![GitHub issues](https://img.shields.io/github/stars/antharuu/BubbleGum?style=for-the-badge)](https://github.com/antharuu/BubbleGum/issues)
 [![GitHub issues](https://img.shields.io/badge/Version-0.4%20alpha-orange?style=for-the-badge)](https://github.com/antharuu/BubbleGum/issues)
-
 
 ### A complete documentation will be done once I have completed the version 1.0.
 
