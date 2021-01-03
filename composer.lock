@@ -4,7 +4,7 @@
     "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
     "This file is @generated automatically"
   ],
-  "content-hash": "3296d28674ed697a5eaa39654f252ded",
+  "content-hash": "f97e4954134397e09682a74c9d88ec89",
   "packages": [
     {
       "name": "symfony/polyfill-ctype",
@@ -15,16 +15,16 @@
         "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41"
       },
       "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
-                "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "suggest": {
-                "ext-ctype": "For best performance"
+        "type": "zip",
+        "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+        "reference": "f4ba089a5b6366e453971d3aad5fe8e897b37f41",
+        "shasum": ""
+      },
+      "require": {
+        "php": ">=7.1"
+      },
+      "suggest": {
+        "ext-ctype": "For best performance"
             },
             "type": "library",
             "extra": {

@@ -82,7 +82,7 @@ to use.
 - [x] Table
 - [x] Buttons
 - [ ] Nav
-  - [ ] Breadcrumb
+  - [x] Breadcrumb
   - [ ] Footer
   - [ ] Navbar
   - [ ] Pagination

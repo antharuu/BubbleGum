@@ -1,0 +1,27 @@
+@include add-breakpoints using($size) {
+  #{selector('breadcrumb', '', $size)} {
+    background-color: lighten($COLOR-muted, 25);
+    padding: $MARGIN-base * 3;
+    border-radius: $MARGIN-base;
+
+    > * {
+      text-decoration: none;
+      color: $COLOR-primary;
+      display: inline;
+
+      &:not(:first-child) {
+        margin-left: $MARGIN-base * 2;
+
+        &:before {
+          content: var(--nav-breadcrumb-symbol);
+          margin-right: $MARGIN-base * 2;
+          color: $COLOR-muted;
+        }
+      }
+
+      &:last-child {
+        color: $COLOR-muted;
+      }
+    }
+  }
+}
