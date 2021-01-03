@@ -13,14 +13,24 @@ In the idea it's just a css framework like many others, it's strongly inspired b
 however used differently and in a way that I find is more aesthetic for the html code and more practical and intuitive
 to use.
 
+## Installation
+
+You can simply download the project or the css on this github repository. Easier and cleaner ways to come.
+
+### With composer
+
+```
+composer require antharuu/bubblegum "v0.4.0-alpha"
+```
+
 ### Examples of equivalent use
 
 ```html
 <!-- BOOTSTRAP -->
 <div class="container">
-    <div class="row">
-        <div class="col-6"></div>
-    </div>
+  <div class="row">
+    <div class="col-6"></div>
+  </div>
 </div>
 
 <!-- BUBBLEGUM -->
@@ -66,9 +76,9 @@ to use.
 ## /!\ WORK IN PROGRESS /!\
 
 - [x] Grid
-    - [x] Container
-    - [x] Row
-    - [x] Col
+  - [x] Container
+  - [x] Row
+  - [x] Col
 - [x] Display
   - [x] Visible
   - [x] Display
