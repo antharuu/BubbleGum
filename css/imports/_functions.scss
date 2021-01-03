@@ -68,7 +68,7 @@
 }
 
 @function visible-color($color) {
-  @if lightness($color) <= 50 {
+  @if lightness($color) <= 65 {
     @return $COLOR-light;
   } @else {
     @return $COLOR-dark;

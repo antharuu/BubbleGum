@@ -1,10 +1,8 @@
 @include add-breakpoints using($size) {
   @include add-color using($color) {
-    @include add-color using($color) {
-      #{selector('bg', $color, $size)} {
-        background-color: color-value($color);
-        color: visible-color(color-value($color));
-      }
+    #{selector('bg', $color, $size)} {
+      background-color: color-value($color);
+      color: visible-color(color-value($color));
     }
 
     @if $CONFIG_colors_variants {

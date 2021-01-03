@@ -2,7 +2,7 @@
 
 Simple and efficiency Css framework
 
-Current version: 0.3 alpha
+Current version: 0.4 alpha
 
 ### A complete documentation will be done once I have completed the version 1.0.
 
@@ -80,7 +80,7 @@ to use.
 - [x] Medias
 - [x] Shadow
 - [x] Table
-- [ ] Buttons
+- [x] Buttons
 - [ ] Nav
   - [ ] Breadcrumb
   - [ ] Footer
