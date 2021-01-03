@@ -28,6 +28,16 @@
   width: 100%;
 }
 
+#{selector('footer')} {
+  @extend %clearfix;
+  max-width: none;
+  margin: 0 auto;
+  width: 100%;
+  background-color: $COLOR-primary;
+  padding: $MARGIN-base * 4 $MARGIN-base;
+  margin-top: $MARGIN-base * 4;
+}
+
 #{selector('row')} {
   @extend %clearfix;
 }
@@ -42,6 +52,23 @@
       max-width: 1280px;
     }
   }
+
+  #{selector('has', 'footer', $size)} {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+
+    > * {
+      &:not(#{selector('footer', 'sticky', $size)}) {
+        flex: 1 0 auto;
+      }
+    }
+
+    #{selector('footer', 'sticky', $size)} {
+      flex-shrink: 0;
+    }
+  }
+
 
   #{selector('row')} {
     align-content: start;
