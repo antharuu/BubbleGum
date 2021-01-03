@@ -7,13 +7,7 @@ Simple and efficiency Css framework
 
 A complete documentation will be done once I have completed the version 1.0.
 
-## USAGE
-
-In the idea it's just a css framework like many others, it's strongly inspired by bootstrap and tailwindcss. It is
-however used differently and in a way that I find is more aesthetic for the html code and more practical and intuitive
-to use.
-
-## Installation
+## INSTALLATION
 
 You can simply download the project or the css on this github repository. Easier and cleaner ways to come.
 
@@ -22,6 +16,12 @@ You can simply download the project or the css on this github repository. Easier
 ```
 composer require antharuu/bubblegum "v0.4.0-alpha"
 ```
+
+## USAGE
+
+In the idea it's just a css framework like many others, it's strongly inspired by bootstrap and tailwindcss. It is
+however used differently and in a way that I find is more aesthetic for the html code and more practical and intuitive
+to use.
 
 ### Examples of equivalent use
 
