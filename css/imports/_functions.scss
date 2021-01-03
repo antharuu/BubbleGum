@@ -66,3 +66,11 @@
 @function shadow-calc($start, $end: 0, $i: 1) {
   @return (round(($end - $start) / ($CONFIG_logic_max - 1)) * $i) * 1px;
 }
+
+@function visible-color($color) {
+  @if lightness($color) <= 50 {
+    @return $COLOR-light;
+  } @else {
+    @return $COLOR-dark;
+  }
+}

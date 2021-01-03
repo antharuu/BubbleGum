@@ -37,4 +37,41 @@
   #{selector('display', 'contents', $size)} {
     display: contents;
   }
+
+  #{selector('overflow', 'hidden', $size)} {
+    overflow: hidden;
+  }
+  #{selector('overflow', 'auto', $size)} {
+    overflow: auto;
+  }
+  #{selector('overflow', 'scroll', $size)} {
+    overflow: scroll;
+  }
+  #{selector('overflow', 'visible', $size)} {
+    overflow: visible;
+  }
+  #{selector('overflow', 'x-hidden', $size)} {
+    overflow-x: hidden;
+  }
+  #{selector('overflow', 'x-auto', $size)} {
+    overflow-x: auto;
+  }
+  #{selector('overflow', 'x-scroll', $size)} {
+    overflow-x: scroll;
+  }
+  #{selector('overflow', 'x-visible', $size)} {
+    overflow-x: visible;
+  }
+  #{selector('overflow', 'y-hidden', $size)} {
+    overflow-y: hidden;
+  }
+  #{selector('overflow', 'y-auto', $size)} {
+    overflow-y: auto;
+  }
+  #{selector('overflow', 'y-scroll', $size)} {
+    overflow-y: scroll;
+  }
+  #{selector('overflow', 'y-visible', $size)} {
+    overflow-y: visible;
+  }
 }

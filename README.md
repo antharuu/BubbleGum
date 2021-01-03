@@ -79,7 +79,7 @@ to use.
 - [x] Typo
 - [x] Medias
 - [x] Shadow
-- [ ] Table
+- [x] Table
 - [ ] Buttons
 - [ ] Nav
   - [ ] Breadcrumb

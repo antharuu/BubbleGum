@@ -3,6 +3,7 @@
     @include add-color using($color) {
       #{selector('bg', $color, $size)} {
         background-color: color-value($color);
+        color: visible-color(color-value($color));
       }
     }
 
@@ -10,11 +11,13 @@
       @include add-logic using($i) {
         #{selector('bg', '#{$color}-light-#{$i}', $size)} {
           background-color: color-value($color, $i, true);
+          color: visible-color(color-value($color, $i, false));
         }
       }
       @include add-logic using($i) {
         #{selector('bg', '#{$color}-dark-#{$i}', $size)} {
           background-color: color-value($color, $i, false);
+          color: visible-color(color-value($color, $i, false));
         }
       }
     }

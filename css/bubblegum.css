@@ -603,6 +603,54 @@ body {
   display: contents;
 }
 
+[_overflow~=hidden] {
+  overflow: hidden;
+}
+
+[_overflow~=auto] {
+  overflow: auto;
+}
+
+[_overflow~=scroll] {
+  overflow: scroll;
+}
+
+[_overflow~=visible] {
+  overflow: visible;
+}
+
+[_overflow~=x-hidden] {
+  overflow-x: hidden;
+}
+
+[_overflow~=x-auto] {
+  overflow-x: auto;
+}
+
+[_overflow~=x-scroll] {
+  overflow-x: scroll;
+}
+
+[_overflow~=x-visible] {
+  overflow-x: visible;
+}
+
+[_overflow~=y-hidden] {
+  overflow-y: hidden;
+}
+
+[_overflow~=y-auto] {
+  overflow-y: auto;
+}
+
+[_overflow~=y-scroll] {
+  overflow-y: scroll;
+}
+
+[_overflow~=y-visible] {
+  overflow-y: visible;
+}
+
 [_pos~=static],
 [_position~=static] {
   position: static;
@@ -718,6 +766,21 @@ body {
 
 [_vertical~=bottom] {
   vertical-align: bottom;
+}
+
+[_margin],
+[_m] {
+  margin: 5px;
+}
+
+[_padding],
+[_p] {
+  padding: 5px;
+}
+
+[_round],
+[_r] {
+  border-radius: 5px;
 }
 
 [_margin~="0"],
@@ -1589,2713 +1652,3384 @@ body {
   border-radius: 50px;
 }
 
-[_round],
-[_r] {
-  border-radius: 5px;
-}
-
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 [_bg~=red] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=pink] {
   background-color: #e43f6f;
+  color: #1a1d2d;
 }
 
 [_bg~=purple] {
   background-color: #6564db;
+  color: #1a1d2d;
 }
 
 [_bg~=indigo] {
   background-color: #473bf0;
+  color: #1a1d2d;
 }
 
 [_bg~=blue] {
   background-color: #3169c4;
+  color: #fbfaf8;
 }
 
 [_bg~=cyan] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=teal] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=green] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=lime] {
   background-color: #aad922;
+  color: #fbfaf8;
 }
 
 [_bg~=yellow] {
   background-color: #f7b32b;
+  color: #1a1d2d;
 }
 
 [_bg~=amber] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=orange] {
   background-color: #f34213;
+  color: #1a1d2d;
 }
 
 [_bg~=brown] {
   background-color: #823329;
+  color: #fbfaf8;
 }
 
 [_bg~=grey] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=black] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=white] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=transparent] {
   background-color: transparent;
+  color: #fbfaf8;
 }
 
 [_bg~=dark] {
   background-color: #1a1d2d;
+  color: #fbfaf8;
 }
 
 [_bg~=light] {
   background-color: #fbfaf8;
+  color: #1a1d2d;
 }
 
 [_bg~=primary] {
   background-color: #00bfb2;
+  color: #fbfaf8;
 }
 
 [_bg~=secondary] {
   background-color: #7179ad;
+  color: #1a1d2d;
 }
 
 [_bg~=success] {
   background-color: #3ccd65;
+  color: #1a1d2d;
 }
 
 [_bg~=info] {
   background-color: #1fa6c1;
+  color: #fbfaf8;
 }
 
 [_bg~=warning] {
   background-color: #ff7f11;
+  color: #1a1d2d;
 }
 
 [_bg~=danger] {
   background-color: #f24236;
+  color: #1a1d2d;
 }
 
 [_bg~=muted] {
   background-color: #6a74a9;
+  color: #1a1d2d;
 }
 
 h1,
@@ -4667,14 +5401,66 @@ pre[_code] {
 .token.important, .token.bold {
   font-weight: bold;
 }
+
 .token.italic {
   font-style: italic;
 }
+
 .token.entity {
   cursor: help;
 }
+
 .token.inserted {
   color: #3ccd65;
+}
+
+[_table] {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1em;
+  border-collapse: collapse;
+}
+
+[_table][_table~=striped] tbody tr:nth-of-type(2n+1) {
+  background-color: rgba(106, 116, 169, 0.2);
+}
+
+[_table][_table~=bordered] {
+  border: 1px solid rgba(106, 116, 169, 0.2);
+}
+
+[_table][_table~=bordered] th:not(:first-child),
+[_table][_table~=bordered] td:not(:first-child) {
+  border: 1px solid rgba(106, 116, 169, 0.2);
+}
+
+[_table][_table~=hover] tr:hover {
+  background-color: rgba(106, 116, 169, 0.3);
+}
+
+[_table][_table~=compact] th,
+[_table][_table~=compact] td {
+  padding: 0.3rem;
+}
+
+[_table] thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid rgba(106, 116, 169, 0.2);
+}
+
+[_table] tr td,
+[_table] tr th {
+  padding: 0.75rem;
+  vertical-align: top;
+}
+
+[_table] tr:not(:first-child) td,
+[_table] tr:not(:first-child) th {
+  border-top: 1px solid rgba(106, 116, 169, 0.2);
+}
+
+[_table] th {
+  text-align: inherit;
 }
 
 /*# sourceMappingURL=bubblegum.css.map */

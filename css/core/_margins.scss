@@ -1,4 +1,20 @@
 @include add-breakpoints using($size) {
+
+  #{selector('margin', '', $size)},
+  #{selector('m', '', $size)} {
+    margin: margin-calc(1);
+  }
+
+  #{selector('padding', '', $size)},
+  #{selector('p', '', $size)} {
+    padding: margin-calc(1);
+  }
+
+  #{selector('round', '', $size)},
+  #{selector('r', '', $size)} {
+    border-radius: margin-calc(1);
+  }
+
   @include add-logic using($i) {
     #{selector('margin', $i, $size)},
     #{selector('m', $i, $size)} {
@@ -70,10 +86,5 @@
     #{selector('r', $i, $size)} {
       border-radius: margin-calc($i);
     }
-  }
-
-  #{selector('round', '', $size)},
-  #{selector('r', '', $size)} {
-    border-radius: margin-calc(1);
   }
 }
