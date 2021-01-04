@@ -11,7 +11,7 @@
     &:not(:first-child) {
       margin-left: $MARGIN-base * 2;
 
-      &:before {
+      &::before {
         content: var(--nav-breadcrumb-symbol);
         margin-right: $MARGIN-base * 2;
         color: $COLOR-muted;
