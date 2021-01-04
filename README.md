@@ -16,7 +16,7 @@ You can simply download the project or the css on this github repository. Easier
 ### With composer
 
 ```
-composer require antharuu/bubblegum "v0.5.0-alpha"
+composer require antharuu/bubblegum "v0.6.0-alpha"
 ```
 
 ## USAGE
