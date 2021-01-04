@@ -27,7 +27,8 @@ composer require antharuu/bubblegum "v0.6.0-alpha"
 
 ### With CDN
 
-```
+```html
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@0.6.0/css/bubblegum.min.css">
 ```
 
