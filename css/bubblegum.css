@@ -1474,6 +1474,50 @@ body {
   text-align: center;
 }
 
+ul[_list][_list~=hoverable] > li:hover {
+  background-color: #cbcee1;
+}
+ul[_list] > li {
+  padding: 0.4rem 1rem;
+  background-color: #ebedf4;
+  text-decoration: none;
+  color: #00bfb2;
+  display: block;
+  margin: 0;
+  border: 1px solid #cbcee1;
+}
+ul[_list] > li:hover {
+  background-color: #cbcee1;
+}
+ul[_list] > li:first-child {
+  border-radius: 5px 5px 0 0;
+}
+ul[_list] > li:last-child {
+  border-radius: 0 0 5px 5px;
+}
+ul[_list] > li:last-child:first-child {
+  border-radius: 5px;
+}
+ul[_list][_list~=lg], ul[_list][_list~=large] {
+  padding: 0.5rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+ul[_list][_list~=sm], ul[_list][_list~=small] {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+ul[_list][_list~=block], ul[_list][_list~=full] {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
+  width: 100%;
+  text-align: center;
+}
+
 [_card] {
   padding: 15px;
   background-color: #fbfaf8;
@@ -1523,6 +1567,225 @@ body {
   top: -15px;
   object-fit: cover;
   max-height: 300px;
+}
+
+[_progress] {
+  height: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+[_progress] > div {
+  height: 100%;
+  background-color: #00bfb2;
+}
+[_progress][_progress~=red] > div {
+  background-color: #f24236;
+  border-color: #f24236;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=red] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=pink] > div {
+  background-color: #e43f6f;
+  border-color: #e43f6f;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=pink] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=purple] > div {
+  background-color: #6564db;
+  border-color: #6564db;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=purple] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=indigo] > div {
+  background-color: #473bf0;
+  border-color: #473bf0;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=indigo] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=blue] > div {
+  background-color: #3169c4;
+  border-color: #3169c4;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=blue] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=cyan] > div {
+  background-color: #1fa6c1;
+  border-color: #1fa6c1;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=cyan] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=teal] > div {
+  background-color: #00bfb2;
+  border-color: #00bfb2;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=teal] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=green] > div {
+  background-color: #3ccd65;
+  border-color: #3ccd65;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=green] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=lime] > div {
+  background-color: #aad922;
+  border-color: #aad922;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=lime] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=yellow] > div {
+  background-color: #f7b32b;
+  border-color: #f7b32b;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=yellow] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=amber] > div {
+  background-color: #ff7f11;
+  border-color: #ff7f11;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=amber] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=orange] > div {
+  background-color: #f34213;
+  border-color: #f34213;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=orange] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=brown] > div {
+  background-color: #823329;
+  border-color: #823329;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=brown] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=grey] > div {
+  background-color: #7179ad;
+  border-color: #7179ad;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=grey] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=black] > div {
+  background-color: #1a1d2d;
+  border-color: #1a1d2d;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=black] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=white] > div {
+  background-color: #fbfaf8;
+  border-color: #fbfaf8;
+  color: #1a1d2d !important;
+}
+[_progress][_progress~=white] > div * {
+  color: #1a1d2d !important;
+}
+[_progress][_progress~=transparent] > div {
+  background-color: transparent;
+  border-color: transparent;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=transparent] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=dark] > div {
+  background-color: #1a1d2d;
+  border-color: #1a1d2d;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=dark] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=light] > div {
+  background-color: #fbfaf8;
+  border-color: #fbfaf8;
+  color: #1a1d2d !important;
+}
+[_progress][_progress~=light] > div * {
+  color: #1a1d2d !important;
+}
+[_progress][_progress~=primary] > div {
+  background-color: #00bfb2;
+  border-color: #00bfb2;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=primary] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=secondary] > div {
+  background-color: #7179ad;
+  border-color: #7179ad;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=secondary] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=success] > div {
+  background-color: #3ccd65;
+  border-color: #3ccd65;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=success] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=info] > div {
+  background-color: #1fa6c1;
+  border-color: #1fa6c1;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=info] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=warning] > div {
+  background-color: #ff7f11;
+  border-color: #ff7f11;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=warning] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=danger] > div {
+  background-color: #f24236;
+  border-color: #f24236;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=danger] > div * {
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=muted] > div {
+  background-color: #6a74a9;
+  border-color: #6a74a9;
+  color: #fbfaf8 !important;
+}
+[_progress][_progress~=muted] > div * {
+  color: #fbfaf8 !important;
 }
 
 [_show],
@@ -2801,136 +3064,6 @@ body {
 [_size~=full] {
   width: 100%;
   height: 100%;
-}
-
-[_bg~=red] {
-  background-color: #f24236;
-  color: #fbfaf8;
-}
-
-[_bg~=pink] {
-  background-color: #e43f6f;
-  color: #fbfaf8;
-}
-
-[_bg~=purple] {
-  background-color: #6564db;
-  color: #fbfaf8;
-}
-
-[_bg~=indigo] {
-  background-color: #473bf0;
-  color: #fbfaf8;
-}
-
-[_bg~=blue] {
-  background-color: #3169c4;
-  color: #fbfaf8;
-}
-
-[_bg~=cyan] {
-  background-color: #1fa6c1;
-  color: #fbfaf8;
-}
-
-[_bg~=teal] {
-  background-color: #00bfb2;
-  color: #fbfaf8;
-}
-
-[_bg~=green] {
-  background-color: #3ccd65;
-  color: #fbfaf8;
-}
-
-[_bg~=lime] {
-  background-color: #aad922;
-  color: #fbfaf8;
-}
-
-[_bg~=yellow] {
-  background-color: #f7b32b;
-  color: #fbfaf8;
-}
-
-[_bg~=amber] {
-  background-color: #ff7f11;
-  color: #fbfaf8;
-}
-
-[_bg~=orange] {
-  background-color: #f34213;
-  color: #fbfaf8;
-}
-
-[_bg~=brown] {
-  background-color: #823329;
-  color: #fbfaf8;
-}
-
-[_bg~=grey] {
-  background-color: #7179ad;
-  color: #fbfaf8;
-}
-
-[_bg~=black] {
-  background-color: #1a1d2d;
-  color: #fbfaf8;
-}
-
-[_bg~=white] {
-  background-color: #fbfaf8;
-  color: #1a1d2d;
-}
-
-[_bg~=transparent] {
-  background-color: transparent;
-  color: #fbfaf8;
-}
-
-[_bg~=dark] {
-  background-color: #1a1d2d;
-  color: #fbfaf8;
-}
-
-[_bg~=light] {
-  background-color: #fbfaf8;
-  color: #1a1d2d;
-}
-
-[_bg~=primary] {
-  background-color: #00bfb2;
-  color: #fbfaf8;
-}
-
-[_bg~=secondary] {
-  background-color: #7179ad;
-  color: #fbfaf8;
-}
-
-[_bg~=success] {
-  background-color: #3ccd65;
-  color: #fbfaf8;
-}
-
-[_bg~=info] {
-  background-color: #1fa6c1;
-  color: #fbfaf8;
-}
-
-[_bg~=warning] {
-  background-color: #ff7f11;
-  color: #fbfaf8;
-}
-
-[_bg~=danger] {
-  background-color: #f24236;
-  color: #fbfaf8;
-}
-
-[_bg~=muted] {
-  background-color: #6a74a9;
-  color: #fbfaf8;
 }
 
 h1,
@@ -4912,6 +5045,136 @@ h6,
 
 [_shadow~="10"] {
   box-shadow: 0 20px 40px 0px rgba(26, 29, 45, 0.14), 0 10px 50px 10px rgba(26, 29, 45, 0.12), 0 10px 10px -10px rgba(26, 29, 45, 0.2);
+}
+
+[_bg~=red] {
+  background-color: #f24236;
+  color: #fbfaf8;
+}
+
+[_bg~=pink] {
+  background-color: #e43f6f;
+  color: #fbfaf8;
+}
+
+[_bg~=purple] {
+  background-color: #6564db;
+  color: #fbfaf8;
+}
+
+[_bg~=indigo] {
+  background-color: #473bf0;
+  color: #fbfaf8;
+}
+
+[_bg~=blue] {
+  background-color: #3169c4;
+  color: #fbfaf8;
+}
+
+[_bg~=cyan] {
+  background-color: #1fa6c1;
+  color: #fbfaf8;
+}
+
+[_bg~=teal] {
+  background-color: #00bfb2;
+  color: #fbfaf8;
+}
+
+[_bg~=green] {
+  background-color: #3ccd65;
+  color: #fbfaf8;
+}
+
+[_bg~=lime] {
+  background-color: #aad922;
+  color: #fbfaf8;
+}
+
+[_bg~=yellow] {
+  background-color: #f7b32b;
+  color: #fbfaf8;
+}
+
+[_bg~=amber] {
+  background-color: #ff7f11;
+  color: #fbfaf8;
+}
+
+[_bg~=orange] {
+  background-color: #f34213;
+  color: #fbfaf8;
+}
+
+[_bg~=brown] {
+  background-color: #823329;
+  color: #fbfaf8;
+}
+
+[_bg~=grey] {
+  background-color: #7179ad;
+  color: #fbfaf8;
+}
+
+[_bg~=black] {
+  background-color: #1a1d2d;
+  color: #fbfaf8;
+}
+
+[_bg~=white] {
+  background-color: #fbfaf8;
+  color: #1a1d2d;
+}
+
+[_bg~=transparent] {
+  background-color: transparent;
+  color: #fbfaf8;
+}
+
+[_bg~=dark] {
+  background-color: #1a1d2d;
+  color: #fbfaf8;
+}
+
+[_bg~=light] {
+  background-color: #fbfaf8;
+  color: #1a1d2d;
+}
+
+[_bg~=primary] {
+  background-color: #00bfb2;
+  color: #fbfaf8;
+}
+
+[_bg~=secondary] {
+  background-color: #7179ad;
+  color: #fbfaf8;
+}
+
+[_bg~=success] {
+  background-color: #3ccd65;
+  color: #fbfaf8;
+}
+
+[_bg~=info] {
+  background-color: #1fa6c1;
+  color: #fbfaf8;
+}
+
+[_bg~=warning] {
+  background-color: #ff7f11;
+  color: #fbfaf8;
+}
+
+[_bg~=danger] {
+  background-color: #f24236;
+  color: #fbfaf8;
+}
+
+[_bg~=muted] {
+  background-color: #6a74a9;
+  color: #fbfaf8;
 }
 
 /******************************************************

@@ -1,0 +1,56 @@
+@include add-breakpoints using($size) {
+  #{selector('progress')} {
+    height: 25px;
+    border-radius: $MARGIN-base;
+    overflow: hidden;
+    margin: $MARGIN-base 0;
+
+    > div {
+      height: 100%;
+      background-color: $COLOR-primary;
+    }
+
+    @include add-color using($color) {
+      &#{selector('progress', $color, $size)} {
+        > div {
+          background-color: color-value($color);
+          border-color: color-value($color);
+          color: visible-color(color-value($color,)) !important;
+
+          * {
+            color: visible-color(color-value($color,)) !important;
+          }
+        }
+      }
+
+      @if $CONFIG_colors_variants {
+        @include add-logic using($i) {
+          &#{selector('progress', '#{$color}-light-#{$i}', $size)} {
+            > div {
+              background-color: color-value($color, $i, true);
+              border-color: color-value($color, $i, true);
+              color: visible-color(color-value($color, $i, false)) !important;
+
+              * {
+                color: visible-color(color-value($color,)) !important;
+              }
+            }
+          }
+        }
+        @include add-logic using($i) {
+          &#{selector('progress', '#{$color}-dark-#{$i}', $size)} {
+            > div {
+              background-color: color-value($color, $i, false);
+              border-color: color-value($color, $i, false);
+              color: visible-color(color-value($color, $i, false)) !important;
+
+              * {
+                color: visible-color(color-value($color,)) !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

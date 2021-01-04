@@ -167,4 +167,67 @@
       }
     }
   }
+
+
+  ul#{selector('list', '', $size)} {
+
+    &#{selector('list', 'hoverable')} {
+      > li:hover {
+        background-color: lighten($COLOR-muted, 30);
+      }
+    }
+
+    > li {
+      padding: .4rem 1rem;
+      background-color: lighten($COLOR-muted, 40);
+      text-decoration: none;
+      color: $COLOR-primary;
+      display: block;
+      margin: 0;
+      border: 1px solid lighten($COLOR-muted, 30);
+
+      &:hover {
+        background-color: lighten($COLOR-muted, 30);
+      }
+
+
+      &:first-child {
+        border-radius: $MARGIN-base $MARGIN-base 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 $MARGIN-base $MARGIN-base;
+
+        &:first-child {
+          border-radius: $MARGIN-base;
+        }
+      }
+    }
+
+    &#{selector('list', 'lg', $size)},
+    &#{selector('list', 'large', $size)} {
+      padding: .5rem 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.5;
+    }
+
+    &#{selector('list', 'sm', $size)},
+    &#{selector('list', 'small', $size)} {
+      padding: .25rem .75rem;
+      font-size: .8rem;
+      line-height: 1.5;
+    }
+
+    &#{selector('list', 'block', $size)},
+    &#{selector('list', 'full', $size)} {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+
+      > * {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 }
