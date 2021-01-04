@@ -1,16 +1,29 @@
 {
-  "name": "bubblegum",
-  "version": "0.0.1",
-  "description": "CSS Framework",
+  "name": "bubblegum-css",
+  "version": "0.6.0",
+  "description": "Simple and efficiency Css framework",
   "main": "main.js",
+  "keywords": [
+    "css",
+    "bubblegum",
+    "bubble",
+    "gum",
+    "attributes",
+    "bootstrap",
+    "framework",
+    "scss",
+    "sass"
+  ],
   "scripts": {
-    "WATCH SASS": "sass --watch css/bubblegum.scss:css/bubblegum.css"
+    "WATCH SASS": "sass --watch css/bubblegum.scss:css/bubblegum.css",
+    "COMPILE SASS": "sass --indented css/bubblegum.scss:css/bubblegum.min.css",
+    "COMPILE SASS MIN": "sass --style=compressed css/bubblegum.scss:css/bubblegum.min.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/antharuu/BubbleGum.git"
   },
-  "author": "Antharuu",
+  "author": "Antharuu <antho.eclips@gmail.com> (https://github.com/antharuu/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/antharuu/BubbleGum/issues"

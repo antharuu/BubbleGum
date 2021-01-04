@@ -13,10 +13,22 @@ A complete documentation will be done once I have completed the version 1.0.
 
 You can simply download the project or the css on this github repository. Easier and cleaner ways to come.
 
+### With npm
+
+```
+npm i bubblegum-css
+```
+
 ### With composer
 
 ```
 composer require antharuu/bubblegum "v0.6.0-alpha"
+```
+
+### With CDN
+
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@0.6.0/css/bubblegum.min.css">
 ```
 
 ## USAGE
