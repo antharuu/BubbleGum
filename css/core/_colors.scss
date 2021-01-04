@@ -1,22 +1,20 @@
-@include add-breakpoints using($size) {
-  @include add-color using($color) {
-    #{selector('bg', $color, $size)} {
-      background-color: color-value($color);
-      color: visible-color(color-value($color));
-    }
+@include add-color using($color) {
+  #{selector('bg', $color)} {
+    background-color: color-value($color);
+    color: visible-color(color-value($color));
+  }
 
-    @if $CONFIG_colors_variants {
-      @include add-logic using($i) {
-        #{selector('bg', '#{$color}-light-#{$i}', $size)} {
-          background-color: color-value($color, $i, true);
-          color: visible-color(color-value($color, $i, false));
-        }
+  @if $CONFIG_colors_variants and $color != 'transparent' {
+    @include add-logic using($i) {
+      #{selector('bg', '#{$color}-light-#{$i}')} {
+        background-color: color-value($color, $i, true);
+        color: visible-color(color-value($color, $i, false));
       }
-      @include add-logic using($i) {
-        #{selector('bg', '#{$color}-dark-#{$i}', $size)} {
-          background-color: color-value($color, $i, false);
-          color: visible-color(color-value($color, $i, false));
-        }
+    }
+    @include add-logic using($i) {
+      #{selector('bg', '#{$color}-dark-#{$i}')} {
+        background-color: color-value($color, $i, false);
+        color: visible-color(color-value($color, $i, false));
       }
     }
   }

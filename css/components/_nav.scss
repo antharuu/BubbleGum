@@ -1,233 +1,231 @@
-@include add-breakpoints using($size) {
-  #{selector('breadcrumb', '', $size)} {
-    background-color: lighten($COLOR-muted, 25);
-    padding: $MARGIN-base * 3;
-    border-radius: $MARGIN-base;
+#{selector('breadcrumb', '')} {
+  background-color: lighten($COLOR-muted, 25);
+  padding: $MARGIN-base * 3;
+  border-radius: $MARGIN-base;
 
-    > * {
-      text-decoration: none;
-      color: $COLOR-primary;
-      display: inline;
+  > * {
+    text-decoration: none;
+    color: $COLOR-primary;
+    display: inline;
 
-      &:not(:first-child) {
-        margin-left: $MARGIN-base * 2;
+    &:not(:first-child) {
+      margin-left: $MARGIN-base * 2;
 
-        &:before {
-          content: var(--nav-breadcrumb-symbol);
-          margin-right: $MARGIN-base * 2;
-          color: $COLOR-muted;
-        }
-      }
-
-      &:last-child {
+      &:before {
+        content: var(--nav-breadcrumb-symbol);
+        margin-right: $MARGIN-base * 2;
         color: $COLOR-muted;
       }
     }
+
+    &:last-child {
+      color: $COLOR-muted;
+    }
+  }
+}
+
+#{selector('navbar')} {
+  background-color: $COLOR-primary;
+  padding: $MARGIN-base * 6 0;
+  font-size: 1.2rem;
+
+  &#{selector('navbar', 'fixed')} {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
   }
 
-  #{selector('navbar')} {
-    background-color: $COLOR-primary;
-    padding: $MARGIN-base * 6 0;
-    font-size: 1.2rem;
+  #{selector('row')} {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 $MARGIN-base * 7;
 
-    &#{selector('navbar', 'fixed')} {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
+    #{selector('brand')} {
+      font-weight: bold;
+      font-size: 1.35em;
     }
 
-    #{selector('row')} {
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      margin: 0 $MARGIN-base * 7;
+    > div {
+      width: 100%;
 
-      #{selector('brand')} {
-        font-weight: bold;
-        font-size: 1.35em;
+      &:first-child {
+        text-align: left;
+
+        :not(:first-child) {
+          margin-left: $MARGIN-base * 2;
+        }
       }
 
-      > div {
-        width: 100%;
+      &:last-child {
+        text-align: right;
 
         &:first-child {
           text-align: left;
-
-          :not(:first-child) {
-            margin-left: $MARGIN-base * 2;
-          }
         }
 
-        &:last-child {
-          text-align: right;
-
-          &:first-child {
-            text-align: left;
-          }
-
-          :not(:last-child) {
-            margin-right: $MARGIN-base * 2;
-          }
-        }
-
-        * {
-          display: inline;
-          color: $COLOR-light;
-        }
-
-        a {
-          color: $COLOR-light;
-          text-decoration: none;
+        :not(:last-child) {
+          margin-right: $MARGIN-base * 2;
         }
       }
 
-      @media screen and (max-width: map-get($GRID-breakpoints, 'sm')) {
-        flex-wrap: wrap;
+      * {
+        display: inline;
+        color: $COLOR-light;
+      }
+
+      a {
+        color: $COLOR-light;
+        text-decoration: none;
+      }
+    }
+
+    @media screen and (max-width: map-get($GRID-breakpoints, 'sm')) {
+      flex-wrap: wrap;
+      padding: 0;
+      > * {
         padding: 0;
-        > * {
-          padding: 0;
-          width: 100%;
+        width: 100%;
 
-          &:first-child,
-          &:last-child {
-            margin: 0 !important;
-
-            > * {
-              margin: 0 !important;
-            }
-          }
+        &:first-child,
+        &:last-child {
+          margin: 0 !important;
 
           > * {
-            margin: 0;
-            display: block !important;
-            text-align: center;
+            margin: 0 !important;
           }
         }
-      }
-    }
 
-    @include colorised('navbar', $size);
-  }
-
-  #{selector('pagination', '', $size)} {
-    > a {
-      padding: .4rem 1rem;
-      background-color: lighten($COLOR-muted, 40);
-      text-decoration: none;
-      color: $COLOR-primary;
-      display: inline;
-      margin: 0;
-      border: 1px solid lighten($COLOR-muted, 30);
-
-      &:hover {
-        background-color: lighten($COLOR-muted, 30);
-      }
-
-      &:not(:first-child) {
-        margin-left: -$MARGIN-base - 1;
-      }
-
-      &:first-child {
-        border-radius: $MARGIN-base 0 0 $MARGIN-base;
-      }
-
-      &:last-child {
-        border-radius: 0 $MARGIN-base $MARGIN-base 0;
-
-        &:first-child {
-          border-radius: $MARGIN-base;
+        > * {
+          margin: 0;
+          display: block !important;
+          text-align: center;
         }
-      }
-    }
-
-    &#{selector('pagination', 'lg', $size)},
-    &#{selector('pagination', 'large', $size)} {
-      padding: .5rem 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-    }
-
-    &#{selector('pagination', 'sm', $size)},
-    &#{selector('pagination', 'small', $size)} {
-      padding: .25rem .75rem;
-      font-size: .8rem;
-      line-height: 1.5;
-    }
-
-    &#{selector('pagination', 'block', $size)},
-    &#{selector('pagination', 'full', $size)} {
-      width: 100%;
-      display: flex;
-      flex-wrap: nowrap;
-
-      > * {
-        width: 100%;
-        text-align: center;
       }
     }
   }
 
+  @include colorised('navbar');
+}
 
-  ul#{selector('list', '', $size)} {
+#{selector('pagination', '')} {
+  > a {
+    padding: .4rem 1rem;
+    background-color: lighten($COLOR-muted, 40);
+    text-decoration: none;
+    color: $COLOR-primary;
+    display: inline;
+    margin: 0;
+    border: 1px solid lighten($COLOR-muted, 30);
 
-    &#{selector('list', 'hoverable')} {
-      > li:hover {
-        background-color: lighten($COLOR-muted, 30);
-      }
+    &:hover {
+      background-color: lighten($COLOR-muted, 30);
     }
 
-    > li {
-      padding: .4rem 1rem;
-      background-color: lighten($COLOR-muted, 40);
-      text-decoration: none;
-      color: $COLOR-primary;
-      display: block;
-      margin: 0;
-      border: 1px solid lighten($COLOR-muted, 30);
+    &:not(:first-child) {
+      margin-left: -$MARGIN-base - 1;
+    }
 
-      &:hover {
-        background-color: lighten($COLOR-muted, 30);
-      }
+    &:first-child {
+      border-radius: $MARGIN-base 0 0 $MARGIN-base;
+    }
 
+    &:last-child {
+      border-radius: 0 $MARGIN-base $MARGIN-base 0;
 
       &:first-child {
-        border-radius: $MARGIN-base $MARGIN-base 0 0;
-      }
-
-      &:last-child {
-        border-radius: 0 0 $MARGIN-base $MARGIN-base;
-
-        &:first-child {
-          border-radius: $MARGIN-base;
-        }
+        border-radius: $MARGIN-base;
       }
     }
+  }
 
-    &#{selector('list', 'lg', $size)},
-    &#{selector('list', 'large', $size)} {
-      padding: .5rem 1.25rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-    }
+  &#{selector('pagination', 'lg')},
+  &#{selector('pagination', 'large')} {
+    padding: .5rem 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
 
-    &#{selector('list', 'sm', $size)},
-    &#{selector('list', 'small', $size)} {
-      padding: .25rem .75rem;
-      font-size: .8rem;
-      line-height: 1.5;
-    }
+  &#{selector('pagination', 'sm')},
+  &#{selector('pagination', 'small')} {
+    padding: .25rem .75rem;
+    font-size: .8rem;
+    line-height: 1.5;
+  }
 
-    &#{selector('list', 'block', $size)},
-    &#{selector('list', 'full', $size)} {
+  &#{selector('pagination', 'block')},
+  &#{selector('pagination', 'full')} {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    > * {
       width: 100%;
-      display: flex;
-      flex-wrap: nowrap;
+      text-align: center;
+    }
+  }
+}
 
-      > * {
-        width: 100%;
-        text-align: center;
+
+ul#{selector('list', '')} {
+
+  &#{selector('list', 'hoverable')} {
+    > li:hover {
+      background-color: lighten($COLOR-muted, 30);
+    }
+  }
+
+  > li {
+    padding: .4rem 1rem;
+    background-color: lighten($COLOR-muted, 40);
+    text-decoration: none;
+    color: $COLOR-primary;
+    display: block;
+    margin: 0;
+    border: 1px solid lighten($COLOR-muted, 30);
+
+    &:hover {
+      background-color: lighten($COLOR-muted, 30);
+    }
+
+
+    &:first-child {
+      border-radius: $MARGIN-base $MARGIN-base 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 $MARGIN-base $MARGIN-base;
+
+      &:first-child {
+        border-radius: $MARGIN-base;
       }
+    }
+  }
+
+  &#{selector('list', 'lg')},
+  &#{selector('list', 'large')} {
+    padding: .5rem 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  &#{selector('list', 'sm')},
+  &#{selector('list', 'small')} {
+    padding: .25rem .75rem;
+    font-size: .8rem;
+    line-height: 1.5;
+  }
+
+  &#{selector('list', 'block')},
+  &#{selector('list', 'full')} {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+
+    > * {
+      width: 100%;
+      text-align: center;
     }
   }
 }

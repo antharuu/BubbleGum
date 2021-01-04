@@ -1,90 +1,88 @@
-@include add-breakpoints using($size) {
-  @include add-logic using($i) {
-    @if $i >= 1 and $i <= 6 {
-      h#{$i},
-      #{selector('font', 'h#{$i}', $size)} {
-        font-size: round($FONT-size * (9 - $i) *  0.3);
+@include add-logic using($i) {
+  @if $i >= 1 and $i <= 6 {
+    h#{$i},
+    #{selector('font', 'h#{$i}')} {
+      font-size: round($FONT-size * (9 - $i) *  0.3);
+    }
+  }
+}
+
+@include add-color using($color) {
+  #{selector('color', $color)},
+  #{selector('font', $color)} {
+    color: color-value($color);
+  }
+
+  @if $CONFIG_colors_variants {
+    @include add-logic using($i) {
+      #{selector('color', '#{$color}-light-#{$i}')},
+      #{selector('font', '#{$color}-light-#{$i}')} {
+        color: color-value($color, $i, true);
+      }
+    }
+    @include add-logic using($i) {
+      #{selector('color', '#{$color}-dark-#{$i}')},
+      #{selector('font', '#{$color}-dark-#{$i}')} {
+        color: color-value($color, $i, false);
       }
     }
   }
 
-  @include add-color using($color) {
-    #{selector('color', $color, $size)},
-    #{selector('font', $color, $size)} {
-      color: color-value($color);
-    }
-
-    @if $CONFIG_colors_variants {
-      @include add-logic using($i) {
-        #{selector('color', '#{$color}-light-#{$i}', $size)},
-        #{selector('font', '#{$color}-light-#{$i}', $size)} {
-          color: color-value($color, $i, true);
-        }
-      }
-      @include add-logic using($i) {
-        #{selector('color', '#{$color}-dark-#{$i}', $size)},
-        #{selector('font', '#{$color}-dark-#{$i}', $size)} {
-          color: color-value($color, $i, false);
-        }
-      }
-    }
-
-    #{selector('font', 'left', $size)} {
-      text-align: left;
-    }
-    #{selector('font', 'right', $size)} {
-      text-align: right;
-    }
-    #{selector('font', 'center', $size)} {
-      text-align: center;
-    }
-    #{selector('font', 'justify', $size)} {
-      text-align: justify;
-    }
-
-    #{selector('font', 'lower', $size)} {
-      text-transform: lowercase;
-    }
-    #{selector('font', 'upper', $size)} {
-      text-transform: uppercase;
-    }
-    #{selector('font', 'capitalize', $size)} {
-      text-transform: capitalize;
-    }
-
-    #{selector('font', 'bold', $size)} {
-      font-weight: bold;
-    }
-    #{selector('font', 'bolder', $size)} {
-      font-weight: bolder;
-    }
-    #{selector('font', 'lighter', $size)} {
-      font-weight: lighter;
-    }
-    #{selector('font', 'normal', $size)} {
-      font-weight: normal;
-    }
-    #{selector('font', 'italic', $size)} {
-      font-style: italic;
-    }
-    #{selector('font', 'mark', $size)},
-    #{selector('font', 'hilight', $size)} {
-      background-color: color-value('yellow', 4);
-      color: $COLOR-dark;
-    }
-
-    #{selector('decoration', 'linethrough', $size)},
-    #{selector('decoration', 'del', $size)} {
-      text-decoration: line-through;
-    }
-    #{selector('decoration', 'underline', $size)},
-    #{selector('decoration', 'line', $size)} {
-      text-decoration: underline;
-    }
-
-    #{selector('decoration', 'none', $size)} {
-      text-decoration: none;
-    }
-
+  #{selector('font', 'left')} {
+    text-align: left;
   }
+  #{selector('font', 'right')} {
+    text-align: right;
+  }
+  #{selector('font', 'center')} {
+    text-align: center;
+  }
+  #{selector('font', 'justify')} {
+    text-align: justify;
+  }
+
+  #{selector('font', 'lower')} {
+    text-transform: lowercase;
+  }
+  #{selector('font', 'upper')} {
+    text-transform: uppercase;
+  }
+  #{selector('font', 'capitalize')} {
+    text-transform: capitalize;
+  }
+
+  #{selector('font', 'bold')} {
+    font-weight: bold;
+  }
+  #{selector('font', 'bolder')} {
+    font-weight: bolder;
+  }
+  #{selector('font', 'lighter')} {
+    font-weight: lighter;
+  }
+  #{selector('font', 'normal')} {
+    font-weight: normal;
+  }
+  #{selector('font', 'italic')} {
+    font-style: italic;
+  }
+  #{selector('font', 'mark')},
+  #{selector('font', 'hilight')} {
+    background-color: color-value('yellow', 4);
+    color: $COLOR-dark;
+  }
+
+  #{selector('decoration', 'linethrough')},
+  #{selector('decoration', 'del')} {
+    text-decoration: line-through;
+  }
+  #{selector('decoration', 'underline')},
+  #{selector('decoration', 'line')} {
+    text-decoration: underline;
+  }
+
+  #{selector('decoration', 'none')} {
+    text-decoration: none;
+  }
+
 }

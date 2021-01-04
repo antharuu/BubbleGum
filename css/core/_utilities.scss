@@ -1,21 +1,21 @@
 @include add-breakpoints using($size) {
   @for $i from 0 through 20 {
     $i: $i * 5;
-    #{selector('size', 'w-#{$i}')} {
+    #{selector('size', 'w-#{$i}', $size)} {
       width: $i * 1%;
     }
-    #{selector('size', 'h-#{$i}')} {
+    #{selector('size', 'h-#{$i}', $size)} {
       height: $i * 1%;
     }
   }
 
-  #{selector('size', 'w-full')} {
+  #{selector('size', 'w-full', $size)} {
     width: 100%;
   }
-  #{selector('size', 'h-full')} {
+  #{selector('size', 'h-full', $size)} {
     height: 100%;
   }
-  #{selector('size', 'full')} {
+  #{selector('size', 'full', $size)} {
     width: 100%;
     height: 100%;
   }

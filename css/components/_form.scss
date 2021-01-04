@@ -15,42 +15,40 @@ $inputs-text: (
         'textarea'
 );
 
-@include add-breakpoints() using($size) {
-  #{selector('form-group')} {
-    margin-bottom: $MARGIN-base * 3;
+#{selector('form-group')} {
+  margin-bottom: $MARGIN-base * 3;
 
-    > * {
-      display: block;
-      width: 100%;
-    }
+  > * {
+    display: block;
+    width: 100%;
+  }
 
 
-    label {
-      width: 100%;
+  label {
+    width: 100%;
+    margin: $MARGIN-base 0;
+  }
+
+  @each $input in $inputs-text {
+    #{$input} {
       margin: $MARGIN-base 0;
+      padding: $MARGIN-base * 2 $MARGIN-base * 3;
+      font-size: 1em;
+      border-radius: $MARGIN-base;
+      border: 1px solid $COLOR-muted;
+      font-family: 'Montserrat', sans-serif;
     }
+  }
 
-    @each $input in $inputs-text {
-      #{$input} {
-        margin: $MARGIN-base 0;
-        padding: $MARGIN-base * 2 $MARGIN-base * 3;
-        font-size: 1em;
-        border-radius: $MARGIN-base;
-        border: 1px solid $COLOR-muted;
-        font-family: 'Montserrat', sans-serif;
-      }
-    }
+  textarea {
+    resize: vertical;
+    min-height: $MARGIN-base * 8 + 2px;
+  }
 
-    textarea {
-      resize: vertical;
-      min-height: $MARGIN-base * 8 + 2px;
-    }
-
-    &#{selector('form-group', 'inline', $size)} {
-      > * {
-        display: inline-block;
-        width: auto;
-      }
+  &#{selector('form-group', 'inline')} {
+    > * {
+      display: inline-block;
+      width: auto;
     }
   }
 }

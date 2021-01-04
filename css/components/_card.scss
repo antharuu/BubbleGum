@@ -1,58 +1,56 @@
-@include add-breakpoints() using($size) {
-  $color: transparentize($COLOR-dark, 1);
+$color: transparentize($COLOR-dark, 1);
 
-  #{selector('card')} {
-    padding: $MARGIN-base * 3;
-    background-color: $COLOR-light;
-    color: $COLOR-dark;
-    border-radius: $MARGIN-base;
-    box-shadow: 0 shadow-calc(2, 24, 1) shadow-calc(2, 38, 1) shadow-calc(0, 3, 1) opacify($color, .14),
-    0 shadow-calc(3, 9, 1) shadow-calc(1, 46, 1) shadow-calc(-2, 8, 1) opacify($color, .12),
-    0 shadow-calc(1, 11, 1) shadow-calc(5, 15, 1) shadow-calc(0, -7, 1) opacify($color, .2);
+#{selector('card')} {
+  padding: $MARGIN-base * 3;
+  background-color: $COLOR-light;
+  color: $COLOR-dark;
+  border-radius: $MARGIN-base;
+  box-shadow: 0 shadow-calc(2, 24, 1) shadow-calc(2, 38, 1) shadow-calc(0, 3, 1) opacify($color, .14),
+  0 shadow-calc(3, 9, 1) shadow-calc(1, 46, 1) shadow-calc(-2, 8, 1) opacify($color, .12),
+  0 shadow-calc(1, 11, 1) shadow-calc(5, 15, 1) shadow-calc(0, -7, 1) opacify($color, .2);
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      line-height: 1.3em;
-      margin-bottom: .2rem;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.3em;
+    margin-bottom: .2rem;
 
-      &:not(:first-child) {
-        opacity: .8;
-      }
+    &:not(:first-child) {
+      opacity: .8;
     }
+  }
 
-    p {
-      opacity: .95;
-    }
+  p {
+    opacity: .95;
+  }
 
-    #{selector('btn')} {
-      margin-top: $MARGIN-base * 2;
-      display: inline-block;
-    }
+  #{selector('btn')} {
+    margin-top: $MARGIN-base * 2;
+    display: inline-block;
+  }
 
-    a {
-      text-decoration: none;
-      margin-top: $MARGIN-base * 4;
-      display: inline-block;
-      color: $COLOR-primary
-    }
+  a {
+    text-decoration: none;
+    margin-top: $MARGIN-base * 4;
+    display: inline-block;
+    color: $COLOR-primary
+  }
 
-    hr {
-      border-color: lighten($COLOR-muted, 30);
-      width: 80%;
-    }
+  hr {
+    border-color: lighten($COLOR-muted, 30);
+    width: 80%;
+  }
 
-    img {
-      border-radius: $MARGIN-base $MARGIN-base 0 0;
-      width: calc(100% + 30px);
-      position: relative;
-      left: - $MARGIN-base * 3;
-      top: - $MARGIN-base * 3;
-      object-fit: cover;
-      max-height: 300px;
-    }
+  img {
+    border-radius: $MARGIN-base $MARGIN-base 0 0;
+    width: calc(100% + 30px);
+    position: relative;
+    left: - $MARGIN-base * 3;
+    top: - $MARGIN-base * 3;
+    object-fit: cover;
+    max-height: 300px;
   }
 }

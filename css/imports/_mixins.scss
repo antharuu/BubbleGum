@@ -39,7 +39,7 @@
   }
 }
 
-@mixin colorised($selector, $size) {
+@mixin colorised($selector, $size: '') {
   @include add-color using($color) {
     &#{selector($selector, $color, $size)} {
       background-color: color-value($color);
