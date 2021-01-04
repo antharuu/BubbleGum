@@ -1,4 +1,6 @@
-# Bubblegum
+<p align="center">
+  <img width="600" src="https://i.postimg.cc/mrNwgZNF/Bubblegum-full.png">
+</p>
 
 Simple and efficiency Css framework
 
@@ -109,3 +111,7 @@ to use.
     - [ ] Range
     - [ ] Select
     - [ ] Input
+    
+<p align="center">
+  <img width="300" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png">
+</p>
