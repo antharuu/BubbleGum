@@ -6,26 +6,17 @@
 
     <link rel="stylesheet" href="css/bubblegum.css">
 </head>
-<body _bg="yellow">
-
-<nav _navbar="dark fixed">
-    <div _container="">
-        <div _row="">
-            <div>
-                <div _brand><a href="#">My super website</a></div>
-                <a href="#">Home</a>
-                <a href="#">Work</a>
-                <a href="#">Contact</a>
-            </div>
-        </div>
-    </div>
-</nav>
-
+<body _bg="dark">
 <div _container _size="h-100">
     <div _row _justify="center" _items="center" _size="full">
         <div _col _shadow _round _bg="white" _p="8">
-            <div _progress>
-                <div style="width: 60%"></div>
+            <div _form-group>
+                <label for="email">Email:</label>
+                <input id="email" type="email">
+            </div>
+            <div _form-group>
+                <label for="message">Message:</label>
+                <textarea id="message"></textarea>
             </div>
         </div>
     </div>

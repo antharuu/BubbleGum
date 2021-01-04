@@ -1788,6 +1788,138 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   color: #fbfaf8 !important;
 }
 
+[_form-group] {
+  margin-bottom: 15px;
+}
+[_form-group] > * {
+  display: block;
+  width: 100%;
+}
+[_form-group] label {
+  width: 100%;
+  margin: 5px 0;
+}
+[_form-group] input[type=text] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=email] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=number] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=date] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=datetime-local] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=month] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=password] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=search] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=tel] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=tel] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=time] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=url] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] input[type=week] {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] textarea {
+  margin: 5px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #6a74a9;
+  font-family: "Montserrat", sans-serif;
+}
+[_form-group] textarea {
+  resize: vertical;
+  min-height: 42px;
+}
+[_form-group][_form-group~=inline] > * {
+  display: inline-block;
+  width: auto;
+}
+
 [_show],
 [_show~=true],
 [_hide~=false] {

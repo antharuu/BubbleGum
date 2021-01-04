@@ -105,12 +105,12 @@ to use.
     - [x] Progress
     - [x] Bar
 - [ ] Form
+    - [ ] Input
     - [ ] Checkbox
     - [ ] Radio
     - [ ] Chips
     - [ ] Range
     - [ ] Select
-    - [ ] Input
     
 <p align="center">
   <img width="300" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png">

@@ -1,0 +1,56 @@
+$inputs-text: (
+        'input[type=text]',
+        'input[type=email]',
+        'input[type=number]',
+        'input[type=date]',
+        'input[type=datetime-local]',
+        'input[type=month]',
+        'input[type=password]',
+        'input[type=search]',
+        'input[type=tel]',
+        'input[type=tel]',
+        'input[type=time]',
+        'input[type=url]',
+        'input[type=week]',
+        'textarea'
+);
+
+@include add-breakpoints() using($size) {
+  #{selector('form-group')} {
+    margin-bottom: $MARGIN-base * 3;
+
+    > * {
+      display: block;
+      width: 100%;
+    }
+
+
+    label {
+      width: 100%;
+      margin: $MARGIN-base 0;
+    }
+
+    @each $input in $inputs-text {
+      #{$input} {
+        margin: $MARGIN-base 0;
+        padding: $MARGIN-base * 2 $MARGIN-base * 3;
+        font-size: 1em;
+        border-radius: $MARGIN-base;
+        border: 1px solid $COLOR-muted;
+        font-family: 'Montserrat', sans-serif;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: $MARGIN-base * 8 + 2px;
+    }
+
+    &#{selector('form-group', 'inline', $size)} {
+      > * {
+        display: inline-block;
+        width: auto;
+      }
+    }
+  }
+}
