@@ -72,7 +72,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="8">
+          <list size="18">
             <item index="0" class="java.lang.String" itemvalue="_container" />
             <item index="1" class="java.lang.String" itemvalue="_col" />
             <item index="2" class="java.lang.String" itemvalue="_justify" />
@@ -81,6 +81,16 @@
             <item index="5" class="java.lang.String" itemvalue="_float" />
             <item index="6" class="java.lang.String" itemvalue="_padding" />
             <item index="7" class="java.lang.String" itemvalue="_debug" />
+            <item index="8" class="java.lang.String" itemvalue="_row" />
+            <item index="9" class="java.lang.String" itemvalue="_brand" />
+            <item index="10" class="java.lang.String" itemvalue="_navbar" />
+            <item index="11" class="java.lang.String" itemvalue="_shadow" />
+            <item index="12" class="java.lang.String" itemvalue="_pagination" />
+            <item index="13" class="java.lang.String" itemvalue="_size" />
+            <item index="14" class="java.lang.String" itemvalue="_items" />
+            <item index="15" class="java.lang.String" itemvalue="_m" />
+            <item index="16" class="java.lang.String" itemvalue="_font" />
+            <item index="17" class="java.lang.String" itemvalue="_bg" />
           </list>
         </value>
       </option>

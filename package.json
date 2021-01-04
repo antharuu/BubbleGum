@@ -4,8 +4,7 @@
   "description": "CSS Framework",
   "main": "main.js",
   "scripts": {
-    "test": "test",
-    "compile-sass": "sass css/bubblegum.scss:css/bubblegum.css"
+    "WATCH SASS": "sass --watch css/bubblegum.scss:css/bubblegum.css"
   },
   "repository": {
     "type": "git",

@@ -92,11 +92,11 @@ to use.
 - [x] Shadow
 - [x] Table
 - [x] Buttons
-- [ ] Nav
+- [x] Nav
   - [x] Breadcrumb
   - [x] Footer
-  - [ ] Navbar
-  - [ ] Pagination
+  - [x] Navbar
+  - [x] Pagination
 - [ ] Cards
 - [ ] List
 - [ ] Progress

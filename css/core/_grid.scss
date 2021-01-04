@@ -130,22 +130,27 @@
   }
 
   #{selector('items', 'stretch', $size)} {
+    align-content: normal;
     align-items: stretch;
   }
 
   #{selector('items', 'start', $size)} {
+    align-content: normal;
     align-items: start;
   }
 
   #{selector('items', 'end', $size)} {
+    align-content: normal;
     align-items: end;
   }
 
   #{selector('items', 'center', $size)} {
+    align-content: normal;
     align-items: center;
   }
 
   #{selector('items', 'baseline', $size)} {
+    align-content: normal;
     align-items: baseline;
   }
 

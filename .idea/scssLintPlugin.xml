@@ -3,6 +3,5 @@
   <component name="ScssLintProjectComponent">
     <option name="scssLintConfigFile" value="C:\Ruby27-x64\lib\ruby\gems\2.7.0\gems\scss_lint-0.59.0\config\default.yml" />
     <option name="scssLintExecutable" value="C:\Ruby27-x64\bin\scss-lint.bat" />
-    <option name="pluginEnabled" value="true" />
   </component>
 </project>

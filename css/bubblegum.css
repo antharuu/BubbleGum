@@ -259,7 +259,6 @@ body {
 [_container][_container~=full] {
   max-width: none;
 }
-
 [_container][_container~=limited] {
   max-width: 1280px;
 }
@@ -269,11 +268,9 @@ body {
   height: 100%;
   flex-direction: column;
 }
-
 [_has~=footer] > *:not([_footer~=sticky]) {
   flex: 1 0 auto;
 }
-
 [_has~=footer] [_footer~=sticky] {
   flex-shrink: 0;
 }
@@ -284,7 +281,6 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-
 [_row][_row~=row] {
   flex-direction: row;
 }
@@ -332,22 +328,27 @@ body {
 }
 
 [_items~=stretch] {
+  align-content: normal;
   align-items: stretch;
 }
 
 [_items~=start] {
+  align-content: normal;
   align-items: start;
 }
 
 [_items~=end] {
+  align-content: normal;
   align-items: end;
 }
 
 [_items~=center] {
+  align-content: normal;
   align-items: center;
 }
 
 [_items~=baseline] {
+  align-content: normal;
   align-items: baseline;
 }
 
@@ -1682,6 +1683,187 @@ body {
   border-radius: 50px;
 }
 
+[_size~=w-0] {
+  width: 0%;
+}
+
+[_size~=h-0] {
+  height: 0%;
+}
+
+[_size~=w-5] {
+  width: 5%;
+}
+
+[_size~=h-5] {
+  height: 5%;
+}
+
+[_size~=w-10] {
+  width: 10%;
+}
+
+[_size~=h-10] {
+  height: 10%;
+}
+
+[_size~=w-15] {
+  width: 15%;
+}
+
+[_size~=h-15] {
+  height: 15%;
+}
+
+[_size~=w-20] {
+  width: 20%;
+}
+
+[_size~=h-20] {
+  height: 20%;
+}
+
+[_size~=w-25] {
+  width: 25%;
+}
+
+[_size~=h-25] {
+  height: 25%;
+}
+
+[_size~=w-30] {
+  width: 30%;
+}
+
+[_size~=h-30] {
+  height: 30%;
+}
+
+[_size~=w-35] {
+  width: 35%;
+}
+
+[_size~=h-35] {
+  height: 35%;
+}
+
+[_size~=w-40] {
+  width: 40%;
+}
+
+[_size~=h-40] {
+  height: 40%;
+}
+
+[_size~=w-45] {
+  width: 45%;
+}
+
+[_size~=h-45] {
+  height: 45%;
+}
+
+[_size~=w-50] {
+  width: 50%;
+}
+
+[_size~=h-50] {
+  height: 50%;
+}
+
+[_size~=w-55] {
+  width: 55%;
+}
+
+[_size~=h-55] {
+  height: 55%;
+}
+
+[_size~=w-60] {
+  width: 60%;
+}
+
+[_size~=h-60] {
+  height: 60%;
+}
+
+[_size~=w-65] {
+  width: 65%;
+}
+
+[_size~=h-65] {
+  height: 65%;
+}
+
+[_size~=w-70] {
+  width: 70%;
+}
+
+[_size~=h-70] {
+  height: 70%;
+}
+
+[_size~=w-75] {
+  width: 75%;
+}
+
+[_size~=h-75] {
+  height: 75%;
+}
+
+[_size~=w-80] {
+  width: 80%;
+}
+
+[_size~=h-80] {
+  height: 80%;
+}
+
+[_size~=w-85] {
+  width: 85%;
+}
+
+[_size~=h-85] {
+  height: 85%;
+}
+
+[_size~=w-90] {
+  width: 90%;
+}
+
+[_size~=h-90] {
+  height: 90%;
+}
+
+[_size~=w-95] {
+  width: 95%;
+}
+
+[_size~=h-95] {
+  height: 95%;
+}
+
+[_size~=w-100] {
+  width: 100%;
+}
+
+[_size~=h-100] {
+  height: 100%;
+}
+
+[_size~=w-full] {
+  width: 100%;
+}
+
+[_size~=h-full] {
+  height: 100%;
+}
+
+[_size~=full] {
+  width: 100%;
+  height: 100%;
+}
+
 [_bg~=red] {
   background-color: #f24236;
   color: #fbfaf8;
@@ -1847,9 +2029,145 @@ h6,
   color: #f24236;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=pink],
 [_font~=pink] {
   color: #e43f6f;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=purple],
@@ -1857,9 +2175,145 @@ h6,
   color: #6564db;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=indigo],
 [_font~=indigo] {
   color: #473bf0;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=blue],
@@ -1867,9 +2321,145 @@ h6,
   color: #3169c4;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=cyan],
 [_font~=cyan] {
   color: #1fa6c1;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=teal],
@@ -1877,9 +2467,145 @@ h6,
   color: #00bfb2;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=green],
 [_font~=green] {
   color: #3ccd65;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=lime],
@@ -1887,9 +2613,145 @@ h6,
   color: #aad922;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=yellow],
 [_font~=yellow] {
   color: #f7b32b;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=amber],
@@ -1897,9 +2759,145 @@ h6,
   color: #ff7f11;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=orange],
 [_font~=orange] {
   color: #f34213;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=brown],
@@ -1907,9 +2905,145 @@ h6,
   color: #823329;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=grey],
 [_font~=grey] {
   color: #7179ad;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=black],
@@ -1917,9 +3051,145 @@ h6,
   color: #1a1d2d;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=white],
 [_font~=white] {
   color: #fbfaf8;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=transparent],
@@ -1927,9 +3197,145 @@ h6,
   color: transparent;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=dark],
 [_font~=dark] {
   color: #1a1d2d;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=light],
@@ -1937,9 +3343,145 @@ h6,
   color: #fbfaf8;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=primary],
 [_font~=primary] {
   color: #00bfb2;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=secondary],
@@ -1947,9 +3489,145 @@ h6,
   color: #7179ad;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=success],
 [_font~=success] {
   color: #3ccd65;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=info],
@@ -1957,14 +3635,218 @@ h6,
   color: #1fa6c1;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=warning],
 [_font~=warning] {
   color: #ff7f11;
 }
 
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
+}
+
 [_color~=danger],
 [_font~=danger] {
   color: #f24236;
+}
+
+[_font~=left] {
+  text-align: left;
+}
+
+[_font~=right] {
+  text-align: right;
+}
+
+[_font~=center] {
+  text-align: center;
+}
+
+[_font~=justify] {
+  text-align: justify;
+}
+
+[_font~=lower] {
+  text-transform: lowercase;
+}
+
+[_font~=upper] {
+  text-transform: uppercase;
+}
+
+[_font~=capitalize] {
+  text-transform: capitalize;
+}
+
+[_font~=bold] {
+  font-weight: bold;
+}
+
+[_font~=bolder] {
+  font-weight: bolder;
+}
+
+[_font~=lighter] {
+  font-weight: lighter;
+}
+
+[_font~=normal] {
+  font-weight: normal;
+}
+
+[_font~=italic] {
+  font-style: italic;
+}
+
+[_font~=mark],
+[_font~=hilight] {
+  background-color: #f9c866;
+  color: #1a1d2d;
+}
+
+[_decoration~=linethrough],
+[_decoration~=del] {
+  text-decoration: line-through;
+}
+
+[_decoration~=underline],
+[_decoration~=line] {
+  text-decoration: underline;
+}
+
+[_decoration~=none] {
+  text-decoration: none;
 }
 
 [_color~=muted],
@@ -2756,6 +4638,317 @@ pre[_code] {
 }
 [_breadcrumb] > *:last-child {
   color: #6a74a9;
+}
+
+[_navbar] {
+  background-color: #00bfb2;
+  padding: 30px 0;
+  font-size: 1.2rem;
+}
+[_navbar] [_row] {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 0 35px;
+}
+[_navbar] [_row] [_brand] {
+  font-weight: bold;
+  font-size: 1.35em;
+}
+[_navbar] [_row] > div {
+  width: 100%;
+}
+[_navbar] [_row] > div:first-child {
+  text-align: left;
+}
+[_navbar] [_row] > div:first-child :not(:first-child) {
+  margin-left: 10px;
+}
+[_navbar] [_row] > div:last-child {
+  text-align: right;
+}
+[_navbar] [_row] > div:last-child :not(:last-child) {
+  margin-right: 10px;
+}
+[_navbar] [_row] > div * {
+  display: inline;
+  color: #fbfaf8;
+}
+[_navbar] [_row] > div a {
+  color: #fbfaf8;
+  text-decoration: none;
+}
+@media screen and (max-width: 580px) {
+  [_navbar] [_row] {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+  [_navbar] [_row] > * {
+    padding: 0;
+    width: 100%;
+  }
+  [_navbar] [_row] > *:first-child, [_navbar] [_row] > *:last-child {
+    margin: 0 !important;
+  }
+  [_navbar] [_row] > *:first-child > *, [_navbar] [_row] > *:last-child > * {
+    margin: 0 !important;
+  }
+  [_navbar] [_row] > * > * {
+    margin: 0;
+    display: block !important;
+    text-align: center;
+  }
+}
+[_navbar][_navbar~=red] {
+  background-color: #f24236;
+  border-color: #f24236;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=red] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=pink] {
+  background-color: #e43f6f;
+  border-color: #e43f6f;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=pink] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=purple] {
+  background-color: #6564db;
+  border-color: #6564db;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=purple] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=indigo] {
+  background-color: #473bf0;
+  border-color: #473bf0;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=indigo] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=blue] {
+  background-color: #3169c4;
+  border-color: #3169c4;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=blue] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=cyan] {
+  background-color: #1fa6c1;
+  border-color: #1fa6c1;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=cyan] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=teal] {
+  background-color: #00bfb2;
+  border-color: #00bfb2;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=teal] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=green] {
+  background-color: #3ccd65;
+  border-color: #3ccd65;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=green] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=lime] {
+  background-color: #aad922;
+  border-color: #aad922;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=lime] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=yellow] {
+  background-color: #f7b32b;
+  border-color: #f7b32b;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=yellow] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=amber] {
+  background-color: #ff7f11;
+  border-color: #ff7f11;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=amber] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=orange] {
+  background-color: #f34213;
+  border-color: #f34213;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=orange] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=brown] {
+  background-color: #823329;
+  border-color: #823329;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=brown] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=grey] {
+  background-color: #7179ad;
+  border-color: #7179ad;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=grey] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=black] {
+  background-color: #1a1d2d;
+  border-color: #1a1d2d;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=black] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=white] {
+  background-color: #fbfaf8;
+  border-color: #fbfaf8;
+  color: #1a1d2d !important;
+}
+[_navbar][_navbar~=white] * {
+  color: #1a1d2d !important;
+}
+[_navbar][_navbar~=transparent] {
+  background-color: transparent;
+  border-color: transparent;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=transparent] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=dark] {
+  background-color: #1a1d2d;
+  border-color: #1a1d2d;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=dark] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=light] {
+  background-color: #fbfaf8;
+  border-color: #fbfaf8;
+  color: #1a1d2d !important;
+}
+[_navbar][_navbar~=light] * {
+  color: #1a1d2d !important;
+}
+[_navbar][_navbar~=primary] {
+  background-color: #00bfb2;
+  border-color: #00bfb2;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=primary] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=secondary] {
+  background-color: #7179ad;
+  border-color: #7179ad;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=secondary] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=success] {
+  background-color: #3ccd65;
+  border-color: #3ccd65;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=success] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=info] {
+  background-color: #1fa6c1;
+  border-color: #1fa6c1;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=info] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=warning] {
+  background-color: #ff7f11;
+  border-color: #ff7f11;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=warning] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=danger] {
+  background-color: #f24236;
+  border-color: #f24236;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=danger] * {
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=muted] {
+  background-color: #6a74a9;
+  border-color: #6a74a9;
+  color: #fbfaf8 !important;
+}
+[_navbar][_navbar~=muted] * {
+  color: #fbfaf8 !important;
+}
+
+[_pagination] > a {
+  padding: 0.4rem 1rem;
+  background-color: #ebedf4;
+  text-decoration: none;
+  color: #00bfb2;
+  display: inline;
+  margin: 0;
+  border: 1px solid #cbcee1;
+}
+[_pagination] > a:hover {
+  background-color: #cbcee1;
+}
+[_pagination] > a:not(:first-child) {
+  margin-left: -6px;
+}
+[_pagination] > a:first-child {
+  border-radius: 5px 0 0 5px;
+}
+[_pagination] > a:last-child {
+  border-radius: 0 5px 5px 0;
+}
+[_pagination] > a:last-child:first-child {
+  border-radius: 5px;
+}
+[_pagination][_pagination~=lg], [_pagination][_pagination~=large] {
+  padding: 0.5rem 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+[_pagination][_pagination~=sm], [_pagination][_pagination~=small] {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+[_pagination][_pagination~=block], [_pagination][_pagination~=full] {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+[_pagination][_pagination~=block] > *, [_pagination][_pagination~=full] > * {
+  width: 100%;
+  text-align: center;
 }
 
 /*# sourceMappingURL=bubblegum.css.map */

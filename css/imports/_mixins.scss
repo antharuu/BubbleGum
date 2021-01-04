@@ -44,7 +44,11 @@
     &#{selector($selector, $color, $size)} {
       background-color: color-value($color);
       border-color: color-value($color);
-      color: visible-color(color-value($color,));
+      color: visible-color(color-value($color,)) !important;
+
+      * {
+        color: visible-color(color-value($color,)) !important;
+      }
     }
 
     @if $CONFIG_colors_variants {
@@ -52,14 +56,22 @@
         &#{selector($selector, '#{$color}-light-#{$i}', $size)} {
           background-color: color-value($color, $i, true);
           border-color: color-value($color, $i, true);
-          color: visible-color(color-value($color, $i, false));
+          color: visible-color(color-value($color, $i, false)) !important;
+
+          * {
+            color: visible-color(color-value($color,)) !important;
+          }
         }
       }
       @include add-logic using($i) {
         &#{selector($selector, '#{$color}-dark-#{$i}', $size)} {
           background-color: color-value($color, $i, false);
           border-color: color-value($color, $i, false);
-          color: visible-color(color-value($color, $i, false));
+          color: visible-color(color-value($color, $i, false)) !important;
+
+          * {
+            color: visible-color(color-value($color,)) !important;
+          }
         }
       }
     }
