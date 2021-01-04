@@ -13,6 +13,12 @@
 @import 'core/reset';
 @import 'core/bases';
 @import 'core/grid';
+
+@import 'components/table';
+@import 'components/buttons';
+@import 'components/nav';
+@import 'components/card';
+
 @import 'core/display';
 @import 'core/positions';
 @import 'core/margins';
@@ -23,9 +29,5 @@
 @import 'core/specials';
 
 @import 'bundle/prism';
-
-@import 'components/table';
-@import 'components/buttons';
-@import 'components/nav';
 
 @import 'imports/breakpoints';

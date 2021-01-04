@@ -99,7 +99,7 @@ to use.
   - [x] Footer
   - [x] Navbar
   - [x] Pagination
-- [ ] Cards
+- [x] Cards
 - [ ] List
 - [ ] Progress
     - [ ] Progress
