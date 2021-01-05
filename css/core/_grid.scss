@@ -43,7 +43,7 @@
 }
 
 @include add-breakpoints using($size) {
-  #{selector('container')} {
+  #{selector('container', '', $size)} {
     &#{selector('container', 'full', $size)} {
       max-width: none;
     }
@@ -70,7 +70,7 @@
   }
 
 
-  #{selector('row')} {
+  #{selector('row', '', $size)} {
     align-content: start;
     align-items: start;
     display: flex;
@@ -202,7 +202,7 @@
     align-self: baseline;
   }
 
-  #{selector('col')} {
+  #{selector('col', '', $size)} {
     position: relative;
     width: 100%;
     padding: 0 $GRID-gutter;

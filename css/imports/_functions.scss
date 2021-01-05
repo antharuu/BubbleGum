@@ -27,7 +27,11 @@
   @if $value != '' {
     @return '[#{$CONFIG_attribute_prefix}#{$selector}#{attribute-value(#{$size}#{$value})}]#{$selector-suffix}';
   } @else {
-    @return '[#{$CONFIG_attribute_prefix}#{$selector}]#{$selector-suffix}';
+    @if $size != '' {
+      @return '[#{$CONFIG_attribute_prefix}#{$selector}="#{$size}"]#{$selector-suffix}';
+    } @else {
+      @return '[#{$CONFIG_attribute_prefix}#{$selector}]#{$selector-suffix}';
+    }
   }
 }
 
