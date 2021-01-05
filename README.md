@@ -88,43 +88,6 @@ to use.
 <div _margin="y-2 x-5"></div>
 ```
 
-## /!\ WORK IN PROGRESS /!\
-
-- [x] Grid
-    - [x] Container
-    - [x] Row
-    - [x] Col
-- [x] Display
-    - [x] Visible
-    - [x] Display
-- [x] Positions
-- [x] Margins
-    - [x] Margin
-    - [x] Padding
-- [x] Colors
-- [x] Typo
-- [x] Medias
-- [x] Shadow
-- [x] Table
-- [x] Buttons
-- [x] Nav
-    - [x] Breadcrumb
-    - [x] Footer
-    - [x] Navbar
-    - [x] Pagination
-- [x] Cards
-- [x] List
-- [x] Progress
-    - [x] Progress
-    - [x] Bar
-- [x] Form
-    - [x] Input
-    - [x] Checkbox
-    - [x] Radio
-    - [x] Chips
-    - [x] Range
-    - [x] Select
-
 <p align="center">
   <img width="300" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png">
 </p>
