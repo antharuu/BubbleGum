@@ -2,13 +2,12 @@
 *  Bubblegum framework by Antharuu
 ******************************************************/
 
+@import url('customisation.css');
 @import 'imports/configuration';
 
 @import 'imports/variables';
 @import 'imports/functions';
 @import 'imports/mixins';
-
-@import 'customisation';
 
 @import 'core/reset';
 @import 'core/bases';

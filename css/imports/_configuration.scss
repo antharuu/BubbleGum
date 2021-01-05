@@ -8,8 +8,6 @@ $CONFIG_colors_variants: true;
 
 $CONFIG_logic_max: 10;
 
-$CONFIG_show_debug_variables: false;
-
 @if $CONFIG_light_mode {
   $CONFIG_breakpoints: false;
   $CONFIG_colors_variants: false;

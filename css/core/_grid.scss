@@ -21,6 +21,7 @@
   }
 }
 
+// OK
 #{selector('container')} {
   @extend %clearfix;
   margin: 0 auto;
@@ -43,11 +44,13 @@
 }
 
 @include add-breakpoints using($size) {
+  // OK
   #{selector('container', '', $size)} {
     &#{selector('container', 'full', $size)} {
       max-width: none;
     }
 
+    // OK
     &#{selector('container', 'limited', $size)} {
       max-width: 1280px;
     }
@@ -69,40 +72,41 @@
     }
   }
 
-
+  // OK
   #{selector('row', '', $size)} {
     align-content: start;
     align-items: start;
     display: flex;
     flex-wrap: wrap;
+  }
 
-    &#{selector('row', 'row', $size)} {
-      flex-direction: row;
+  #{selector('direction', 'row', $size)} {
+    flex-direction: row;
+  }
+
+  #{selector('direction', 'reverse', $size)} {
+    flex-direction: row-reverse;
+  }
+
+  #{selector('direction', 'col', $size)},
+  #{selector('direction', 'column', $size)} {
+    flex-direction: column;
+
+    #{selector('direction', 'reverse', $size)} {
+      flex-direction: column-reverse;
     }
+  }
 
-    &#{selector('row', 'reverse', $size)} {
-      flex-direction: row-reverse;
-    }
+  #{selector('wrap', 'nowrap', $size)} {
+    flex-wrap: nowrap;
+  }
 
-    &#{selector('row', 'col', $size)}, #{selector('row', 'column', $size)} {
-      flex-direction: column;
+  #{selector('wrap', 'wrap', $size)} {
+    flex-wrap: wrap;
+  }
 
-      &#{selector('row', 'reverse', $size)} {
-        flex-direction: column-reverse;
-      }
-    }
-
-    &#{selector('row', 'nowrap', $size)} {
-      flex-wrap: nowrap;
-    }
-
-    &#{selector('row', 'wrap', $size)} {
-      flex-wrap: wrap;
-    }
-
-    &#{selector('row', 'wrap-reverse', $size)} {
-      flex-wrap: wrap-reverse;
-    }
+  #{selector('wrap', 'wrap-reverse', $size)} {
+    flex-wrap: wrap-reverse;
   }
 
   #{selector('justify', 'start', $size)} {
