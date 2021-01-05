@@ -9,8 +9,5 @@
       "name": "Antharuu",
       "email": "antho.eclips@gmail.com"
     }
-  ],
-  "require": {
-    "twig/twig": "^3.1"
-  }
+  ]
 }
