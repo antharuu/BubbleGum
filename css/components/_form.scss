@@ -49,28 +49,117 @@ $inputs-text: (
           }
         }
       }
+
+      input[type=range] {
+        &:focus {
+          &::-webkit-slider-thumb {
+            background: color-value($color) !important;
+          }
+
+          &::-moz-range-thumb {
+            background: color-value($color) !important;
+          }
+
+          &::-ms-thumb {
+            background: color-value($color) !important;
+          }
+        }
+      }
     }
 
     @if $CONFIG_colors_variants {
       @include add-logic using($i) {
         &#{selector('form-group', '#{$color}-light-#{$i}')} {
-          background-color: color-value($color, $i, true);
-          border-color: color-value($color, $i, true);
-          color: visible-color(color-value($color, $i, false)) !important;
+          input[type=radio] {
+            &:checked {
+              & + label {
+                &::before {
+                  border-color: color-value($color, $i, true) !important;
+                }
 
-          * {
-            color: visible-color(color-value($color)) !important;
+                &::after {
+                  background-color: color-value($color, $i, true) !important;
+                }
+              }
+            }
+          }
+
+          input[type=checkbox] {
+            &:checked {
+              & + label {
+                &::before {
+                  border-color: color-value($color, $i, true) !important;
+                  background-color: color-value($color, $i, true) !important;
+                }
+
+                &::after {
+                }
+              }
+            }
+          }
+
+          input[type=range] {
+            &:focus {
+              &::-webkit-slider-thumb {
+                background: color-value($color, $i, true) !important;
+              }
+
+              &::-moz-range-thumb {
+                background: color-value($color, $i, true) !important;
+              }
+
+              &::-ms-thumb {
+                background: color-value($color, $i, true) !important;
+              }
+            }
           }
         }
       }
+
       @include add-logic using($i) {
         &#{selector('form-group', '#{$color}-dark-#{$i}')} {
-          background-color: color-value($color, $i, false);
-          border-color: color-value($color, $i, false);
-          color: visible-color(color-value($color, $i, false)) !important;
+          input[type=radio] {
+            &:checked {
+              & + label {
+                &::before {
+                  border-color: color-value($color, $i, false) !important;
+                }
 
-          * {
-            color: visible-color(color-value($color)) !important;
+                &::after {
+                  background-color: color-value($color, $i, false) !important;
+                }
+              }
+            }
+          }
+
+          input[type=checkbox] {
+            &:checked {
+              & + label {
+                &::before {
+                  border-color: color-value($color, $i, false) !important;
+                  background-color: color-value($color, $i, false) !important;
+                }
+
+                &::after {
+                }
+              }
+            }
+          }
+
+          input[type=range] {
+            &:focus {
+              &::-webkit-slider-thumb {
+                background: color-value($color, $i, false) !important;
+              }
+
+              &::-moz-range-thumb {
+                background: color-value($color, $i, false) !important;
+              }
+
+              &::-ms-thumb {
+                background: color-value($color, $i, false) !important;
+              }
+            }
           }
         }
       }
@@ -214,6 +303,119 @@ $inputs-text: (
       }
     }
   }
+
+  input[type=range] {
+    margin: $MARGIN-base * 2 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background: lighten($COLOR-muted, 30);
+      border-radius: $MARGIN-base;
+      width: 100%;
+      height: $MARGIN-base;
+      cursor: pointer;
+    }
+
+    &::-webkit-slider-thumb {
+      margin-top: -5px;
+      width: 14px;
+      height: 14px;
+      background: $COLOR-muted;
+      border-radius: 50%;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+
+    &::-moz-range-track {
+      background: lighten($COLOR-muted, 30);
+      border-radius: $MARGIN-base;
+      width: 100%;
+      height: $MARGIN-base;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      margin-top: -5px;
+      width: 14px;
+      height: 14px;
+      background: $COLOR-muted;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &::-ms-track {
+      border: none;
+      color: transparent;
+      background: lighten($COLOR-muted, 30);
+      width: 100%;
+      border-radius: $MARGIN-base;
+      height: $MARGIN-base;
+      cursor: pointer;
+      overflow: hidden !important;
+    }
+
+    &::-ms-fill-lower {
+      background: transparent;
+      border: none;
+      border-radius: 2.6px;
+    }
+
+    &::-ms-fill-upper {
+      background: transparent;
+      border: none;
+      border-radius: 2.6px;
+    }
+
+    &:focus {
+      &::-webkit-slider-runnable-track {
+        background: lighten($COLOR-muted, 35);
+      }
+
+      &::-moz-range-track {
+        background: lighten($COLOR-muted, 35);
+      }
+
+      &::-ms-track {
+        background: lighten($COLOR-muted, 35) !important;
+      }
+
+      &::-webkit-slider-thumb {
+        background: $COLOR-primary;
+      }
+
+      &::-moz-range-thumb {
+        background: $COLOR-primary;
+      }
+
+      &::-ms-fill-upper {
+        background: transparent;
+      }
+
+      &::-ms-fill-lower {
+        background: transparent;
+      }
+    }
+
+    &::-ms-thumb {
+      margin-top: 0px;
+      width: 14px;
+      background: $COLOR-muted;
+      cursor: pointer;
+      border: none;
+      border-radius: $MARGIN-base;
+      height: $MARGIN-base;
+    }
+
+    @supports (-ms-ime-align:auto) {
+      margin: 0;
+    }
+  }
 }
 
 #{selector('chips')} {
@@ -246,6 +448,7 @@ $inputs-text: (
 
   &#{selector('chips', 'round')} {
     border-radius: $MARGIN-base * 3;
+
     img {
       border-radius: $MARGIN-base * 3;
     }
