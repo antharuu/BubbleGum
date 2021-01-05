@@ -121,7 +121,7 @@ to use.
     - [x] Input
     - [x] Checkbox
     - [x] Radio
-    - [ ] Chips
+    - [x] Chips
     - [ ] Range
     - [ ] Select
 

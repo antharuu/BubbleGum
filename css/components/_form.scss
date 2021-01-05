@@ -35,6 +35,7 @@ $inputs-text: (
           }
         }
       }
+
       input[type=checkbox] {
         &:checked {
           & + label {
@@ -211,6 +212,42 @@ $inputs-text: (
           border-radius: 50%;
         }
       }
+    }
+  }
+}
+
+#{selector('chips')} {
+  @include colorised('chips');
+  background-color: $COLOR-muted;
+  display: inline-block;
+  padding: $MARGIN-base $MARGIN-base * 2;
+  border-radius: $MARGIN-base * 3;
+  color: $COLOR-light;
+  margin-bottom: $MARGIN-base;
+  overflow: hidden;
+  border: 2px solid $COLOR-muted;
+
+  img {
+    object-fit: cover;
+    height: calc(1em + 10px);
+    margin-left: - $MARGIN-base * 2;
+    margin-top: - $MARGIN-base;
+    margin-bottom: -$MARGIN-base  - 2;
+    border-radius: $MARGIN-base * 3;
+  }
+
+  &#{selector('chips', 'square')} {
+    border-radius: 0;
+
+    img {
+      border-radius: 0;
+    }
+  }
+
+  &#{selector('chips', 'round')} {
+    border-radius: $MARGIN-base * 3;
+    img {
+      border-radius: $MARGIN-base * 3;
     }
   }
 }
