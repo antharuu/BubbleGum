@@ -43,9 +43,9 @@ to use.
 ```html
 <!-- BOOTSTRAP -->
 <div class="container">
-  <div class="row">
-    <div class="col-6"></div>
-  </div>
+    <div class="row">
+        <div class="col-6"></div>
+    </div>
 </div>
 
 <!-- BUBBLEGUM -->
@@ -67,14 +67,14 @@ to use.
 ```html
 <!-- BOOTSTRAP -->
 <div class="row justify-content-center">
-  <div class="col-10 col-md-10 col-xl-6"></div>
-  <div class="col-6 col-push-1"></div>
+    <div class="col-10 col-md-10 col-xl-6"></div>
+    <div class="col-6 col-push-1"></div>
 </div>
 
 <!-- BUBBLEGUM -->
 <div _row _justify="center">
-  <div _col="10 md:10 xl:6"></div>
-  <div _col="6" _push="1"></div>
+    <div _col="10 md:10 xl:6"></div>
+    <div _col="6" _push="1"></div>
 </div>
 ```
 
@@ -91,16 +91,16 @@ to use.
 ## /!\ WORK IN PROGRESS /!\
 
 - [x] Grid
-  - [x] Container
-  - [x] Row
-  - [x] Col
+    - [x] Container
+    - [x] Row
+    - [x] Col
 - [x] Display
-  - [x] Visible
-  - [x] Display
+    - [x] Visible
+    - [x] Display
 - [x] Positions
 - [x] Margins
-  - [x] Margin
-  - [x] Padding
+    - [x] Margin
+    - [x] Padding
 - [x] Colors
 - [x] Typo
 - [x] Medias
@@ -108,23 +108,23 @@ to use.
 - [x] Table
 - [x] Buttons
 - [x] Nav
-  - [x] Breadcrumb
-  - [x] Footer
-  - [x] Navbar
-  - [x] Pagination
+    - [x] Breadcrumb
+    - [x] Footer
+    - [x] Navbar
+    - [x] Pagination
 - [x] Cards
 - [x] List
 - [x] Progress
     - [x] Progress
     - [x] Bar
 - [ ] Form
-  - [x] Input
-  - [ ] Checkbox
-    - [ ] Radio
+    - [x] Input
+    - [x] Checkbox
+    - [x] Radio
     - [ ] Chips
     - [ ] Range
     - [ ] Select
-    
+
 <p align="center">
   <img width="300" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png">
 </p>

@@ -1,15 +1,5 @@
 @include add-breakpoints using($size) {
 
-  #{selector('margin', '', $size)},
-  #{selector('m', '', $size)} {
-    margin: margin-calc(1);
-  }
-
-  #{selector('padding', '', $size)},
-  #{selector('p', '', $size)} {
-    padding: margin-calc(1);
-  }
-
   #{selector('round', '', $size)},
   #{selector('r', '', $size)} {
     border-radius: margin-calc(1);

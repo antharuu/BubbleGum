@@ -17,10 +17,74 @@ $inputs-text: (
 
 #{selector('form-group')} {
   margin-bottom: $MARGIN-base * 3;
+  position: relative;
+
+
+  @include add-color using($color) {
+    &#{selector('form-group', $color)} {
+      input[type=radio] {
+        &:checked {
+          & + label {
+            &::before {
+              border-color: color-value($color) !important;
+            }
+
+            &::after {
+              background-color: color-value($color) !important;
+            }
+          }
+        }
+      }
+      input[type=checkbox] {
+        &:checked {
+          & + label {
+            &::before {
+              border-color: color-value($color) !important;
+              background-color: color-value($color) !important;
+            }
+
+            &::after {
+            }
+          }
+        }
+      }
+    }
+
+    @if $CONFIG_colors_variants {
+      @include add-logic using($i) {
+        &#{selector('form-group', '#{$color}-light-#{$i}')} {
+          background-color: color-value($color, $i, true);
+          border-color: color-value($color, $i, true);
+          color: visible-color(color-value($color, $i, false)) !important;
+
+          * {
+            color: visible-color(color-value($color)) !important;
+          }
+        }
+      }
+      @include add-logic using($i) {
+        &#{selector('form-group', '#{$color}-dark-#{$i}')} {
+          background-color: color-value($color, $i, false);
+          border-color: color-value($color, $i, false);
+          color: visible-color(color-value($color, $i, false)) !important;
+
+          * {
+            color: visible-color(color-value($color)) !important;
+          }
+        }
+      }
+    }
+  }
+
 
   > * {
     display: block;
     width: 100%;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 
 
@@ -37,6 +101,18 @@ $inputs-text: (
       border-radius: $MARGIN-base;
       border: 1px solid $COLOR-muted;
       font-family: 'Montserrat', sans-serif;
+
+      transition: border-color 250ms ease-in-out;
+
+      &:focus {
+        border-color: $COLOR-blue;
+        box-shadow: none;
+      }
+
+      &:invalid {
+        border-color: $COLOR-red;
+        box-shadow: none;
+      }
     }
   }
 
@@ -49,6 +125,92 @@ $inputs-text: (
     > * {
       display: inline-block;
       width: auto;
+    }
+  }
+
+  input[type=checkbox] {
+    display: inline;
+    width: auto;
+
+    & + label {
+      display: inline;
+      width: auto;
+      margin-left: $MARGIN-base;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -1px;
+        height: 16px;
+        width: 16px;
+        border: 1px solid $COLOR-muted;
+        border-radius: $MARGIN-base;
+        background-color: $COLOR-light;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &::before {
+          border-color: $COLOR-primary;
+          background-color: $COLOR-primary;
+        }
+
+        &::after {
+          content: '✓';
+          position: absolute;
+          left: 2.5px;
+          margin-top: .5px;
+          color: $COLOR-light;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  input[type=radio] {
+    opacity: 0;
+    display: inline;
+    width: auto;
+
+    & + label {
+      display: inline;
+      width: auto;
+      margin-left: $MARGIN-base;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -1px;
+        height: 16px;
+        width: 16px;
+        border: 1px solid $COLOR-muted;
+        border-radius: 50%;
+        background-color: $COLOR-light;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &::before {
+          border-color: $COLOR-primary;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          color: $COLOR-light;
+          font-weight: bold;
+          background-color: $COLOR-primary;
+          left: 3px;
+          top: 2px;
+          height: 12px;
+          width: 12px;
+          border-radius: 50%;
+        }
+      }
     }
   }
 }

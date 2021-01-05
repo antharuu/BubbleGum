@@ -9,10 +9,27 @@
 <body _bg="dark">
 <div _container _size="h-100">
     <div _row _justify="center" _items="center" _size="full">
-        <div _col _shadow _round _bg="white" _p="8">
+        <div _col="6" _shadow _round _bg="white" _p="8">
             <div _form-group>
                 <label for="email">Email:</label>
                 <input id="email" type="email">
+            </div>
+            <div _form-group="blue">
+                <input type="radio" id="oui" name="oui" checked>
+                <label for="oui">Je confirme</label>
+            </div>
+            <div _form-group="red">
+                <input type="radio" id="oui2" name="oui">
+                <label for="oui2">Je confirme</label>
+            </div>
+            <hr>
+            <div _form-group="blue">
+                <input type="checkbox" id="oui4" checked>
+                <label for="oui4">Je confirme</label>
+            </div>
+            <div _form-group="dark">
+                <input type="checkbox" id="oui3">
+                <label for="oui3">Je confirme</label>
             </div>
             <div _form-group>
                 <label for="message">Message:</label>
