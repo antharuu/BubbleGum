@@ -2300,6 +2300,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   margin: 5px 0;
 }
 [_form-group] input[type=text] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2317,6 +2318,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=email] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2334,6 +2336,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=number] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2351,6 +2354,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=date] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2368,6 +2372,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=datetime-local] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2385,6 +2390,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=month] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2402,6 +2408,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=password] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2419,6 +2426,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=search] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2436,6 +2444,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=tel] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2453,6 +2462,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=tel] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2470,6 +2480,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=time] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2487,6 +2498,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=url] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2504,6 +2516,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] input[type=week] {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2521,6 +2534,7 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
   box-shadow: none;
 }
 [_form-group] textarea {
+  color: #1a1d2d;
   margin: 5px 0;
   padding: 10px 15px;
   font-size: 1em;
@@ -2946,6 +2960,41 @@ ul[_list][_list~=block] > *, ul[_list][_list~=full] > * {
 }
 [_chips][_chips~=round] img {
   border-radius: 15px;
+}
+
+[_select-group] select {
+  display: block;
+  width: 100%;
+  border: 1px solid #6a74a9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #1a1d2d;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  appearance: none;
+  box-shadow: none;
+}
+[_select-group] select::-ms-expand {
+  display: none;
+}
+[_select-group] select:focus {
+  outline: none;
+}
+[_select-group] select option {
+  border: 1px solid #6a74a9;
+}
+[_select-group]::before {
+  content: "▼";
+  position: absolute;
+  color: #6a74a9;
+  top: 28px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  pointer-events: none;
+  transform: scale(0.8);
 }
 
 [_show],

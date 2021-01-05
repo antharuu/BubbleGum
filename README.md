@@ -117,13 +117,13 @@ to use.
 - [x] Progress
     - [x] Progress
     - [x] Bar
-- [ ] Form
+- [x] Form
     - [x] Input
     - [x] Checkbox
     - [x] Radio
     - [x] Chips
-    - [ ] Range
-    - [ ] Select
+    - [x] Range
+    - [x] Select
 
 <p align="center">
   <img width="300" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png">

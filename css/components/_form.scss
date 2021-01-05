@@ -185,6 +185,7 @@ $inputs-text: (
 
   @each $input in $inputs-text {
     #{$input} {
+      color: $COLOR-dark;
       margin: $MARGIN-base 0;
       padding: $MARGIN-base * 2 $MARGIN-base * 3;
       font-size: 1em;
@@ -452,5 +453,46 @@ $inputs-text: (
     img {
       border-radius: $MARGIN-base * 3;
     }
+  }
+}
+
+#{selector('select-group')} {
+  select {
+    display: block;
+    width: 100%;
+    border: 1px solid $COLOR-muted;
+    padding: $MARGIN-base $MARGIN-base * 2;
+    border-radius: $MARGIN-base;
+    color: $COLOR-dark;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    appearance: none;
+    box-shadow: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    option {
+      border: 1px solid $COLOR-muted;
+    }
+  }
+
+  &::before {
+    content: '▼';
+    position: absolute;
+    color: $COLOR-muted;
+    top: 28px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    pointer-events: none;
+    transform: scale(.8);
   }
 }
