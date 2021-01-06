@@ -1,0 +1,223 @@
++add-selector('display') {
+  _.current_selector = 'display'
+
+  +add-value('flex') {
+    display: flex;
+  }
+
+  +add-value('none') {
+    display: none;
+  }
+
+  +add-value('block') {
+    display: block;
+  }
+
+  +add-value('inline') {
+    display: inline;
+  }
+
+  +add-value('flow') {
+    display: flow;
+  }
+
+  +add-value('ruby') {
+    display: ruby;
+  }
+
+  +add-value('grid') {
+    display: grid;
+  }
+
+  +add-value('table') {
+    display: table;
+  }
+
+  +add-value('contents') {
+    display: contents;
+  }
+}
+
+
++add-selector('direction') {
+  _.current_selector = 'direction'
+
+  +add-value('row') {
+    flex-direction: row;
+  }
+  +add-value('reverse') {
+    flex-direction: row-reverse;
+  }
+  +add-value('col' 'column') {
+    flex-direction: column;
+    +add-value('reverse') {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+
++add-selector('wrap') {
+  _.current_selector = 'wrap'
+
+  flex-wrap: wrap;
+
+  +add-value('wrap') {
+    flex-wrap: wrap;
+  }
+
+  +add-value('nowrap') {
+    flex-wrap: nowrap;
+  }
+
+  +add-value('reverse' 'wrap-reverse') {
+    flex-wrap: wrap-reverse;
+  }
+}
+
+
++add-selector('justify') {
+  _.current_selector = 'justify'
+
+  justify-content: start;
+
+  +add-value('start') {
+    justify-content: start;
+  }
+
+  +add-value('end') {
+    justify-content: end;
+  }
+
+  +add-value('center') {
+    justify-content: center;
+  }
+
+  +add-value('between') {
+    justify-content: space-between;
+  }
+
+  +add-value('around') {
+    justify-content: space-around;
+  }
+
+  +add-value('evenly') {
+    justify-content: space-evenly;
+  }
+}
+
+
++add-selector('items') {
+  _.current_selector = 'items'
+
+  align-content: normal;
+
+  +add-value('stretch') {
+    align-items: stretch;
+  }
+  +add-value('start') {
+    align-items: start;
+  }
+  +add-value('end') {
+    align-items: end;
+  }
+  +add-value('center') {
+    align-items: center;
+  }
+  +add-value('baseline') {
+    align-items: baseline;
+  }
+}
+
+
++add-selector('content') {
+  _.current_selector = 'content'
+
+  align-content: normal;
+
+  +add-value('start') {
+    align-content: start;
+  }
+  +add-value('end') {
+    align-content: end;
+  }
+  +add-value('center') {
+    align-content: center;
+  }
+  +add-value('between') {
+    align-content: space-between;
+  }
+  +add-value('around') {
+    align-content: space-around;
+  }
+  +add-value('evenly') {
+    align-content: space-evenly;
+  }
+  +add-value('stretch') {
+    align-content: stretch;
+  }
+}
+
++add-selector('show') {
+  _.current_selector = 'show'
+
+  display: block;
+  +add-value('true') {
+    display: block;
+  }
+
+  +add-value('false') {
+    display: none;
+  }
+}
+
+
++add-selector('hide') {
+  _.current_selector = 'show'
+
+  display: none;
+  +add-value('true') {
+    display: none;
+  }
+
+  +add-value('false') {
+    display: block;
+  }
+}
+
+
++add-selector('overflow') {
+  _.current_selector = 'overflow'
+
+  display: none;
+  +add-value('true') {
+    display: none;
+  }
+
+  for $prefix in '' 'x' 'y' {
+    $p-prefix = ''
+    $v-prefix = ''
+    if $prefix {
+      $p-prefix = '-' + $prefix
+      $v-prefix = $prefix + '-'
+    }
+
+    +add-value($v-prefix + 'hidden') {
+      overflow{$p-prefix}: hidden;
+    }
+
+    +add-value($v-prefix + 'scroll') {
+      overflow{$p-prefix}: scroll;
+    }
+
+    +add-value($v-prefix + 'auto') {
+      overflow{$p-prefix}: auto;
+    }
+
+    +add-value($v-prefix + 'visible') {
+      overflow{$p-prefix}: visible;
+    }
+  }
+}
+
+

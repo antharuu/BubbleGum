@@ -17,7 +17,10 @@
   "scripts": {
     "WATCH SASS": "sass --watch css/bubblegum.scss:css/bubblegum.css",
     "COMPILE SASS": "sass css/bubblegum.scss:css/bubblegum.min.css",
-    "COMPILE SASS MIN": "sass --style=compressed css/bubblegum.scss:css/bubblegum.min.css"
+    "COMPILE SASS MIN": "sass --style=compressed css/bubblegum.scss:css/bubblegum.min.css",
+    "WATCH SASS 1.0": "sass --watch css_1.0/bubblegum.scss:css_1.0/bubblegum.css",
+    "COMPILE SASS 1.0": "sass css_1.0/bubblegum.scss:css_1.0/bubblegum.min.css",
+    "COMPILE SASS MIN 1.0": "sass --style=compressed css_1.0/bubblegum.scss:css_1.0/bubblegum.min.css"
   },
   "repository": {
     "type": "git",
@@ -31,5 +34,8 @@
   "homepage": "https://github.com/antharuu/BubbleGum#readme",
   "devDependencies": {
     "sass": "^1.32.0"
+  },
+  "dependencies": {
+    "stylus": "^0.54.8"
   }
 }

@@ -1,0 +1,19 @@
+hr {
+  _.current_selector = 'color'
+
+  add-extends('width-80')
+  border: none
+  border-bottom: $Borders.size $Borders.type $Borders.default_color
+
+  for $color-name, $color-value in $Colors.all {
+    add-value($color-name, 'color-border-' + $color-name)
+  }
+}
+
++add-selector('bg') {
+  _.current_selector = 'bg'
+
+  for $color-name, $color-value in $Colors.all {
+    add-value($color-name, 'color-background-' + $color-name)
+  }
+}

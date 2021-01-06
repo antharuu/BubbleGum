@@ -1,0 +1,38 @@
+$current_selector = null;
+
+selector-name($selector, $value = '') {
+  $symbol = '~'
+  $start = '[';
+  $end = ']';
+
+  if $breakpoint == $Grid.ignored_breakpoint {
+    $breakpoint = ''
+  } else {
+    if $value != '' {
+      $value = $breakpoint + $Core.breakpoint_prefix + $value
+    } else {
+      $value = $breakpoint
+      $symbol = '*'
+    }
+  }
+
+  if $value {
+    $value = $symbol + '="' + $value + '"';
+  }
+
+  return $start + $Core.prefix + $selector + $value + $end;
+}
+
+get-selectors($selector, $value) {
+  $first = true
+  $selectors = '';
+
+  for $s in $selector {
+    if !$first {
+      $selectors = $selectors + ', ';
+    }
+    $selectors = $selectors + selector-name($s, $value);
+    $first = false
+  }
+  return $selectors
+}
