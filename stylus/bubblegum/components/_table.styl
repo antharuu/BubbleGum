@@ -1,0 +1,69 @@
++add-selector('table', '', 'width-100') {
+  _.current_selector = 'table'
+
+  max-width: 100%
+  margin-bottom: $Sizes.margin.large
+  border-collapse: collapse
+  thead {
+    th {
+      vertical-align: bottom;
+      border-bottom: ($Borders.size * 2) $Borders.type alpha($Borders.default_color, .8);
+    }
+  }
+
+  tr {
+    td,
+    th {
+      padding: ($Sizes.margin.medium / 2);
+      vertical-align: top;
+    }
+
+    &:not(:first-child) {
+      td,
+      th {
+        border-top: $Borders.size $Borders.type alpha($Borders.default_color, .8);
+      }
+    }
+  }
+
+  th {
+    text-align: inherit;
+  }
+
+
+  +add-value('striped') {
+    tbody {
+      tr:nth-of-type(2n+1) {
+        background-color: alpha($Borders.default_color, .8);
+      }
+    }
+  }
+
+  +add-value('bordered') {
+    border: $Borders.size $Borders.type alpha($Borders.default_color, .8);
+
+    th,
+    td {
+      &:not(:first-child) {
+        border: $Borders.size $Borders.type alpha($Borders.default_color, .8);
+      }
+    }
+  }
+
+  +add-value('hover') {
+    tr {
+      &:hover {
+        background-color: alpha($Borders.default_color, .7);
+      }
+    }
+  }
+
+  +add-value('compact') {
+    th,
+    td {
+      padding: ($Sizes.margin.small / 2);
+    }
+  }
+
+
+}
