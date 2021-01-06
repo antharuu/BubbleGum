@@ -1,0 +1,38 @@
+add-selector($selector = '', $value = '', $extends...) {
+  {get-selectors($selector, $value)} {
+    add-extends($extends)
+    {block}
+  }
+}
+
+add-value($value, $extends...) {
+  $first = true
+  $selector = '';
+
+  for $v in $value {
+    if !$first {
+      $selector = $selector + ', &';
+    }
+    $selector = $selector + selector-name(_.current_selector, $v);
+    $first = false
+  }
+
+  &{$selector} {
+    add-extends($extends)
+    {block}
+  }
+}
+
+add-extends($extends) {
+  for $extend in $extends {
+    @extends $--{$breakpoint}-{$extend}
+  }
+}
+
+get-visible-color($color-value, $property = 'font') {
+  $color = 'light'
+  if light($color-value) {
+    $color = 'dark'
+  }
+  add-extends('color-' + $property + '-' + $color)
+}

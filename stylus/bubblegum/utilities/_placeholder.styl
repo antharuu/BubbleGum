@@ -1,0 +1,55 @@
+$-- {
+  &{$breakpoint} {
+    for $size in 0..20 {
+      &-width {
+        &-{$size * 5} {
+          width: percentage($size * 5 / 100)
+        }
+      }
+      &-height {
+        &-{$size * 5} {
+          height: percentage($size * 5 / 100)
+        }
+      }
+    }
+
+    &-col {
+      @extends $--{$breakpoint}-width-100
+      min-height: 1px
+      position: relative
+    }
+
+    &-clearfix {
+      &::after {
+        clear: both;
+        content: '';
+        display: table;
+      }
+    }
+
+    &-margin-center {
+      margin: 0 auto;
+    }
+
+    &-color {
+      for $color-name, $color-value in $Colors.all {
+        &-font-{$color-name} {
+          color: $color-value
+        }
+      }
+
+      for $color-name, $color-value in $Colors.all {
+        &-background-{$color-name} {
+          background-color: $color-value
+          get-visible-color($color-value)
+        }
+
+        &-border-{$color-name} {
+          border-color: $color-value
+        }
+      }
+    }
+  }
+
+  // End breakpoint
+}

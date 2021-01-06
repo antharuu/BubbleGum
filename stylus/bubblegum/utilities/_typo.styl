@@ -1,0 +1,92 @@
+for $i in 6..1 {
+  $h = ''
+  if $breakpoint == $Grid.ignored_breakpoint {
+    $h = 'h' + $i + ', '
+  }
+
+
+  {$h}{selector-name('font', 'h' + $i)} {
+    font-size: round($Font.size.default * (9 - $i) * $Font.size.multiplier)
+  }
+}
+
+
++add-selector('font') {
+  for $color-name, $color-value in $Colors.all {
+    add-value($color-name, 'color-font-' + $color-name)
+  }
+
+  +add-value('left') {
+    text-align: left;
+  }
+
+  +add-value('right') {
+    text-align: right;
+  }
+
+  +add-value('center') {
+    text-align: center;
+  }
+
+  +add-value('justify') {
+    text-align: justify;
+  }
+
+  +add-value('lower' 'lowercase') {
+    text-transform: lowercase
+  }
+
+  +add-value('upper' 'uppercase') {
+    text-transform: uppercase
+  }
+
+  +add-value('cap' 'capital' 'capitalize') {
+    text-transform: capitalize
+  }
+
+  +add-value('bold') {
+    font-weight: bold
+  }
+
+  +add-value('bolder') {
+    font-weight: bolder
+  }
+
+  +add-value('light' 'lighter') {
+    font-weight: lighter
+  }
+
+  +add-value('normal') {
+    font-weight: normal
+  }
+
+  +add-value('italic') {
+    font-style: italic
+  }
+
+  add-value('mark' 'hilight', 'color-background-yellow', 'color-font-dark')
+}
+
+
++add-selector('color') {
+  for $color-name, $color-value in $Colors.all {
+    add-value($color-name, 'color-font-' + $color-name)
+  }
+}
+
+
++add-selector('decoration') {
+  _.current_selector = 'decoration'
+
+  +add-value('linethrough' 'del') {
+    text-decoration: line-through
+  }
+
+  +add-value('underline' 'line') {
+    text-decoration: underline
+  }
+
+  +add-value('none') {
+    text-decoration: none
+  }
+}

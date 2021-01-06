@@ -1,0 +1,88 @@
++add-selector('round') {
+  _.current_selector = 'round'
+
+  border-radius: $Sizes.round.small
+
+  for $i in 0..$Core.logic_max {
+    +add-value($i 'small-' + $i 'sm-' + $i) {
+      border-radius: ($Sizes.round.small * $i)
+    }
+    +add-value('medium-' + $i 'md-' + $i) {
+      border-radius: ($Sizes.round.medium * $i)
+    }
+    +add-value('large-' + $i 'lg-' + $i) {
+      border-radius: ($Sizes.round.large * $i)
+    }
+  }
+
+  +add-value('full' 'circle') {
+    border-radius: 100%
+  }
+}
+
+
++add-selector('margin') {
+  _.current_selector = 'margin'
+
+  margin: $Sizes.margin.small
+
+  for $i in 0..$Core.logic_max {
+    +add-value($i 'small-' + $i 'sm-' + $i) {
+      margin: ($Sizes.margin.small * $i)
+    }
+    +add-value('medium-' + $i 'md-' + $i) {
+      margin: ($Sizes.margin.medium * $i)
+    }
+    +add-value('large-' + $i 'lg-' + $i) {
+      margin: ($Sizes.margin.large * $i)
+    }
+
+    for $dir-value, $dir-name in _.directions {
+      $dir-name = $dir-name + '-'
+      $dir-value = '-' + $dir-value
+
+      +add-value($dir-name + $i $dir-name + 'small-' + $i $dir-name + 'sm-' + $i) {
+        margin{$dir-value}: ($Sizes.margin.small * $i)
+      }
+      +add-value($dir-name + 'medium-' + $i $dir-name + 'md-' + $i) {
+        margin{$dir-value}: ($Sizes.margin.medium * $i)
+      }
+      +add-value($dir-name + 'large-' + $i $dir-name + 'lg-' + $i) {
+        margin{$dir-value}: ($Sizes.margin.large * $i)
+      }
+    }
+  }
+}
+
++add-selector('padding') {
+  _.current_selector = 'padding'
+
+  margin: $Sizes.padding.small
+
+  for $i in 0..$Core.logic_max {
+    +add-value($i 'small-' + $i 'sm-' + $i) {
+      padding: ($Sizes.padding.small * $i)
+    }
+    +add-value('medium-' + $i 'md-' + $i) {
+      padding: ($Sizes.padding.medium * $i)
+    }
+    +add-value('large-' + $i 'lg-' + $i) {
+      padding: ($Sizes.padding.large * $i)
+    }
+
+    for $dir-value, $dir-name in _.directions {
+      $dir-name = $dir-name + '-'
+      $dir-value = '-' + $dir-value
+
+      +add-value($dir-name + $i $dir-name + 'small-' + $i $dir-name + 'sm-' + $i) {
+        padding{$dir-value}: ($Sizes.padding.small * $i)
+      }
+      +add-value($dir-name + 'medium-' + $i $dir-name + 'md-' + $i) {
+        padding{$dir-value}: ($Sizes.padding.medium * $i)
+      }
+      +add-value($dir-name + 'large-' + $i $dir-name + 'lg-' + $i) {
+        padding{$dir-value}: ($Sizes.padding.large * $i)
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
++add-selector('position') {
+  _.current_selector = 'position'
+
+  +add-value('relative' 'rel') {
+    position: relative;
+  }
+
+  +add-value('absolute' 'abs') {
+    position: absolute;
+  }
+
+  +add-value('fixed' 'fix') {
+    position: fixed;
+  }
+
+  +add-value('static') {
+    position: static;
+  }
+
+  +add-value('sticky') {
+    position: sticky;
+  }
+}
+
++add-selector('float') {
+  _.current_selector = 'float'
+
+  +add-value('left') {
+    float: left
+  }
+
+  +add-value('right') {
+    float: right
+  }
+
+  +add-value('none') {
+    float: none
+  }
+}
+
++add-selector('z') {
+  _.current_selector = 'float'
+
+  +add-value('0') {
+    z-index: 0
+  }
+
+  for $i in 1..$Core.logic_max {
+    +add-value($i) {
+      z-index: $i
+    }
+    +add-value('-' + $i) {
+      z-index: 0 - $i
+    }
+  }
+
+}
+
++add-selector('vertical') {
+  _.current_selector = 'vertical'
+
+  +add-value('baseline') {
+    vertical-align: baseline
+  }
+
+  +add-value('sub') {
+    vertical-align: sub
+  }
+
+  +add-value('super') {
+    vertical-align: super
+  }
+
+  +add-value('text-top') {
+    vertical-align: text-top
+  }
+
+  +add-value('text-bottom') {
+    vertical-align: text-bottom
+  }
+
+  +add-value('middle') {
+    vertical-align: middle
+  }
+
+  +add-value('top') {
+    vertical-align: top
+  }
+
+  +add-value('bottom') {
+    vertical-align: bottom
+  }
+}
