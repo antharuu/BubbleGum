@@ -36,3 +36,7 @@ get-visible-color($color-value, $property = 'font') {
   }
   add-extends('color-' + $property + '-' + $color)
 }
+
+shadow-values($shadow, $i = 1) {
+  box-shadow: shadow-calc($shadow.x_min, $shadow.x_max, $i) shadow-calc($shadow.y_min, $shadow.y_max, $i) shadow-calc($shadow.blur_min, $shadow.blur_max, $i) shadow-calc($shadow.spread_min, $shadow.spread_max, $i) alpha($shadow.color, $shadow.opacity)
+}

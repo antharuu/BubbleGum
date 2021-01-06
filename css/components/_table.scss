@@ -1,67 +1,6 @@
-#{selector('table', '')} {
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 1em;
-  border-collapse: collapse;
-
-  &#{selector('table', 'striped')} {
-    tbody {
-      tr:nth-of-type(2n+1) {
-        background-color: transparentize($COLOR-muted, .8);
-      }
-    }
-  }
-
-  &#{selector('table', 'bordered')} {
-    border: 1px solid transparentize($COLOR-muted, .8);
-
-    th,
-    td {
-      &:not(:first-child) {
-        border: 1px solid transparentize($COLOR-muted, .8);
-      }
-    }
-  }
-
-  &#{selector('table', 'hover')} {
-    tr {
-      &:hover {
-        background-color: transparentize($COLOR-muted, .7);
-      }
-    }
-  }
-
-  &#{selector('table', 'compact')} {
-    th,
-    td {
-      padding: .3rem;
-    }
-  }
 
 
-  thead {
-    th {
-      vertical-align: bottom;
-      border-bottom: 2px solid transparentize($COLOR-muted, .8);
-    }
-  }
 
-  tr {
-    td,
-    th {
-      padding: .75rem;
-      vertical-align: top;
-    }
 
-    &:not(:first-child) {
-      td,
-      th {
-        border-top: 1px solid transparentize($COLOR-muted, .8);
-      }
-    }
-  }
 
-  th {
-    text-align: inherit;
-  }
 }

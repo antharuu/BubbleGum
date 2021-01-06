@@ -16,7 +16,7 @@ selector-name($selector, $value = '') {
     }
   }
 
-  if $value {
+  if $value != '' {
     $value = $symbol + '="' + $value + '"';
   }
 
@@ -35,4 +35,8 @@ get-selectors($selector, $value) {
     $first = false
   }
   return $selectors
+}
+
+shadow-calc($start, $end = 0, $i = 1) {
+  return (round(($end - $start) / ($Core.logic_max - 1)) * $i) * 1px
 }

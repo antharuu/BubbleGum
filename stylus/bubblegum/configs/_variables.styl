@@ -86,6 +86,51 @@ $Borders = {
   default_color: $Colors.theme.muted
 }
 
+$Shadows = {
+  first: {
+    x_min: 0
+    x_max: 0
+    y_min: 2
+    y_max: 24
+    blur_min: 2
+    blur_max: 38
+    spread_min: 0
+    spread_max: 3
+    color: $Colors.theme.dark
+    opacity: .14
+  }
+  second: {
+    x_min: 0
+    x_max: 0
+    y_min: 3
+    y_max: 9
+    blur_min: 1
+    blur_max: 46
+    spread_min: -2
+    spread_max: 8
+    color: $Colors.theme.dark
+    opacity: .12
+  }
+  third: {
+    x_min: 0
+    x_max: 0
+    y_min: 1
+    y_max: 11
+    blur_min: 5
+    blur_max: 15
+    spread_min: 0
+    spread_max: -7
+    color: $Colors.theme.dark
+    opacity: .2
+  }
+}
+
+$Others = {
+  nav:{
+    breadcrumb_symbol: '/'
+  }
+}
+
 // ------------------------------------- Colors generation
 $Colors.all = merge($Colors.base, $Colors.theme)
 

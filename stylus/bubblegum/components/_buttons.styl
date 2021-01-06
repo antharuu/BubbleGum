@@ -1,0 +1,61 @@
++add-selector('btn') {
+  _.current_selector = 'btn'
+
+  cursor: pointer
+  -webkit-appearance: button
+  display: inline-block
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  user-select: none
+  border: $Borders.size $Borders.type $Colors.base.transparent
+  background-color: $Colors.base.transparent
+  text-transform: none;
+  margin: 0
+  padding: $Sizes.margin.small $Sizes.margin.medium
+  font-family: inherit
+  font-size: $Font.size.default
+  line-height: 1.5
+  transition: all .2s
+
+  +add-value('lg' 'large') {
+    padding: $Sizes.margin.medium $Sizes.margin.large
+    font-size: $Font.size.default * 1.25
+  }
+
+  +add-value('sm' 'small') {
+    padding: ($Sizes.margin.small / 2) $Sizes.margin.small
+    font-size: $Font.size.default * .8
+  }
+
+  +add-value('block' 'full', 'width-100') {
+    display: block;
+  }
+
+  for $color-name, $color-value in $Colors.all {
+    &{selector-name('btn', $color-name)} {
+      add-extends('color-background-' + $color-name)
+      add-extends('color-border-' + $color-name)
+
+      &:hover {
+        background-color: $color-value - 10%
+        border-color: $color-value - 10%
+      }
+    }
+  }
+
+  +add-value('outline') {
+    background-color: $Colors.base.transparent !important
+
+    for $color-name, $color-value in $Colors.all {
+      +add-value($color-value, 'color-font-' + $color-name, 'color-border-' + $color-name) {
+
+        &:hover {
+          add-extends('color-background-' + $color-name)
+          add-extends('color-border-' + $color-name)
+        }
+      }
+    }
+  }
+}

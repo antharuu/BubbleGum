@@ -10,10 +10,28 @@ hr {
   }
 }
 
+
 +add-selector('bg') {
   _.current_selector = 'bg'
 
   for $color-name, $color-value in $Colors.all {
     add-value($color-name, 'color-background-' + $color-name)
+  }
+}
+
++add-selector('responsive', '', 'width-100') {
+  height: auto;
+}
+
++add-selector('shadow') {
+  _.current_selector = 'shadow'
+  $color = $Colors.theme.dark
+
+  shadow-values($Shadows.first)
+
+  for $i in 0..$Core.logic_max {
+    +add-value($i) {
+      shadow-values($Shadows.first, $i)
+    }
   }
 }
