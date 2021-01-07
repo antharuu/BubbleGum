@@ -115,7 +115,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 html,
 body,
 div,
@@ -194,7 +193,7 @@ time,
 mark,
 audio,
 video {
-  font-family: 'Montseratt', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
 }
 code {
@@ -5677,3 +5676,5 @@ script[type='text/plain'][class*='language-'] {
   white-space: pre;
   overflow: auto;
 }
+
+/*# sourceMappingURL=bubblegum.css.map */
