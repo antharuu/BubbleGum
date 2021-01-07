@@ -1,0 +1,44 @@
+add-selector($selector = '', $value = '', $extends...) {
+  {get-selectors($selector, $value)} {
+    add-extends($extends)
+    {block}
+  }
+}
+
+add-value($value, $extends...) {
+  $first = true
+  $selector = '';
+
+  for $v in $value {
+    if !$first {
+      $selector = $selector + ', &';
+    }
+    $selector = $selector + selector-name(_.current_selector, $v);
+    $first = false
+  }
+
+  &{$selector} {
+    add-extends($extends)
+    {block}
+  }
+}
+
+add-extends($extends) {
+  for $extend in $extends {
+    @extends $--{$breakpoint}-{$extend}
+  }
+}
+
+get-visible-color($color-value, $property = 'font') {
+  $color = 'light'
+  if light($color-value) {
+    $color = 'dark'
+  }
+  add-extends('color-' + $property + '-' + $color)
+}
+
+shadow-values($i = 1) {
+  box-shadow: shadow-calc($Shadows.first.x_min, $Shadows.first.x_max, $i) shadow-calc($Shadows.first.y_min, $Shadows.first.y_max, $i) shadow-calc($Shadows.first.blur_min, $Shadows.first.blur_max, $i) shadow-calc($Shadows.first.spread_min, $Shadows.first.spread_max, $i) alpha($Shadows.first.color, $Shadows.first.opacity),
+  shadow-calc($Shadows.second.x_min, $Shadows.second.x_max, $i) shadow-calc($Shadows.second.y_min, $Shadows.second.y_max, $i) shadow-calc($Shadows.second.blur_min, $Shadows.second.blur_max, $i) shadow-calc($Shadows.second.spread_min, $Shadows.second.spread_max, $i) alpha($Shadows.second.color, $Shadows.second.opacity),
+  shadow-calc($Shadows.third.x_min, $Shadows.third.x_max, $i) shadow-calc($Shadows.third.y_min, $Shadows.third.y_max, $i) shadow-calc($Shadows.third.blur_min, $Shadows.third.blur_max, $i) shadow-calc($Shadows.third.spread_min, $Shadows.third.spread_max, $i) alpha($Shadows.third.color, $Shadows.third.opacity)
+}

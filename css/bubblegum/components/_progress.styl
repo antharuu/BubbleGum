@@ -1,0 +1,22 @@
++add-selector('progress') {
+  _.current_selector = 'progress'
+
+  height: 15px
+  border-radius: $Sizes.round.large
+  overflow: hidden;
+  margin: $Sizes.margin.small
+
+  > div {
+    add-extends('height-100')
+    background-color: $Colors.theme.primary
+  }
+
+
+  for $color-name, $color-value in $Colors.all {
+    +add-value($color-name) {
+      > div {
+        add-extends('color-background-' + $color-name)
+      }
+    }
+  }
+}

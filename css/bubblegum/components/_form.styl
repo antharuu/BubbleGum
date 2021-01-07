@@ -1,0 +1,298 @@
++add-selector('form-group') {
+  _.current_selector = 'form-group'
+
+  margin-bottom: $Sizes.margin.medium
+  position: relative
+
+  for $color-name, $color-value in $Colors.all {
+    input[type=radio] {
+      &:checked {
+        & + label {
+          &::before {
+            border-color: $color-value;
+          }
+
+          &::after {
+            background-color: $color-value !important;
+          }
+        }
+      }
+    }
+    input[type=checkbox] {
+      &:checked {
+        & + label {
+          &::before {
+            border-color: $color-value !important;
+            background-color: $color-value !important;
+          }
+        }
+      }
+    }
+    input[type=range] {
+      &:focus {
+        &::-webkit-slider-thumb {
+          background: $color-value !important;
+        }
+
+        &::-moz-range-thumb {
+          background: $color-value !important;
+        }
+
+        &::-ms-thumb {
+          background: $color-value !important;
+        }
+      }
+    }
+  }
+
+  > * {
+    display: block
+    width: 100%
+    box-shadow: none
+
+    &:focus {
+      outline: none
+    }
+  }
+
+  label {
+    width: 100%
+    margin: $Sizes.margin.small 0
+  }
+
+  for $input in 'input[type=text]' 'input[type=email]' 'input[type=number]' 'input[type=date]' 'input[type=datetime-local]' 'input[type=month]' 'input[type=password]' 'input[type=search]' 'input[type=tel]' 'input[type=tel]' 'input[type=time]' 'input[type=url]' 'input[type=week]' 'textarea' {
+    {$input} {
+      color: $Form.color_font
+      margin: $Sizes.margin.small 0
+      padding: $Sizes.padding.small * 2 $Sizes.padding.small * 3
+      font-size: 1em
+      border-radius: $Sizes.round.small
+      border: $Borders.size $Borders.type $Form.color
+      font-family: inherit
+
+      transition: border-color 250ms ease-in-out
+
+      &:focus {
+        border-color: $Form.color_main
+        box-shadow: none
+      }
+
+      &:invalid {
+        border-color: $Colors.theme.danger
+        box-shadow: none
+      }
+    }
+  }
+
+  textarea {
+    resize: vertical
+    min-height: $Sizes.margin.small * 8 + 2px
+  }
+
+  +add-value('inline') {
+    > * {
+      display: inline-block
+      width: auto
+    }
+  }
+
+  input[type=checkbox] {
+    display: inline
+    width: auto
+
+    & + label {
+      display: inline
+      width: auto
+      margin-left: $Sizes.margin.small
+
+      &::before {
+        content: ''
+        position: absolute
+        left: 0
+        top: -1px
+        height: 16px
+        width: 16px
+        border: 1px solid $Form.color
+        border-radius: $Sizes.round.small
+        background-color: $Colors.theme.light
+      }
+    }
+
+    &:checked {
+      & + label {
+        &::before {
+          border-color: $Form.color_main
+          background-color: $Form.color_main
+        }
+
+        &::after {
+          content: '✓'
+          position: absolute
+          left: 2.5px
+          margin-top: .5px
+          color: $Colors.theme.light
+          font-weight: bold
+        }
+      }
+    }
+  }
+
+  input[type=radio] {
+    opacity: 0
+    display: inline
+    width: auto
+
+    & + label {
+      display: inline
+      width: auto
+      margin-left: $Sizes.margin.small
+
+      &::before {
+        content: ''
+        position: absolute
+        left: 0
+        top: -1px
+        height: 16px
+        width: 16px
+        border: $Borders.size $Borders.type $Form.color
+        border-radius: 50%
+        background-color: $Colors.theme.light
+      }
+    }
+
+    &:checked {
+      & + label {
+        &::before {
+          border-color: $Form.color_main
+        }
+
+        &::after {
+          content: ''
+          position: absolute
+          color: $Colors.theme.light
+          font-weight: bold
+          background-color: $Form.color_main !important
+          left: 3px
+          top: 2px
+          height: 12px
+          width: 12px
+          border-radius: 50%
+        }
+      }
+    }
+  }
+
+  input[type=range] {
+    margin: $Sizes.margin.small * 2 0
+    background-color: $Colors.base.transparent
+    -webkit-appearance: none
+
+    &:focus {
+      outline: none
+    }
+
+    &::-webkit-slider-runnable-track {
+      background: $Form.color + 30%
+      border-radius: $Sizes.round.small
+      width: 100%
+      height: $Sizes.margin.small
+      cursor: pointer
+    }
+
+    &::-webkit-slider-thumb {
+      margin-top: -5px
+      width: 14px
+      height: 14px
+      background: $Form.color
+      border-radius: 50%
+      cursor: pointer
+      -webkit-appearance: none
+    }
+
+    &::-moz-range-track {
+      background: $Form.color + 30%
+      border-radius: $Sizes.round.small
+      width: 100%
+      height: $Sizes.margin.small
+      cursor: pointer
+    }
+
+    &::-moz-range-thumb {
+      margin-top: -5px
+      width: 14px
+      height: 14px
+      background: $Form.color
+      border: none
+      border-radius: 50%
+      cursor: pointer
+    }
+
+    &::-ms-track {
+      border: none
+      color: $Colors.base.transparent
+      background: $Form.color + 30%
+      width: 100%;
+      border-radius: $Sizes.round.small
+      height: $Sizes.margin.small
+      cursor: pointer
+      overflow: hidden !important
+    }
+
+    &::-ms-fill-lower {
+      background: $Colors.base.transparent
+      border: none
+      border-radius: ($Sizes.round.small / 2)
+    }
+
+    &::-ms-fill-upper {
+      background: $Colors.base.transparent
+      border: none
+      border-radius: ($Sizes.round.small / 2)
+    }
+
+    &:focus {
+      &::-webkit-slider-runnable-track {
+        background: $Form.color + 35%
+      }
+
+      &::-moz-range-track {
+        background: $Form.color + 35%
+      }
+
+      &::-ms-track {
+        background: $Form.color + 35% !important
+      }
+
+      &::-webkit-slider-thumb {
+        background: $Form.color_main !important
+      }
+
+      &::-moz-range-thumb {
+        background: $Form.color_main !important
+      }
+
+      &::-ms-fill-upper {
+        background: $Colors.base.transparent
+      }
+
+      &::-ms-fill-lower {
+        background: $Colors.base.transparent
+      }
+    }
+
+    &::-ms-thumb {
+      margin-top: 0
+      width: 14px
+      background: $Form.color
+      cursor: pointer
+      border: none
+      border-radius: $Sizes.round.small
+      height: $Sizes.margin.small
+    }
+
+    @supports (-ms-ime-align:auto) {
+      margin: 0
+    }
+  }
+
+}

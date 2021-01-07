@@ -4,7 +4,7 @@
 
 Simple and efficiency Css framework
 
-[![GitHub issues](https://img.shields.io/badge/Version-0.6%20alpha-orange)](https://github.com/antharuu/BubbleGum/issues)
+[![GitHub issues](https://img.shields.io/badge/Version-0.8%20alpha-orange)](https://github.com/antharuu/BubbleGum/issues)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4d29b2e75bb7432c81708eecec2861ea)](https://app.codacy.com/gh/antharuu/BubbleGum?utm_source=github.com&utm_medium=referral&utm_content=antharuu/BubbleGum&utm_campaign=Badge_Grade)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/bubblegum-css.svg)](https://openbase.io/js/bubblegum-css?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
@@ -23,14 +23,14 @@ npm i bubblegum-css
 ### With composer
 
 ```
-composer require antharuu/bubblegum "v0.6.0-alpha"
+composer require antharuu/bubblegum "v0.8.0-alpha"
 ```
 
 ### With CDN
 
 ```html
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@0.6.0/css/bubblegum.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@0.8.0/css/bubblegum.min.css">
 ```
 
 ## USAGE

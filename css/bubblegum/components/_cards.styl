@@ -1,0 +1,45 @@
++add-selector('card', '', 'color-background-light') {
+
+  shadow-values(1);
+  padding: $Sizes.padding.medium
+  border-radius: $Sizes.round.small
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3em
+    margin-bottom: .2rem
+
+    &:not(:first-child) {
+      opacity: .8
+    }
+  }
+
+  p {
+    opacity: .95
+  }
+
+  +add-selector('btn') {
+    margin-top: $Sizes.margin.medium
+    display: inline-block
+  }
+
+  a {
+    text-decoration: none
+    margin-top: $Sizes.margin.large
+    display: inline-block
+    color: $Colors.theme.primary
+  }
+
+  hr {
+    border-color: $Colors.theme.muted + 30%
+    width: 80%
+  }
+
+  img {
+    border-radius: $Sizes.round.small $Sizes.round.small 0 0
+    width: calc(100% + 30px)
+    position: relative;
+    left: 0 - $Sizes.padding.medium
+    top: 0 - $Sizes.padding.medium
+    object-fit: cover
+    max-height: 400px
+  }
+}

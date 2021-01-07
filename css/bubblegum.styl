@@ -1,0 +1,37 @@
+@import "nib"
+
+@require 'bubblegum/configs/_configuration';
+@require 'bubblegum/configs/_variables';
+@require 'bubblegum/core/_functions';
+@require 'bubblegum/core/_mixins';
+
+@require 'bubblegum/utilities/_reset';
+@require 'bubblegum/utilities/_base';
+
+if $Core.use.breakpoints {
+  for $breakpoint, $size in $Grid.breakpoints {
+    if $breakpoint != $Grid.ignored_breakpoint {
+      @media screen and (min-width: $size) {
+        @import 'bubblegum/core/_breakpoints_imports';
+      }
+    } else {
+      @import 'bubblegum/core/_breakpoints_imports';
+    }
+  }
+} else {
+  $breakpoint = xs;
+  @import 'bubblegum/core/_breakpoints_imports';
+}
+
+$breakpoint = xs;
+@import 'bubblegum/layout/_margins';
+@import 'bubblegum/utilities/_others';
+
+@import "bubblegum/components/*"
+
+// ----------- Bundles
+for $name, $use in $Core.bundle {
+  if $use {
+    @import "bubblegum/bundle/_" + $name
+  }
+}

@@ -1,0 +1,204 @@
+/******************************************************
+* PrismJS 1.23.0
+*
+* prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+* Based on https://github.com/chriskempson/tomorrow-theme
+*
+* @author Rose Pritchard
+******************************************************
+* Bubblegum integration by Antharuu
+******************************************************/
+
+code[class*="language-"],
+code[_code] {
+  shadow-values(1);
+  background: none
+  color: $Prism.colors.base
+  font-size: $Font.size.default
+  hyphens: none
+  line-height: 1.5
+  tab-size: $Prism.tab_size
+  text-align: left
+  white-space: pre
+  word-break: normal
+  word-spacing: normal
+  word-wrap: normal
+  border-radius: $Sizes.round.small
+}
+
+pre[class*="language-"]
+pre[_code] {
+  shadow-values(1);
+  border-radius: $Sizes.round.small
+  background: none
+  color: $Prism.colors.base
+  font-size: $Font.size.default
+  hyphens: none
+  line-height: 1.5
+  margin: $Sizes.margin.small 0
+  overflow: auto
+  padding: $Sizes.padding.medium
+  tab-size: $Prism.tab_size
+  text-align: left
+  white-space: pre
+  word-break: normal
+  word-spacing: normal
+  word-wrap: normal
+}
+
+:not(pre) > code[class*="language-"],
+:not(pre) > code[_code],
+pre[class*="language-"],
+pre[_code] {
+  background: $Prism.colors.background
+}
+
+
+:not(pre) > code[class*="language-"],
+:not(pre) > code[_code] {
+  padding: ($Sizes.padding.small / 2)
+  white-space: normal
+}
+
+.token {
+  &.comment,
+  &.block-comment {
+    color: $Prism.colors.comment;
+  }
+
+  &.prolog {
+    color: $Prism.colors.prolog;
+  }
+
+  &.doctype {
+    color: $Prism.colors.doctype;
+  }
+
+  &.cdata {
+    color: $Prism.colors.cdata;
+  }
+
+  &.punctuation {
+    color: $Prism.colors.punctuation;
+  }
+
+  &.tag {
+    color: $Prism.colors.tag;
+  }
+
+  &.attr-name {
+    color: $Prism.colors.attr-name;
+  }
+
+  &.namespace {
+    color: $Prism.colors.namespace;
+  }
+
+  &.deleted {
+    color: $Prism.colors.deleted;
+  }
+
+  &.function-name {
+    color: $Prism.colors.function-name;
+  }
+
+  &.boolean {
+    color: $Prism.colors.boolean;
+  }
+
+  &.number {
+    color: $Prism.colors.number;
+  }
+
+  &.function {
+    color: $Prism.colors.function;
+  }
+
+  &.property {
+    color: $Prism.colors.property;
+  }
+
+  &.class-name {
+    color: $Prism.colors.class-name;
+  }
+
+  &.constant {
+    color: $Prism.colors.constant;
+  }
+
+  &.symbol {
+    color: $Prism.colors.symbol;
+  }
+
+  &.selector {
+    color: $Prism.colors.selector;
+  }
+
+  &.important {
+    color: $Prism.colors.important;
+  }
+
+  &.atrule {
+    color: $Prism.colors.atrule;
+  }
+
+  &.keyword {
+    color: $Prism.colors.keyword;
+  }
+
+  &.builtin {
+    color: $Prism.colors.builtin;
+  }
+
+  &.string {
+    color: $Prism.colors.string;
+  }
+
+  &.char {
+    color: $Prism.colors.char;
+  }
+
+  &.hexcode {
+    color: $Prism.colors.hexcode;
+  }
+
+  &.attr-value {
+    color: $Prism.colors.attr-value;
+  }
+
+  &.regex {
+    color: $Prism.colors.regex;
+  }
+
+  &.variable {
+    color: $Prism.colors.variable;
+  }
+
+  &.operator {
+    color: $Prism.colors.operator;
+  }
+
+  &.entity {
+    color: $Prism.colors.entity;
+  }
+
+  &.url {
+    color: $Prism.colors.url;
+  }
+
+  &.important, &.bold {
+    font-weight: bold;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.entity {
+    cursor: help;
+  }
+
+  &.inserted {
+    color: $Prism.colors.inserted;
+  }
+}
