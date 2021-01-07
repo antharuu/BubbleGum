@@ -1,0 +1,146 @@
+$-- {
+  &{$breakpoint} {
+    for $size in 0..20 {
+      &-width {
+        &-{$size * 5} {
+          width: percentage($size * 5 / 100)
+        }
+
+        &-{$size * 5}-px {
+          width: ($size * 5) * 1px
+        }
+
+        &-{$size * 5}-vw {
+          width: ($size * 5) * 1vw
+        }
+
+        &-{$size * 5}-vh {
+          max-height: ($size * 5) * 1vh
+        }
+
+        &-min-{$size * 5} {
+          min-width: percentage($size * 5 / 100)
+        }
+
+        &-min-{$size * 5}-px {
+          min-width: ($size * 5) * 1px
+        }
+
+        &-min-{$size * 5}-vw {
+          min-width: ($size * 5) * 1vw
+        }
+
+        &-min-{$size * 5}-vh {
+          min-width: ($size * 5) * 1vh
+        }
+
+        &-max-{$size * 5} {
+          max-width: percentage($size * 5 / 100)
+        }
+
+        &-max-{$size * 5}-px {
+          max-width: ($size * 5) * 1px
+        }
+
+        &-max-{$size * 5}-vw {
+          max-width: ($size * 5) * 1vw
+        }
+
+        &-max-{$size * 5}-vh {
+          max-width: ($size * 5) * 1vh
+        }
+      }
+
+      &-height {
+        &-{$size * 5} {
+          height: percentage($size * 5 / 100)
+        }
+
+        &-{$size * 5}-px {
+          height: ($size * 5) * 1px
+        }
+
+        &-{$size * 5}-vw {
+          height: ($size * 5) * 1vw
+        }
+
+        &-{$size * 5}-vh {
+          height: ($size * 5) * 1vh
+        }
+
+        &-min-{$size * 5} {
+          min-height: percentage($size * 5 / 100)
+        }
+
+        &-min-{$size * 5}-px {
+          min-height: ($size * 5) * 1px
+        }
+
+        &-min-{$size * 5}-vw {
+          min-height: ($size * 5) * 1vw
+        }
+
+        &-min-{$size * 5}-vh {
+          min-height: ($size * 5) * 1vh
+        }
+
+        &-max-{$size * 5} {
+          max-height: percentage($size * 5 / 100)
+        }
+
+        &-max-{$size * 5}-px {
+          max-height: ($size * 5) * 1px
+        }
+
+        &-max-{$size * 5}-vw {
+          max-height: ($size * 5) * 1vw
+        }
+
+        &-max-{$size * 5}-vh {
+          max-height: ($size * 5) * 1vh
+        }
+      }
+
+    }
+
+    &-col {
+      @extends $--{$breakpoint}-width-100
+      min-height: 1px
+      position: relative
+    }
+
+    &-clearfix {
+      &::after {
+        clear: both;
+        content: '';
+        display: table;
+      }
+    }
+
+    &-margin-center {
+      margin: 0 auto;
+    }
+
+    &-color {
+      for $color-name, $color-value in $Colors.all {
+        &-font-{$color-name} {
+          color: $color-value
+        }
+      }
+
+      for $color-name, $color-value in $Colors.all {
+        &-background-{$color-name} {
+          background-color: $color-value
+          get-visible-color($color-value)
+        }
+
+        &-border-{$color-name} {
+          border-color: $color-value
+        }
+      }
+    }
+
+  }
+
+  // End breakpoint
+}

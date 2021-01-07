@@ -1,0 +1,92 @@
+for $property in 'width' 'height' {
+  $unit_str = "vw"
+  $unit = 1vw
+  if $property == 'height' {
+    $unit_str = "vh"
+    $unit = 1vh
+  }
+
+  +add-selector($property) {
+    _.current_selector = $property
+
+    for $i in 0..20 {
+      +add-value($i * 5, $property + '-' + $i * 5) {
+      }
+
+      if $Core.use.size_variants {
+        +add-value($i * 5 * 1px, $property + '-' + $i * 5 + '-px') {
+        }
+        +add-value($i * 5 * $unit, $property + '-' + $i * 5 + '-' + $unit_str) {
+        }
+        +add-value($i * 5 * $unit, $property + '-' + $i * 5 + '-' + $unit_str) {
+        }
+      }
+    }
+
+    +add-value('full', $property + '-100') {
+    }
+    +add-value('min-full', $property + '-min-100') {
+    }
+    +add-value('max-full', $property + '-max-100') {
+    }
+
+    if $Core.use.size_variants {
+      +add-value('full', $property + '-100-' + $unit_str) {
+      }
+      +add-value('min-full-' + $unit_str, $property + '-min-' + $i * 5 + '-' + $unit_str) {
+      }
+      +add-value('max-full-' + $unit_str, $property + '-max-' + $i * 5 + '-' + $unit_str) {
+      }
+    }
+  }
+
+  +add-selector('size') {
+    _.current_selector = 'size'
+
+    for $i in 0..20 {
+      +add-value('w-' + $i * 5, 'width-' + $i * 5) {
+      }
+      if $Core.use.size_variants {
+        +add-value('w-' + $i * 5 * 1px, 'width-' + $i * 5 + '-px') {
+        }
+        +add-value('w-' + $i * 5 * 1vw, 'width-' + $i * 5 + '-' + $unit_str) {
+        }
+        +add-value('w-' + $i * 5 * 1vh, 'width-' + $i * 5 + '-' + $unit_str) {
+        }
+      }
+
+
+      +add-value('h-' + $i * 5, 'height-' + $i * 5) {
+      }
+      if $Core.use.size_variants {
+        +add-value('h-' + $i * 5 * 1px, 'height-' + $i * 5 + '-px') {
+        }
+        +add-value('h-' + $i * 5 * 1vw, 'height-' + $i * 5 + '-' + $unit_str) {
+        }
+        +add-value('h-' + $i * 5 * 1vh, 'height-' + $i * 5 + '-' + $unit_str) {
+        }
+      }
+    }
+
+    +add-value('w-full', 'width-100') {
+    }
+    +add-value('w-min-full', 'width-min-100') {
+    }
+    +add-value('w-max-full', 'width-max-100') {
+    }
+
+    +add-value('h-full', 'height-100') {
+    }
+    +add-value('h-min-full', 'height-min-100') {
+    }
+    +add-value('h-max-full', 'height-max-100') {
+    }
+
+    +add-value('full', 'width-100', 'height-100') {
+    }
+    +add-value('min-full', 'width-min-100', 'height-min-100') {
+    }
+    +add-value('max-full', 'width-min-100', 'height-min-100') {
+    }
+  }
+}

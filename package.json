@@ -1,6 +1,6 @@
 {
   "name": "bubblegum-css",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Simple and efficiency Css framework",
   "main": "main.js",
   "keywords": [
@@ -32,10 +32,9 @@
     "url": "https://github.com/antharuu/BubbleGum/issues"
   },
   "homepage": "https://github.com/antharuu/BubbleGum#readme",
-  "devDependencies": {
-    "sass": "^1.32.0"
-  },
   "dependencies": {
+    "nib": "^1.1.2",
+    "prismjs": "^1.23.0",
     "stylus": "^0.54.8"
   }
 }
