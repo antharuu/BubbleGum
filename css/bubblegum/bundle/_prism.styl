@@ -3,190 +3,169 @@
 *
 * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
 * Based on https://github.com/chriskempson/tomorrow-theme
-*
-* @author Rose Pritchard
 ******************************************************
 * Bubblegum integration by Antharuu
 ******************************************************/
-
 code[class*="language-"],
-code[_code] {
-  shadow-values(1);
-  background: none
+pre[class*="language-"] {
   color: $Prism.colors.base
+  background: none
   font-size: $Font.size.default
-  hyphens: none
-  line-height: 1.5
-  tab-size: $Prism.tab_size
   text-align: left
   white-space: pre
-  word-break: normal
   word-spacing: normal
+  word-break: normal
   word-wrap: normal
+  line-height: 1.5
+  tab-size: $Prism.tab_size
+  hyphens: none;
   border-radius: $Sizes.round.small
 }
 
-pre[class*="language-"]
-pre[_code] {
-  shadow-values(1);
-  border-radius: $Sizes.round.small
-  background: none
-  color: $Prism.colors.base
-  font-size: $Font.size.default
-  hyphens: none
-  line-height: 1.5
+pre[class*="language-"] {
+  padding: $Sizes.padding.medium
   margin: $Sizes.margin.small 0
   overflow: auto
-  padding: $Sizes.padding.medium
-  tab-size: $Prism.tab_size
-  text-align: left
-  white-space: pre
-  word-break: normal
-  word-spacing: normal
-  word-wrap: normal
 }
 
 :not(pre) > code[class*="language-"],
-:not(pre) > code[_code],
-pre[class*="language-"],
-pre[_code] {
+pre[class*="language-"] {
   background: $Prism.colors.background
 }
 
-
-:not(pre) > code[class*="language-"],
-:not(pre) > code[_code] {
-  padding: ($Sizes.padding.small / 2)
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: $Sizes.padding.medium
+  border-radius: $Sizes.round.small
   white-space: normal
 }
 
 .token {
-  &.comment,
+  &.comment {
+    color: $Prism.colors.comment
+  }
+
   &.block-comment {
-    color: $Prism.colors.comment;
+    color: $Prism.colors.comment
   }
 
   &.prolog {
-    color: $Prism.colors.prolog;
+    color: $Prism.colors.prolog
   }
 
   &.doctype {
-    color: $Prism.colors.doctype;
+    color: $Prism.colors.doctype
   }
 
   &.cdata {
-    color: $Prism.colors.cdata;
+    color: $Prism.colors.cdata
   }
 
   &.punctuation {
-    color: $Prism.colors.punctuation;
+    color: $Prism.colors.punctuation
   }
 
   &.tag {
-    color: $Prism.colors.tag;
+    color: $Prism.colors.tag
   }
 
   &.attr-name {
-    color: $Prism.colors.attr-name;
+    color: $Prism.colors.attr-name
   }
 
-  &.namespace {
-    color: $Prism.colors.namespace;
+  &.attr-name {
+    color: $Prism.colors.attr-name
   }
 
   &.deleted {
-    color: $Prism.colors.deleted;
+    color: $Prism.colors.deleted
   }
 
   &.function-name {
-    color: $Prism.colors.function-name;
+    color: $Prism.colors.function-name
   }
 
   &.boolean {
-    color: $Prism.colors.boolean;
+    color: $Prism.colors.boolean
   }
 
   &.number {
-    color: $Prism.colors.number;
+    color: $Prism.colors.number
   }
 
   &.function {
-    color: $Prism.colors.function;
+    color: $Prism.colors.function
   }
 
   &.property {
-    color: $Prism.colors.property;
+    color: $Prism.colors.property
   }
 
   &.class-name {
-    color: $Prism.colors.class-name;
+    color: $Prism.colors.class-name
   }
 
   &.constant {
-    color: $Prism.colors.constant;
-  }
-
-  &.symbol {
-    color: $Prism.colors.symbol;
+    color: $Prism.colors.constant
   }
 
   &.selector {
-    color: $Prism.colors.selector;
+    color: $Prism.colors.selector
   }
 
   &.important {
-    color: $Prism.colors.important;
+    color: $Prism.colors.important
   }
 
   &.atrule {
-    color: $Prism.colors.atrule;
+    color: $Prism.colors.atrule
   }
 
   &.keyword {
-    color: $Prism.colors.keyword;
+    color: $Prism.colors.keyword
   }
 
   &.builtin {
-    color: $Prism.colors.builtin;
+    color: $Prism.colors.builtin
   }
 
   &.string {
-    color: $Prism.colors.string;
+    color: $Prism.colors.string
   }
 
   &.char {
-    color: $Prism.colors.char;
-  }
-
-  &.hexcode {
-    color: $Prism.colors.hexcode;
+    color: $Prism.colors.char
   }
 
   &.attr-value {
-    color: $Prism.colors.attr-value;
+    color: $Prism.colors.attr-value
   }
 
   &.regex {
-    color: $Prism.colors.regex;
+    color: $Prism.colors.regex
   }
 
   &.variable {
-    color: $Prism.colors.variable;
+    color: $Prism.colors.variable
   }
 
   &.operator {
-    color: $Prism.colors.operator;
+    color: $Prism.colors.operator
   }
 
   &.entity {
-    color: $Prism.colors.entity;
+    color: $Prism.colors.entity
   }
 
   &.url {
-    color: $Prism.colors.url;
+    color: $Prism.colors.url
   }
 
-  &.important, &.bold {
+  &.important {
+    font-weight: bold;
+  }
+
+  &.bold {
     font-weight: bold;
   }
 
@@ -201,4 +180,139 @@ pre[_code] {
   &.inserted {
     color: $Prism.colors.inserted;
   }
+}
+
+pre[data-line] {
+  position: relative
+  padding: $Sizes.padding.medium 0 $Sizes.padding.medium $Sizes.padding.large
+}
+
+.line-highlight {
+  position: absolute
+  left: 0
+  right: 0
+  padding: inherit 0
+  margin-top: $Sizes.padding.medium
+  background: alpha($Colors.theme.muted, .2);
+  background: linear-gradient(to right, alpha($Colors.theme.muted, .2) 70%, alpha($Colors.theme.muted, 0))
+  pointer-events: none
+  line-height: inherit
+  white-space: pre
+}
+
+@media print {
+  .line-highlight {
+    color-adjust: exact
+  }
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start)
+  position: absolute
+  top: .4em
+  left: .6em
+  min-width: $Font.size.default
+  padding: 0 .5em
+  background-color: alpha($Colors.theme.muted, .4);
+  color: $Colors.theme.light
+  font: bold 65% / 1.5 sans-serif
+  text-align: center
+  vertical-align: .3em
+  border-radius: 999px
+  text-shadow: none
+  shadow-values(1)
+}
+
+.line-highlight[data-end]:after {
+  content: attr(data-end)
+  top: auto
+  bottom: .4em
+}
+
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows {
+  pointer-events: all
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+  cursor: pointer
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+  background-color: alpha($Colors.theme.muted, .2);
+}
+
+pre[class*="language-"].line-numbers {
+  position: relative
+  padding-left: 3.8em
+  counter-reset: linenumber
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative
+  white-space: inherit
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute
+  pointer-events: none
+  top: 0
+  font-size: 104.1%
+  left: -3.8em
+  width: 3em
+  letter-spacing: -1px
+  border-right: 1px solid #999
+  user-select: none
+}
+
+.line-numbers-rows > span {
+  display: block
+  counter-increment: linenumber
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber)
+  color: #999
+  display: block
+  padding-right: 0.8em
+  text-align: right
+}
+
+.token a {
+  color: inherit
+}
+
+span.inline-color-wrapper {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=")
+  background-position: center
+  background-size: 110%
+  display: inline-block
+  height: 1.333ch
+  width: 1.333ch
+  margin: 0 .333ch
+  box-sizing: border-box
+  border: 1px solid $Colors.theme.light
+  outline: 1px solid alpha($Colors.theme.dark, .4)
+  overflow: hidden
+}
+
+span.inline-color {
+  display: block
+  height: 120%
+  width: 120%
+}
+
+[class*='lang-'] script[type='text/plain'],
+[class*='language-'] script[type='text/plain'],
+script[type='text/plain'][class*='lang-'],
+script[type='text/plain'][class*='language-'] {
+  display: block
+  font: 100%
+  white-space: pre
+  overflow: auto
 }

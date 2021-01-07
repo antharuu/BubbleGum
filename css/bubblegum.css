@@ -26018,60 +26018,43 @@ hr {
 *
 * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
 * Based on https://github.com/chriskempson/tomorrow-theme
-*
-* @author Rose Pritchard
 ******************************************************
 * Bubblegum integration by Antharuu
 ******************************************************/
 code[class*="language-"],
-code[_code] {
-  box-shadow: 0px 2px 4px 0px rgba(26,29,45,0.14), 0px 1px 5px 1px rgba(26,29,45,0.12), 0px 1px 1px -1px rgba(26,29,45,0.2);
-  background: none;
+pre[class*="language-"] {
   color: #fbfaf8;
+  background: none;
   font-size: 18px;
-  -webkit-hyphens: none;
-  hyphens: none;
-  line-height: 1.5;
-  tab-size: 4;
   text-align: left;
   white-space: pre;
-  word-break: normal;
   word-spacing: normal;
+  word-break: normal;
   word-wrap: normal;
-  border-radius: 5px;
-}
-pre[class*="language-"],
-pre[_code] {
-  box-shadow: 0px 2px 4px 0px rgba(26,29,45,0.14), 0px 1px 5px 1px rgba(26,29,45,0.12), 0px 1px 1px -1px rgba(26,29,45,0.2);
-  border-radius: 5px;
-  background: none;
-  color: #fbfaf8;
-  font-size: 18px;
+  line-height: 1.5;
+  tab-size: 4;
   -webkit-hyphens: none;
   hyphens: none;
-  line-height: 1.5;
+  border-radius: 5px;
+}
+pre[class*="language-"] {
+  padding: 15px;
   margin: 5px 0;
   overflow: auto;
-  padding: 15px;
-  tab-size: 4;
-  text-align: left;
-  white-space: pre;
-  word-break: normal;
-  word-spacing: normal;
-  word-wrap: normal;
 }
 :not(pre) > code[class*="language-"],
-:not(pre) > code[_code],
-pre[class*="language-"],
-pre[_code] {
+pre[class*="language-"] {
   background: #1a1d2d;
 }
-:not(pre) > code[class*="language-"],
-:not(pre) > code[_code] {
-  padding: 2.5px;
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 15px;
+  border-radius: 5px;
   white-space: normal;
 }
-.token.comment,
+.token.comment {
+  color: #5a659c;
+}
 .token.block-comment {
   color: #5a659c;
 }
@@ -26093,7 +26076,7 @@ pre[_code] {
 .token.attr-name {
   color: #f24236;
 }
-.token.namespace {
+.token.attr-name {
   color: #f24236;
 }
 .token.deleted {
@@ -26120,9 +26103,6 @@ pre[_code] {
 .token.constant {
   color: #f7b32b;
 }
-.token.symbol {
-  color: #f7b32b;
-}
 .token.selector {
   color: #e43f6f;
 }
@@ -26144,9 +26124,6 @@ pre[_code] {
 .token.char {
   color: #3ccd65;
 }
-.token.hexcode {
-  color: #6564db;
-}
 .token.attr-value {
   color: #3ccd65;
 }
@@ -26165,7 +26142,9 @@ pre[_code] {
 .token.url {
   color: #3169c4;
 }
-.token.important,
+.token.important {
+  font-weight: bold;
+}
 .token.bold {
   font-weight: bold;
 }
@@ -26177,4 +26156,123 @@ pre[_code] {
 }
 .token.inserted {
   color: #3ccd65;
+}
+pre[data-line] {
+  position: relative;
+  padding: 15px 0 15px 30px;
+}
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 15px;
+  background: rgba(90,101,156,0.2);
+  background: linear-gradient(to right, rgba(90,101,156,0.2) 70%, rgba(90,101,156,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+@media print {
+  .line-highlight {
+    -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+  }
+}
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 18px;
+  padding: 0 0.5em;
+  background-color: rgba(90,101,156,0.4);
+  color: #fbfaf8;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0px 2px 4px 0px rgba(26,29,45,0.14), 0px 1px 5px 1px rgba(26,29,45,0.12), 0px 1px 1px -1px rgba(26,29,45,0.2);
+}
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+.line-numbers .line-highlight:before,
+.line-numbers .line-highlight:after {
+  content: none;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows {
+  pointer-events: all;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+  cursor: pointer;
+}
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+  background-color: rgba(90,101,156,0.2);
+}
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 104.1%;
+  left: -3.8em;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+.token a {
+  color: inherit;
+}
+span.inline-color-wrapper {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDIiPjxwYXRoIGZpbGw9ImdyYXkiIGQ9Ik0wIDBoMnYySDB6Ii8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0wIDBoMXYxSDB6TTEgMWgxdjFIMXoiLz48L3N2Zz4=");
+  background-position: center;
+  background-size: 110%;
+  display: inline-block;
+  height: 1.333ch;
+  width: 1.333ch;
+  margin: 0 0.333ch;
+  box-sizing: border-box;
+  border: 1px solid #fbfaf8;
+  outline: 1px solid rgba(26,29,45,0.4);
+  overflow: hidden;
+}
+span.inline-color {
+  display: block;
+  height: 120%;
+  width: 120%;
+}
+[class*='lang-'] script[type='text/plain'],
+[class*='language-'] script[type='text/plain'],
+script[type='text/plain'][class*='lang-'],
+script[type='text/plain'][class*='language-'] {
+  display: block;
+  font: 100%;
+  white-space: pre;
+  overflow: auto;
 }
