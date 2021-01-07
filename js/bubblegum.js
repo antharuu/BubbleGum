@@ -8,6 +8,12 @@
  */
 const bubblegum_prefix = '_';
 
+const bundles = [
+    'prism'
+]
+
+bundles.forEach((file) => require('./bundles/' + file))
+
 let codes = document.querySelectorAll('[' + bubblegum_prefix + 'code]');
 
 codes.forEach(function (c) {
@@ -17,7 +23,10 @@ codes.forEach(function (c) {
         if (c.localName === 'code') {
             bubble_set_code(c)
         } else if (c.localName === 'pre') {
-            if (c.childNodes[0].localName === 'code') {
+            if (c.childNodes[0] !== undefined) {
+                if (c.childNodes[0].localName !== 'code') {
+                    c.innerHTML = '<code>' + c.innerHTML + '</code>'
+                }
                 bubble_set_code(c.childNodes[0])
             }
         }

@@ -1,1 +1,0 @@
-(()=>{function e(e){e.innerHTML=e.innerHTML.trim(),"pre"!==e.parentElement.localName&&(e.outerHTML="<pre>"+e.outerHTML+"</pre>")}document.querySelectorAll("[_code]").forEach((function(l){{let o=l.attributes._code.value;l.classList.add("language-"+o),"code"===l.localName?e(l):"pre"===l.localName&&"code"===l.childNodes[0].localName&&e(l.childNodes[0])}}))})();
