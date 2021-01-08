@@ -1,7 +1,6 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
-    <inspection_tool class="CssUnknownTarget" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="ForgottenDebugOutputInspection" enabled="true" level="ERROR" enabled_by_default="true">
       <option name="configuration">
         <list>
@@ -72,42 +71,10 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="19">
+          <list size="3">
             <item index="0" class="java.lang.String" itemvalue="_container" />
-            <item index="1" class="java.lang.String" itemvalue="_col" />
-            <item index="2" class="java.lang.String" itemvalue="_justify" />
-            <item index="3" class="java.lang.String" itemvalue="_content" />
-            <item index="4" class="java.lang.String" itemvalue="_push" />
-            <item index="5" class="java.lang.String" itemvalue="_float" />
-            <item index="6" class="java.lang.String" itemvalue="_padding" />
-            <item index="7" class="java.lang.String" itemvalue="_debug" />
-            <item index="8" class="java.lang.String" itemvalue="_row" />
-            <item index="9" class="java.lang.String" itemvalue="_brand" />
-            <item index="10" class="java.lang.String" itemvalue="_navbar" />
-            <item index="11" class="java.lang.String" itemvalue="_shadow" />
-            <item index="12" class="java.lang.String" itemvalue="_pagination" />
-            <item index="13" class="java.lang.String" itemvalue="_size" />
-            <item index="14" class="java.lang.String" itemvalue="_items" />
-            <item index="15" class="java.lang.String" itemvalue="_m" />
-            <item index="16" class="java.lang.String" itemvalue="_font" />
-            <item index="17" class="java.lang.String" itemvalue="_bg" />
-            <item index="18" class="java.lang.String" itemvalue="_form-group" />
-          </list>
-        </value>
-      </option>
-      <option name="myCustomValuesEnabled" value="true" />
-    </inspection_tool>
-    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
-      <option name="myValues">
-        <value>
-          <list size="7">
-            <item index="0" class="java.lang.String" itemvalue="nobr" />
-            <item index="1" class="java.lang.String" itemvalue="noembed" />
-            <item index="2" class="java.lang.String" itemvalue="comment" />
-            <item index="3" class="java.lang.String" itemvalue="noscript" />
-            <item index="4" class="java.lang.String" itemvalue="embed" />
-            <item index="5" class="java.lang.String" itemvalue="script" />
-            <item index="6" class="java.lang.String" itemvalue="row" />
+            <item index="1" class="java.lang.String" itemvalue="_font" />
+            <item index="2" class="java.lang.String" itemvalue="_bg" />
           </list>
         </value>
       </option>

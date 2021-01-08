@@ -1,0 +1,44 @@
+-
+    const version = '1.0';
+    const version_full = 'v1.0.0';
+    const cdn_link = 'https://cdn.jsdelivr.net/npm/bubblegum-css@1.0.0/css/bubblegum.min.css';
+
+    const parts = ({
+        'installation': 'Installation',
+        'overview': 'Overview'
+    })
+
+
+mixin row-col()
+    if block
+        section(_row='' _justify='center')
+            div(_col=' md:11 lg:10')
+                div(_font='justify' _bg='light' _round _shadow _margin='b-5' _padding=5).card
+                    block
+
+mixin add-title(title, link)
+    <h2 id="#{link}" class="section-title" _font="pink">#{title}</h2>
+
+doctype html
+html(lang='en')
+    head
+        title Bubblegum documentation v#{version}
+        meta(charset='UTF-8')
+        link(rel='stylesheet' href='doc/css/doc.css')
+        link(rel='stylesheet' href='css/bubblegum.css')
+        link(rel='shortcut icon' href='favicon.png' type='image/x-icon')
+    body(_bg='pink')
+        h1(_font='center light').title Bubblegum
+            small(title=version_full) #{version}
+
+        div(_container='')
+            +row-col: include parts/home.pug
+            +row-col: include parts/installation.pug
+            +row-col: include parts/overview.pug
+
+        nav#sidenav
+            each name,link in parts
+                <a href="##{link}" data-name="#{name}" title="#{name}">•</a>
+
+script(src='doc/js/doc.min.js')
+script(src='js/bubblegum.min.js')

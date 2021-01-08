@@ -4,7 +4,10 @@
   border-radius: $Sizes.round.small
 
   for $i in 0..$Core.logic_max {
-    +add-value($i 'small-' + $i 'sm-' + $i) {
+    +add-value($i) {
+      border-radius: ($Sizes.round.small * $i)
+    }
+    +add-value('small-' + $i 'sm-' + $i) {
       border-radius: ($Sizes.round.small * $i)
     }
     +add-value('medium-' + $i 'md-' + $i) {
@@ -24,10 +27,8 @@
 +add-selector('margin') {
   _.current_selector = 'margin'
 
-  margin: $Sizes.margin.small
-
   for $i in 0..$Core.logic_max {
-    +add-value($i 'small-' + $i 'sm-' + $i) {
+    +add-value($i 'small-' + $i 'sm-' + $i $i) {
       margin: ($Sizes.margin.small * $i)
     }
     +add-value('medium-' + $i 'md-' + $i) {
@@ -41,7 +42,10 @@
       $dir-name = $dir-name + '-'
       $dir-value = '-' + $dir-value
 
-      +add-value($dir-name + $i $dir-name + 'small-' + $i $dir-name + 'sm-' + $i) {
+      +add-value($dir-name + $i $dir-name + 'small-' + $i) {
+        margin{$dir-value}: ($Sizes.margin.small * $i)
+      }
+      +add-value($dir-name + 'sm-' + $i) {
         margin{$dir-value}: ($Sizes.margin.small * $i)
       }
       +add-value($dir-name + 'medium-' + $i $dir-name + 'md-' + $i) {
@@ -56,8 +60,6 @@
 
 +add-selector('padding') {
   _.current_selector = 'padding'
-
-  margin: $Sizes.padding.small
 
   for $i in 0..$Core.logic_max {
     +add-value($i 'small-' + $i 'sm-' + $i) {
@@ -74,7 +76,10 @@
       $dir-name = $dir-name + '-'
       $dir-value = '-' + $dir-value
 
-      +add-value($dir-name + $i $dir-name + 'small-' + $i $dir-name + 'sm-' + $i) {
+      +add-value($dir-name + $i $dir-name + 'small-' + $i) {
+        padding{$dir-value}: ($Sizes.padding.small * $i)
+      }
+      +add-value($dir-name + 'sm-' + $i) {
         padding{$dir-value}: ($Sizes.padding.small * $i)
       }
       +add-value($dir-name + 'medium-' + $i $dir-name + 'md-' + $i) {

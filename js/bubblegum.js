@@ -17,7 +17,14 @@ codes.forEach(function (c) {
         if (c.localName === 'code') {
             bubble_set_code(c)
         } else if (c.localName === 'pre') {
+<<<<<<< Updated upstream
             if (c.childNodes[0].localName === 'code') {
+=======
+            if (c.childNodes[0] !== undefined) {
+                if (c.childNodes[0].localName !== 'code') {
+                    c.innerHTML = '<code>' + c.innerHTML.trim() + '</code>'
+                }
+>>>>>>> Stashed changes
                 bubble_set_code(c.childNodes[0])
             }
         }
@@ -27,6 +34,6 @@ codes.forEach(function (c) {
 function bubble_set_code(c) {
     c.innerHTML = c.innerHTML.trim()
     if (c.parentElement.localName !== 'pre') {
-        c.outerHTML = '<pre>' + c.outerHTML + '</pre>'
+        c.outerHTML = '<pre>' + c.outerHTML.trim() + '</pre>'
     }
 }
