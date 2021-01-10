@@ -40,6 +40,10 @@ a
     display flex
     justify-content space-between
 
+  .nav-part
+    margin: 0
+    padding: 0
+
 
 #brand
   font-family 'Nunito', sans-serif
@@ -102,12 +106,12 @@ a
 
 
   h1
-    font-size 48px
+    font-size clamp(32px, 5vw, 48px)
     margin-bottom 20px
 
 
   h2
-    font-size 39px
+    font-size clamp(24px, 4vw, 39px)
     margin-bottom 20px
     line-height 1.7em
     font-weight 500
@@ -164,22 +168,24 @@ pre
 
 #logo-bg
   position absolute
-  width 40vw
-  height 40vw
-  min-width 600px
-  min-height 600px
+  width clamp(300px, 50vw, 600px)
+  height clamp(300px, 50vw, 600px)
   background-image url('../../favicon.png')
+  background-repeat: no-repeat
   background-size contain
   z-index -1
   opacity 0.3
   transform rotate(-17deg)
-  top -20%
+  top clamp(0, 20vh, -20%)
   left 40%
 
 
 #home-why
   color $Color_secondary
   margin 200px 0
+
+  h3
+    font-size: clamp(32px, 4vw, 38px) !important
 
 
 .why-card
@@ -190,9 +196,10 @@ pre
     text-transform uppercase
     color $Color_main
     font-weight bold
+    font-size: clamp(24px, 4vw, 32px)
 
   p
-    font-size 1.4em
+    font-size: clamp(1em, 3vw, 1.4em)
     font-weight 400
 
 #bottom-links
@@ -225,9 +232,11 @@ footer
   margin-bottom 5em
   border-right 1px solid alpha($Color_secondary, .3)
 
-  h5
-    text-align right
+  .nav-part
+    padding: 0
+    margin: 0
 
+  h5
     > a
       font-size 0.9em
       text-transform uppercase
@@ -236,7 +245,6 @@ footer
   ul
     margin none
     list-style-type none
-    text-align right
 
     li
       a
@@ -253,6 +261,7 @@ code
   margin-bottom: 4em
   padding 0 1em
   color $Color_secondary
+  font-size: clamp(.85em, 2vw, 1em)
 
   h2, h3, h4, h5, h6
     text-transform uppercase
@@ -262,6 +271,7 @@ code
     margin-left: .3em
     color $Color_main
     font-weight: bold;
+    font-size: clamp(38px, 4vw, 48px)
 
     &:before {
       position: relative;
@@ -273,24 +283,27 @@ code
 
   h3
     margin-top: .5em
-    font-size: 2em
+    font-size: clamp(1.5em, 3vw, 2em)
 
   h4
     margin-top: .5em
-    font-size: 1.5em
+    font-size: clamp(1.25em, 3vw, 1.5em)
 
   h5
     margin-top: .5em
-    font-size: 1.25em
+    font-size: clamp(1.1em, 2vw, 1.25em)
 
   h6
-    font-size: 1em
+    font-size: clamp(1em, 2vw, 1.1em)
 
   ul.no-style
     list-style-type: none;
 
-  pre
+  pre, code
+    font-size: clamp(.85em, 2vw, 1em) !important
     margin-top: 1em
+    box-shadow none
+    opacity: .95
 
   a
     color: $Color_main !important
@@ -302,3 +315,33 @@ code
 
     &.big
       margin: 2em auto
+
+@media screen and (max-width: 990px)
+  #home-container
+    margin-left: 1em
+    margin-right: 1em
+
+
+@media screen and (max-width: 770px)
+  #brand
+    margin-left: -2.5em
+
+  #links
+    margin-bottom: 2em
+
+    li, li a
+      margin-top: 1em
+      width 100%
+      text-align: center
+
+  #home-container
+    a
+      text-align: center;
+      display: block;
+      width: 100%
+      margin auto
+      margin-bottom: .5em
+
+    code
+      text-align: center !important;
+      font-size: clamp(16px, 5vw, 24px) !important

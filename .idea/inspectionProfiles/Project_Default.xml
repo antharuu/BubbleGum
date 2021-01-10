@@ -71,7 +71,7 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="12">
+          <list size="15">
             <item index="0" class="java.lang.String" itemvalue="_container" />
             <item index="1" class="java.lang.String" itemvalue="_font" />
             <item index="2" class="java.lang.String" itemvalue="_bg" />
@@ -84,6 +84,9 @@
             <item index="9" class="java.lang.String" itemvalue="_items" />
             <item index="10" class="java.lang.String" itemvalue="_push" />
             <item index="11" class="java.lang.String" itemvalue="_display" />
+            <item index="12" class="java.lang.String" itemvalue="_width" />
+            <item index="13" class="java.lang.String" itemvalue="_show" />
+            <item index="14" class="java.lang.String" itemvalue="_content" />
           </list>
         </value>
       </option>

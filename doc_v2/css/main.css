@@ -79,11 +79,9 @@ audio,
 video {
   font-family: 'Raleway', sans-serif;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   background-color: transparent;
 }
@@ -109,6 +107,10 @@ a:hover {
 #navbar > [_container] {
   display: flex;
   justify-content: space-between;
+}
+#navbar .nav-part {
+  margin: 0;
+  padding: 0;
 }
 #brand {
   font-family: 'Nunito', sans-serif;
@@ -165,25 +167,22 @@ a:hover {
   padding: 0;
 }
 #home-container h1 {
-  font-size: 48px;
+  font-size: clamp(32px, 5vw, 48px);
   margin-bottom: 20px;
 }
 #home-container h2 {
-  font-size: 39px;
+  font-size: clamp(24px, 4vw, 39px);
   margin-bottom: 20px;
   line-height: 1.7em;
   font-weight: 500;
 }
-
 #home-container pre {
   font-size: 24px;
   background-color: #4a4a4a;
 }
-
 pre {
   font-family: 'Fira code', monospace !important;
 }
-
 #home-links {
   margin-top: 25px;
 }
@@ -224,21 +223,23 @@ pre {
 }
 #logo-bg {
   position: absolute;
-  width: 40vw;
-  height: 40vw;
-  min-width: 600px;
-  min-height: 600px;
+  width: clamp(300px, 50vw, 600px);
+  height: clamp(300px, 50vw, 600px);
   background-image: url("../../favicon.png");
+  background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
   opacity: 0.3;
   transform: rotate(-17deg);
-  top: -20%;
+  top: clamp(0, 20vh, -20%);
   left: 40%;
 }
 #home-why {
   color: #4a4a4a;
   margin: 200px 0;
+}
+#home-why h3 {
+  font-size: clamp(32px, 4vw, 38px) !important;
 }
 .why-card {
   padding: 0;
@@ -248,9 +249,10 @@ pre {
   text-transform: uppercase;
   color: #f04f78;
   font-weight: bold;
+  font-size: clamp(24px, 4vw, 32px);
 }
 .why-card p {
-  font-size: 1.4em;
+  font-size: clamp(1em, 3vw, 1.4em);
   font-weight: 400;
 }
 #bottom-links {
@@ -267,62 +269,51 @@ pre {
   color: #f04f78;
   font-size: 1em;
 }
-
 #credits,
 #licence {
   font-weight: lighter;
 }
-
 #credits a,
 #licence a {
   color: #f04f78;
   font-size: 1em;
 }
-
 footer {
   margin-top: 5em;
 }
-
 #doc-nav {
   margin-bottom: 5em;
-  border-right: 1px solid rgba(74, 74, 74, 0.3);
+  border-right: 1px solid rgba(74,74,74,0.3);
 }
-
-#doc-nav h5 {
-  text-align: right;
+#doc-nav .nav-part {
+  padding: 0;
+  margin: 0;
 }
-
 #doc-nav h5 > a {
   font-size: 0.9em;
   text-transform: uppercase;
   color: #f04f78;
 }
-
 #doc-nav ul {
   margin: none;
   list-style-type: none;
-  text-align: right;
 }
-
 #doc-nav ul li a {
   font-size: 0.9em;
   color: #4a4a4a;
 }
-
 #doc-nav ul li a.active {
   font-weight: bold;
 }
-
 code {
   box-shadow: none !important;
 }
-
 #documentation-container {
   margin-bottom: 4em;
   padding: 0 1em;
   color: #4a4a4a;
+  font-size: clamp(0.85em, 2vw, 1em);
 }
-
 #documentation-container h2,
 #documentation-container h3,
 #documentation-container h4,
@@ -330,58 +321,83 @@ code {
 #documentation-container h6 {
   text-transform: uppercase;
 }
-
 #documentation-container h2 {
   position: relative;
   margin-left: 0.3em;
   color: #f04f78;
   font-weight: bold;
+  font-size: clamp(38px, 4vw, 48px);
 }
-
 #documentation-container h2:before {
   position: relative;
   content: '>';
   left: -0.3em;
   top: -0.06em;
 }
-
 #documentation-container h3 {
   margin-top: 0.5em;
-  font-size: 2em;
+  font-size: clamp(1.5em, 3vw, 2em);
 }
-
 #documentation-container h4 {
   margin-top: 0.5em;
-  font-size: 1.5em;
+  font-size: clamp(1.25em, 3vw, 1.5em);
 }
-
 #documentation-container h5 {
   margin-top: 0.5em;
-  font-size: 1.25em;
+  font-size: clamp(1.1em, 2vw, 1.25em);
 }
-
 #documentation-container h6 {
-  font-size: 1em;
+  font-size: clamp(1em, 2vw, 1.1em);
 }
-
 #documentation-container ul.no-style {
   list-style-type: none;
 }
-
-#documentation-container pre {
+#documentation-container pre,
+#documentation-container code {
+  font-size: clamp(0.85em, 2vw, 1em) !important;
   margin-top: 1em;
+  box-shadow: none;
+  opacity: 0.95;
 }
-
 #documentation-container a {
   color: #f04f78 !important;
 }
-
 #documentation-container hr {
   border-color: #4a4a4a !important;
   opacity: 0.5;
   margin: 1em auto;
 }
-
 #documentation-container hr.big {
   margin: 2em auto;
+}
+@media screen and (max-width: 990px) {
+  #home-container {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+@media screen and (max-width: 770px) {
+  #brand {
+    margin-left: -2.5em;
+  }
+  #links {
+    margin-bottom: 2em;
+  }
+  #links li,
+  #links li a {
+    margin-top: 1em;
+    width: 100%;
+    text-align: center;
+  }
+  #home-container a {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 0.5em;
+  }
+  #home-container code {
+    text-align: center !important;
+    font-size: clamp(16px, 5vw, 24px) !important;
+  }
 }

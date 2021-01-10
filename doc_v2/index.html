@@ -11,13 +11,18 @@
   <body>
     <div id="navbar-rule"></div>
     <div id="navbar">
-      <div _container=""><a href="index.html" id="brand"><img src="../favicon.png">ubblegum</a>
-        <ul id="links">
-          <li><a href="documentation.html">Documentation</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="changelog.html">Changelog</a></li>
-          <li class="btn-started"><a href="documentation.html">Get started</a></li>
-        </ul>
+      <div _container="">
+        <div _row="" _width="100">
+          <div class="nav-part" _col="12 lg:4" _font="center lg:left"><a href="index.html" id="brand"><img src="../favicon.png">ubblegum</a></div>
+          <div class="nav-part" _col="12 lg:8">
+            <ul _width="100" _row _direction="column md:row" _justify="center lg:end" _content="center" id="links">
+              <li _font="center lg:right"><a href="documentation.html">Documentation</a></li>
+              <li _font="center lg:right"><a href="contact.html">Contact</a></li>
+              <li _font="center lg:right"><a href="changelog.html">Changelog</a></li>
+              <li class="btn-started"><a href="documentation.html">Get started</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div _container="">
@@ -40,13 +45,13 @@
               <p>Designed to be quick and easy to use</p>
             </div>
             <div class="why-card" _col="md:4 lg:3">
-                <h4>Consistent</h4>
-                <p>Bring together the different uses of classical frameworks</p>
+              <h4>Consistent</h4>
+              <p>Bring together the different uses of classical frameworks</p>
             </div>
-              <div class="why-card" _col="md:4 lg:3">
-                  <h4>Bundles</h4>
-                  <p>Simplify the use of integrated bundles</p>
-              </div>
+            <div class="why-card" _col="md:4 lg:3">
+              <h4>Bundles</h4>
+              <p>Simplify the use of integrated bundles</p>
+            </div>
           </div>
         </div>
       </div>
@@ -54,21 +59,18 @@
     <script src="js/main.dev.js"></script>
     <script src="../js/bubblegum.min.js"></script>
     <footer _container="">
-        <div _row="" _justify="center">
-            <div _col="10">
-                <ul id="bottom-links">
-                    <li><a href="https://github.com/antharuu/BubbleGum" target="_blank">Github</a></li>
-                    <li><a href="https://www.npmjs.com/package/bubblegum-css" target="_blank">Npm</a></li>
-                    <li><a href="https://twitter.com/Antharuu" target="_blank">Twitter</a></li>
-                    <li><a href="about.html" target="_blank">About</a></li>
-                </ul>
-                <p id="credits">Designed and created by Anthony Bellancourt, with <a href='https://stylus-lang.com/'
-                                                                                     target='_blank'>stylus</a>.</p>
-                <p id="licence">Currently v1.0.0. Licence <a target='_blank'
-                                                             href='https://github.com/antharuu/BubbleGum/blob/main/LICENSE'>MIT</a>.
-                </p>
-            </div>
+      <div _row="" _justify="center">
+        <div _col="10">
+          <ul id="bottom-links">
+            <li><a href="https://github.com/antharuu/BubbleGum" target="_blank">Github</a></li>
+            <li><a href="https://www.npmjs.com/package/bubblegum-css" target="_blank">Npm</a></li>
+            <li><a href="https://twitter.com/Antharuu" target="_blank">Twitter</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+          </ul>
+          <p id="credits">Designed and created by Anthony Bellancourt, with <a href='https://stylus-lang.com/' target='_blank'>stylus</a>.</p>
+          <p id="licence">Currently v1.0.0. Licence <a target='_blank' href='https://github.com/antharuu/BubbleGum/blob/main/LICENSE'>MIT</a>.</p>
         </div>
+      </div>
     </footer>
   </body>
 </html>

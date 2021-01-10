@@ -14,16 +14,21 @@ html
         #navbar-rule
         #navbar
             div(_container='')
-                a(href='index.html')#brand
-                    img(src='../favicon.png')
-                    | ubblegum
-                ul#links
-                    each link, name in navbar
-                        if active_page === link
-                            li.active: a(href=link)=name
-                        else
-                            li: a(href=link)=name
-                    li.btn-started: a(href='documentation.html') Get started
+                div(_row='' _width='100')
+                    div(_col='12 lg:4' _font='center lg:left').nav-part
+                        a(href='index.html')#brand
+                            img(src='../favicon.png')
+                            | ubblegum
+                    div(_col='12 lg:8').nav-part
+                        ul(_width='100' _row _direction='column md:row' _justify='center lg:end' _content='center')#links
+                            each link, name in navbar
+                                if active_page === link
+                                    li(_font='center lg:right').active: a(href=link)=name
+                                else
+                                    li(_font='center lg:right'): a(href=link)=name
+                            li.btn-started: a(href='documentation.html') Get started
+
+
 
         block content
 
