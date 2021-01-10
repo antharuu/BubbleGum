@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Nunito:wght@600&family=Raleway:ital,wght@0,300;0,400;1,500&display=swap");
+html,
+body,
+div,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-family: 'Raleway', sans-serif;
+}
+#navbar {
+  margin-bottom: 50px;
+}
+#navbar > [_container] {
+  display: flex;
+  justify-content: space-between;
+}
+#navbar > [_container] #brand {
+  font-family: 'Nunito', sans-serif;
+  color: #f04f78;
+  font-size: 48px;
+  position: relative;
+  top: 30px;
+  left: 95px;
+}
+#navbar > [_container] #brand img {
+  position: absolute;
+  height: 105px;
+  width: 105px;
+  top: -18px;
+  left: -95px;
+}
+#navbar > [_container] #links {
+  display: flex;
+  list-style: none;
+  position: relative;
+  top: 56px;
+}
+#navbar > [_container] #links > .active a {
+  font-weight: bold;
+}
+#navbar > [_container] #links > li {
+  margin-left: 25px;
+}
+#navbar > [_container] #links > li a {
+  font-size: 22px;
+  color: #f04f78;
+  text-decoration: none;
+}
+#navbar > [_container] #links .btn-started a {
+  position: relative;
+  top: 0.2em;
+  border: 1px solid #f04f78;
+  padding: 0.7em 1em;
+  border-radius: 5000px;
+  transition: all 0.2s ease-in-out;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+#navbar > [_container] #links .btn-started a:hover {
+  background-color: #f04f78;
+  color: #fff;
+}
