@@ -1,31 +1,37 @@
-$Colors = {
-  main: #F04F78,
-  secondary: #4A4A4A
-}
+$Color_main = #F04F78
+$Color_secondary = #4A4A4A
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Nunito:wght@600&family=Raleway:ital,wght@0,300;0,400;1,500&display=swap')
 
 html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, address, big, cite, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
   font-family 'Raleway', sans-serif
 
+html
+  scroll-behavior: smooth
+
 body
   background-color transparent
+
 
 .debug
   outline 1px solid red
 
+
 .pink
-  color $Colors.main
+  color $Color_main
+
 
 *::selection
   color white
-  background-color $Colors.main
+  background-color $Color_main
+
 
 a
   text-decoration none
 
   &:hover
     text-decoration underline
+
 
 #navbar
   margin-bottom 65px
@@ -34,9 +40,10 @@ a
     display flex
     justify-content space-between
 
+
 #brand
   font-family 'Nunito', sans-serif
-  color $Colors.main
+  color $Color_main
   font-size 48px
   position relative
   top 30px
@@ -50,6 +57,7 @@ a
     top -18px
     left -95px
 
+
 #links
   display flex
   list-style none
@@ -60,18 +68,20 @@ a
     a
       font-weight bold
 
+
   > li
     margin-left 25px
 
     a
       font-size 22px
-      color $Colors.main
+      color $Color_main
       text-decoration none
+
 
   .btn-started a
     position relative
     top 0.2em
-    border 1px solid $Colors.main
+    border 1px solid $Color_main
     padding 0.7em 1em
     border-radius 5000px
     transition all 0.2s ease-in-out
@@ -79,19 +89,22 @@ a
     font-size 18px
 
     &:hover
-      background-color $Colors.main
+      background-color $Color_main
       color white
 
+
 #home-container
-  color $Colors.secondary
+  color $Color_secondary
   height calc(100vh - 150px)
 
   > div
     padding 0
 
+
   h1
     font-size 48px
     margin-bottom 20px
+
 
   h2
     font-size 39px
@@ -99,9 +112,13 @@ a
     line-height 1.7em
     font-weight 500
 
+
   pre
     font-size 24px
-    background-color $Colors.secondary
+    background-color $Color_secondary
+
+pre
+  font-family: 'Fira code', monospace !important
 
 #home-links
   margin-top 25px
@@ -113,18 +130,21 @@ a
     text-decoration none
     border-radius 5000px
     margin-left 15px
-    border 1px solid $Colors.secondary
-    color $Colors.secondary
+    border 1px solid $Color_secondary
+    color $Color_secondary
     transition all 0.2s ease-in-out
 
+
   &-started
-    background-color $Colors.main
+    background-color $Color_main
     border none !important
     color white !important
     font-size 24px !important
 
+
   &-download
     margin-top 0.5em
+
 
   &-star
     margin-top 0.5em
@@ -136,9 +156,11 @@ a
       top 0.2em
       margin-right 0.5em
 
+
   &-download:hover, &-star:hover
-    background-color $Colors.secondary
+    background-color $Color_secondary
     color white
+
 
 #logo-bg
   position absolute
@@ -154,9 +176,11 @@ a
   top -20%
   left 40%
 
+
 #home-why
-  color $Colors.secondary
+  color $Color_secondary
   margin 200px 0
+
 
 .why-card
   padding 0
@@ -164,7 +188,7 @@ a
 
   h4
     text-transform uppercase
-    color $Colors.main
+    color $Color_main
     font-weight bold
 
   p
@@ -181,13 +205,100 @@ a
   li
     margin-right 1em
 
+
   a
-    color $Colors.main
+    color $Color_main
     font-size 1em
 
 #credits, #licence
   font-weight lighter
 
   a
-    color $Colors.main
+    color $Color_main
     font-size 1em
+
+footer
+  margin-top 5em
+
+
+#doc-nav
+  margin-bottom 5em
+  border-right 1px solid alpha($Color_secondary, .3)
+
+  h5
+    text-align right
+
+    > a
+      font-size 0.9em
+      text-transform uppercase
+      color $Color_main
+
+  ul
+    margin none
+    list-style-type none
+    text-align right
+
+    li
+      a
+        font-size 0.9em
+        color $Color_secondary
+
+      a.active
+        font-weight bold
+
+code
+  box-shadow none !important
+
+#documentation-container
+  margin-bottom: 4em
+  padding 0 1em
+  color $Color_secondary
+
+  h2, h3, h4, h5, h6
+    text-transform uppercase
+
+  h2
+    position: relative;
+    margin-left: .3em
+    color $Color_main
+    font-weight: bold;
+
+    &:before {
+      position: relative;
+      content '>'
+      left: -.3em
+      top: -.06em
+    }
+
+
+  h3
+    margin-top: .5em
+    font-size: 2em
+
+  h4
+    margin-top: .5em
+    font-size: 1.5em
+
+  h5
+    margin-top: .5em
+    font-size: 1.25em
+
+  h6
+    font-size: 1em
+
+  ul.no-style
+    list-style-type: none;
+
+  pre
+    margin-top: 1em
+
+  a
+    color: $Color_main !important
+
+  hr
+    border-color $Color_secondary !important
+    opacity: .5
+    margin: 1em auto
+
+    &.big
+      margin: 2em auto

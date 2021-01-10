@@ -79,6 +79,11 @@ audio,
 video {
   font-family: 'Raleway', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: transparent;
 }
@@ -169,10 +174,16 @@ a:hover {
   line-height: 1.7em;
   font-weight: 500;
 }
+
 #home-container pre {
   font-size: 24px;
   background-color: #4a4a4a;
 }
+
+pre {
+  font-family: 'Fira code', monospace !important;
+}
+
 #home-links {
   margin-top: 25px;
 }
@@ -256,12 +267,121 @@ a:hover {
   color: #f04f78;
   font-size: 1em;
 }
+
 #credits,
 #licence {
   font-weight: lighter;
 }
+
 #credits a,
 #licence a {
   color: #f04f78;
   font-size: 1em;
+}
+
+footer {
+  margin-top: 5em;
+}
+
+#doc-nav {
+  margin-bottom: 5em;
+  border-right: 1px solid rgba(74, 74, 74, 0.3);
+}
+
+#doc-nav h5 {
+  text-align: right;
+}
+
+#doc-nav h5 > a {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #f04f78;
+}
+
+#doc-nav ul {
+  margin: none;
+  list-style-type: none;
+  text-align: right;
+}
+
+#doc-nav ul li a {
+  font-size: 0.9em;
+  color: #4a4a4a;
+}
+
+#doc-nav ul li a.active {
+  font-weight: bold;
+}
+
+code {
+  box-shadow: none !important;
+}
+
+#documentation-container {
+  margin-bottom: 4em;
+  padding: 0 1em;
+  color: #4a4a4a;
+}
+
+#documentation-container h2,
+#documentation-container h3,
+#documentation-container h4,
+#documentation-container h5,
+#documentation-container h6 {
+  text-transform: uppercase;
+}
+
+#documentation-container h2 {
+  position: relative;
+  margin-left: 0.3em;
+  color: #f04f78;
+  font-weight: bold;
+}
+
+#documentation-container h2:before {
+  position: relative;
+  content: '>';
+  left: -0.3em;
+  top: -0.06em;
+}
+
+#documentation-container h3 {
+  margin-top: 0.5em;
+  font-size: 2em;
+}
+
+#documentation-container h4 {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+
+#documentation-container h5 {
+  margin-top: 0.5em;
+  font-size: 1.25em;
+}
+
+#documentation-container h6 {
+  font-size: 1em;
+}
+
+#documentation-container ul.no-style {
+  list-style-type: none;
+}
+
+#documentation-container pre {
+  margin-top: 1em;
+}
+
+#documentation-container a {
+  color: #f04f78 !important;
+}
+
+#documentation-container hr {
+  border-color: #4a4a4a !important;
+  opacity: 0.5;
+  margin: 1em auto;
+}
+
+#documentation-container hr.big {
+  margin: 2em auto;
 }
