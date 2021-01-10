@@ -5,9 +5,20 @@
 
     const parts = ({
         'installation': 'Installation',
-        'overview': 'Overview'
+        'overview': 'Overview',
+        'attributes': 'Attributes',
+        'grid': 'Grid',
+        'display': 'Display',
+        'margins': 'Margins',
+        'position': 'Position',
+        'typo': 'Typo',
+        'sizes': 'Sizes',
+        'components': 'Components',
+        'others': 'Others',
+        'bundles': 'Bundles'
     })
 
+include ../pug/mixins
 
 mixin row-col()
     if block
@@ -19,26 +30,61 @@ mixin row-col()
 mixin add-title(title, link)
     <h2 id="#{link}" class="section-title" _font="pink">#{title}</h2>
 
+mixin add-sub-title(title, link)
+    <h5 id="#{link}" _font="upper">#{title}</h5>
+
+mixin add-code(lang, src, ext)
+    if !ext
+        - ext = lang
+    pre(_code=lang data-src="doc/codes/" + src + "." + ext)
+
+mixin alert(type)
+    p(_alert=type): block
+
+mixin pill(type, content, attrtitle)
+    span(_chips=type title=attrtitle)= content
+
+mixin usages(name, uses, breakpoints)
+    div(_display='flex' _justify='center' _wrap='wrap')
+        each use in uses
+            a(href='#').usage
+                if use
+                    +pill('info' ,'_' + name + '="' + use + '"', 'click to copy')
+                else
+                    +pill('info' ,'_' + name, 'click to copy')
+    br
+    if breakpoints
+        p(_font='right info') <small>Can be used with breakpoints</small>
+
+
 doctype html
 html(lang='en')
     head
         title Bubblegum documentation v#{version}
         meta(charset='UTF-8')
         link(rel='stylesheet' href='doc/css/doc.css')
-        link(rel='stylesheet' href='css/bubblegum.css')
+        link(rel='stylesheet' href='css/bubblegum-dev.css')
         link(rel='shortcut icon' href='favicon.png' type='image/x-icon')
     body(_bg='pink')
         h1(_font='center light').title Bubblegum
             small(title=version_full) #{version}
 
-        div(_container='')
+        +_container#container
             +row-col: include parts/home.pug
             +row-col: include parts/installation.pug
             +row-col: include parts/overview.pug
+            +row-col: include parts/attributes.pug
+            +row-col: include parts/attributes/grid.pug
+            +row-col: include parts/attributes/display.pug
+            +row-col: include parts/attributes/margins.pug
+            +row-col: include parts/attributes/position.pug
+            +row-col: include parts/attributes/typo.pug
+            +row-col: include parts/attributes/sizes.pug
+            +row-col: include parts/attributes/components.pug
+            +row-col: include parts/attributes/others.pug
+            +row-col: include parts/bundles.pug
 
-        nav#sidenav
-            each name,link in parts
-                <a href="##{link}" data-name="#{name}" title="#{name}">•</a>
+input(type='text')#copytext
 
 script(src='doc/js/doc.min.js')
 script(src='js/bubblegum.min.js')

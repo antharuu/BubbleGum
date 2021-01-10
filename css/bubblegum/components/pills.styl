@@ -1,0 +1,33 @@
++add-selector('chips') {
+  _.current_selector = 'chips'
+
+  background-color: #6a74a9;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: #fbfaf8;
+  margin-bottom: 5px;
+  overflow: hidden;
+  border: 2px solid #6a74a9;
+
+  for $color-name, $color-value in $Colors.all {
+    add-value($color-name, 'color-background-' + $color-name)
+  }
+}
+
++add-selector('pill') {
+  _.current_selector = 'pill'
+
+  background-color: #6a74a9;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: #fbfaf8;
+  margin-bottom: 5px;
+  overflow: hidden;
+  border: 2px solid #6a74a9;
+
+  for $color-name, $color-value in $Colors.all {
+    add-value($color-name, 'color-background-' + $color-name)
+  }
+}

@@ -71,15 +71,25 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="3">
+          <list size="12">
             <item index="0" class="java.lang.String" itemvalue="_container" />
             <item index="1" class="java.lang.String" itemvalue="_font" />
             <item index="2" class="java.lang.String" itemvalue="_bg" />
+            <item index="3" class="java.lang.String" itemvalue="_padding" />
+            <item index="4" class="java.lang.String" itemvalue="_code" />
+            <item index="5" class="java.lang.String" itemvalue="_col" />
+            <item index="6" class="java.lang.String" itemvalue="_row" />
+            <item index="7" class="java.lang.String" itemvalue="_alert" />
+            <item index="8" class="java.lang.String" itemvalue="_justify" />
+            <item index="9" class="java.lang.String" itemvalue="_items" />
+            <item index="10" class="java.lang.String" itemvalue="_push" />
+            <item index="11" class="java.lang.String" itemvalue="_display" />
           </list>
         </value>
       </option>
       <option name="myCustomValuesEnabled" value="true" />
     </inspection_tool>
+    <inspection_tool class="JSUnresolvedVariable" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
     <inspection_tool class="SecurityAdvisoriesInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="optionConfiguration">
         <list>
@@ -134,6 +144,11 @@
           <option value="zendframework/zend-test" />
         </list>
       </option>
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="true" />
+      <option name="processComments" value="true" />
     </inspection_tool>
   </profile>
 </component>

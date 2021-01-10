@@ -1,4 +1,18 @@
-mixin _container(value)
+mixin attribute(attr, value, tag)
     - value = value ? value : ''
-    div(_container=value)
+    - tag = tag ? tag : 'div'
+    <#{tag} _#{attr}="#{value}">
+        block
+    </#{tag}> <!-- #{attr} end -->
+
+mixin _container(value)
+    +attribute('container', value)
+        block
+
+mixin _row
+    +attribute('row')
+        block
+
+mixin _col(value)
+    +attribute('col')
         block

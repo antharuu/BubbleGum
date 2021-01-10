@@ -1,1 +1,4 @@
-add-selector('hide')
+add-selector('position')
+add-selector('float')
+add-selector('z')
+add-selector('vertical')

@@ -1,6 +1,5 @@
 add-selector($selector = '', $value = '', $extends...) {
   {get-selectors($selector, $value)} {
-    add-extends($extends)
     {block}
   }
 }
@@ -39,6 +38,22 @@ get-visible-color($color-value, $property = 'font') {
 
 shadow-values($i = 1) {
   box-shadow: shadow-calc($Shadows.first.x_min, $Shadows.first.x_max, $i) shadow-calc($Shadows.first.y_min, $Shadows.first.y_max, $i) shadow-calc($Shadows.first.blur_min, $Shadows.first.blur_max, $i) shadow-calc($Shadows.first.spread_min, $Shadows.first.spread_max, $i) alpha($Shadows.first.color, $Shadows.first.opacity),
-  shadow-calc($Shadows.second.x_min, $Shadows.second.x_max, $i) shadow-calc($Shadows.second.y_min, $Shadows.second.y_max, $i) shadow-calc($Shadows.second.blur_min, $Shadows.second.blur_max, $i) shadow-calc($Shadows.second.spread_min, $Shadows.second.spread_max, $i) alpha($Shadows.second.color, $Shadows.second.opacity),
-  shadow-calc($Shadows.third.x_min, $Shadows.third.x_max, $i) shadow-calc($Shadows.third.y_min, $Shadows.third.y_max, $i) shadow-calc($Shadows.third.blur_min, $Shadows.third.blur_max, $i) shadow-calc($Shadows.third.spread_min, $Shadows.third.spread_max, $i) alpha($Shadows.third.color, $Shadows.third.opacity)
+          shadow-calc($Shadows.second.x_min, $Shadows.second.x_max, $i) shadow-calc($Shadows.second.y_min, $Shadows.second.y_max, $i) shadow-calc($Shadows.second.blur_min, $Shadows.second.blur_max, $i) shadow-calc($Shadows.second.spread_min, $Shadows.second.spread_max, $i) alpha($Shadows.second.color, $Shadows.second.opacity),
+          shadow-calc($Shadows.third.x_min, $Shadows.third.x_max, $i) shadow-calc($Shadows.third.y_min, $Shadows.third.y_max, $i) shadow-calc($Shadows.third.blur_min, $Shadows.third.blur_max, $i) shadow-calc($Shadows.third.spread_min, $Shadows.third.spread_max, $i) alpha($Shadows.third.color, $Shadows.third.opacity)
 }
+
+webfont(family, file, hack-chrome-windows = false, weight = 'normal')
+  @font-face
+    font-family family
+    src url(font-url(file + '.eot'))
+    src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
+    url(font-url(file + '.woff')) format('woff'),
+    url(font-url(file + '.ttf')) format('truetype'),
+    url(font-url(file + '.svg#' + family)) format('svg')
+    font-weight weight
+    font-style normal
+  if hack-chrome-windows
+    @media screen and (-webkit-min-device-pixel-ratio: 0)
+      @font-face
+        font-family family
+        src url(font-url(file + '.svg#' + family)) format('svg')

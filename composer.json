@@ -1,9 +1,9 @@
 {
   "name": "antharuu/bubblegum",
-  "description": "Simple but different CSS Framework",
+  "description": "Bubblegum is a classless CSS framework, this is more than a simple framework, this is a simple, flexible and intuitive modern framework, fast to install, easy to use, and customizable. Created with stylus.",
   "type": "library",
   "license": "MIT",
-  "version": "v0.8.0-alpha",
+  "version": "v1.0.0",
   "authors": [
     {
       "name": "Antharuu",

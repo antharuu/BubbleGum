@@ -31,6 +31,8 @@ h5
     margin-right 0.3em
     fill $Colors.theme.dark !important
 
+ul
+  list-style none
 
 .title
   font-size 6em
@@ -94,6 +96,9 @@ h5
     position relative
     shadow-values()
 
+    &.active:after
+      left .5vw
+
   a:hover
     background-color $Colors.theme.dark
     box-shadow none
@@ -101,25 +106,65 @@ h5
   a:before
     text-transform: uppercase;
     transition all .5s ease-in-out
-    position: absolute;
+    position absolute;
     content attr(title)
     right -50vw
     padding 0 5em 0 1em
     background-color $Colors.theme.dark
     height 100%
-    width: 15vw
+    width 15vw
     top -4px
     font-size .8em
     color $Colors.theme.light
     line-height 2.8vw
     border-radius 500px 0 0 500px
-    font-weight: bold;
+    font-weight bold;
     border 4px solid $Colors.base.pink
 
   a:hover:before
     right -4px
     background-color $Colors.theme.dark
 
+  a:after
+    position absolute
+    content ''
+    width 100%
+    height 2vw
+    background-color: $Colors.theme.dark
+    border-radius 500px 0 0 500px
+    top .5vw
+    left 100%
+    transition left 250ms ease-in-out
+
+[_chips] {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fbfaf8;
+  overflow: hidden;
+  margin: 5px;
+  border none !important
+  border-radius: 5000px !important;
+  font-size: 0.9em;
+  font-weight: 400;
+  position: relative;
+  top: 17px;
+  font-family: 'Fira code', monospace
+}
+
+a
+  color $Colors.base.pink !important
+  text-decoration: none;
+
+.exemple
+  border: 1px solid $Colors.theme.muted - 30%
+  background-color $Colors.theme.muted
+  color $Colors.theme.light
+  text-align: center
+
+#copytext
+  opacity: 0;
+  position: fixed;
+  top: -100vh
 
 @media screen and (max-width: 740px)
   h1

@@ -1,0 +1,13 @@
++add-selector('alert', '', 'color-background-muted') {
+  _.current_selector = 'alert'
+
+  padding: $Sizes.padding.large
+  border-radius: $Sizes.round.small
+  display: block
+  width: 100%
+  font-weight: bold;
+
+  for $color-name, $color-value in $Colors.all {
+    add-value($color-name, 'color-background-' + $color-name)
+  }
+}

@@ -40,3 +40,6 @@ get-selectors($selector, $value) {
 shadow-calc($start, $end = 0, $i = 1) {
   return (round(($end - $start) / ($Core.logic_max - 1)) * $i) * 1px
 }
+
+font-url(file)
+  return 'fonts/' + file
