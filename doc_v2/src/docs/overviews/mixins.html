@@ -1,0 +1,140 @@
+<h2 id="mixins">Mixins</h2>
+<h3 id="add-selector">add-selector</h3>
+<p>Allows you to use a selector and insert content into it</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selector</td>
+<td>Selector name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Selector value</td>
+</tr>
+<tr>
+<td>extends</td>
+<td>Placeholders to extends</td>
+</tr>
+</tbody></table>
+<p>Exemple:</p>
+<pre><code class="language-stylus">+add-selector(&#39;container&#39;, &#39;full&#39;){
+    width: 100%;
+    background-color: white;
+}</code></pre>
+<p>Return:</p>
+<pre><code class="language-css">[_container~=&quot;full&quot;] {
+  width: 100%;
+  background-color: white;
+}</code></pre>
+<h3 id="add-value">add-value</h3>
+<p>Allow you to put value inside a selector</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>Selector value</td>
+</tr>
+<tr>
+<td>extends</td>
+<td>Placeholders to extends</td>
+</tr>
+</tbody></table>
+<div _alert='muted'_shadow _margin='t-2'>You need to set the <code>current_selector</code> value before.</div>
+
+<p>Exemple:</p>
+<pre><code class="language-stylus">+add-selector(&#39;container&#39;){
+    _.current_selector = &#39;container&#39;;
+
+    width: 100%;
+    background-color: white;
+
+    +add-value(&#39;limited&#39;){
+        max-width: 1280px;
+    }
+}</code></pre>
+<p>Return:</p>
+<pre><code class="language-css">[_container] {
+  width: 100%;
+  background-color: white;
+}
+[_container][_container~=&quot;limited&quot;] {
+  max-width: 1280px;
+}</code></pre>
+<h3 id="add-extends">add-extends</h3>
+<p>Add a extends to created placeholders</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>Placeholders name</td>
+</tr>
+</tbody></table>
+<h3 id="get-visible-color">get-visible-color</h3>
+<p>Return the most contrasted theme color between light and dark for the given color</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>Color value</td>
+</tr>
+</tbody></table>
+<h3 id="shadow-values">shadow-values</h3>
+<p>Add automatically the box-shadow with the given modifier and the shadow variables</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>modifier</td>
+<td>Modifier value</td>
+</tr>
+</tbody></table>
+<h3 id="webfont">webfont</h3>
+<p>Use the font face with the arguments</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>family</td>
+<td>Font family name</td>
+</tr>
+<tr>
+<td>file</td>
+<td>File name <a href="#functions">see font-url</a></td>
+</tr>
+<tr>
+<td>hack-chrome-windows</td>
+<td>if use the hack for chrome</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>Font weight</td>
+</tr>
+</tbody></table>

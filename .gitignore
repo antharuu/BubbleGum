@@ -6,3 +6,4 @@ vendor
 node_modules
 /vendor/
 .idea
+js/components

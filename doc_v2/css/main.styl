@@ -230,7 +230,18 @@ footer
 
 #doc-nav
   margin-bottom 5em
-  border-right 1px solid alpha($Color_secondary, .3)
+  position relative
+  
+  &-inner
+    position relative
+
+    &:after
+      position absolute
+      content ''
+      border-right 1px solid alpha($Color_secondary, .3)
+      height 100%
+      top 0
+      right -1em
 
   .nav-part
     padding: 0
@@ -238,13 +249,27 @@ footer
 
   h5
     > a
-      font-size 0.9em
+      font-size clamp(.6em, 1.5vw, .9em)
       text-transform uppercase
       color $Color_main
 
+      &:hover
+        text-decoration: none
+
+      &.expend:after, &.active:after
+        content '<'
+        position relative
+        margin-left .3em
+        top -.1em
   ul
-    margin none
+    height auto
+    max-height 0
+    overflow hidden
     list-style-type none
+    transition max-height .5s ease-in-out
+
+    &.expend
+      max-height 50vh
 
     li
       a
@@ -305,6 +330,23 @@ code
     box-shadow none
     opacity: .95
 
+  pre
+    position relative
+    --lang: ''
+
+    &:before
+      content: var(--lang)
+      position: absolute;
+      top: .5em;
+      right: .5em;
+      text-transform: uppercase;
+      opacity: .8;
+      color: #5a659c
+      transition opacity .2s ease-in-out
+
+    &:hover:before
+      opacity 1
+
   a
     color: $Color_main !important
 
@@ -315,33 +357,15 @@ code
 
     &.big
       margin: 2em auto
+  
+  table
+    tr
+      td, th
+        border 1px solid alpha($Color_secondary, .5)
+        padding.5em
 
-@media screen and (max-width: 990px)
-  #home-container
-    margin-left: 1em
-    margin-right: 1em
+[_alert]
+  padding 1em
 
-
-@media screen and (max-width: 770px)
-  #brand
-    margin-left: -2.5em
-
-  #links
-    margin-bottom: 2em
-
-    li, li a
-      margin-top: 1em
-      width 100%
-      text-align: center
-
-  #home-container
-    a
-      text-align: center;
-      display: block;
-      width: 100%
-      margin auto
-      margin-bottom: .5em
-
-    code
-      text-align: center !important;
-      font-size: clamp(16px, 5vw, 24px) !important
+@require 'breakpoints/lg'
+@require 'breakpoints/md'

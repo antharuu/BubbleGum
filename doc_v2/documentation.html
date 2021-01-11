@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Get started - Bubblegum | Classless, flexible and modern CSS framework</title>
+    <meta name="description" content="Bubblegum is a classless CSS framework, this is more than a simple framework, this is a simple, flexible and intuitive modern framework, fast to install, easy to use, and customizable. Created with stylus.">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bubblegum.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <div id="navbar-rule"></div>
+    <div id="navbar">
+      <div _container="">
+        <div _row="" _width="100">
+          <div class="nav-part" _col="12 lg:4" _font="center lg:left"><a href="index.html" id="brand"><img src="../favicon.png">ubblegum</a></div>
+          <div class="nav-part" _col="12 lg:8">
+            <ul _width="100" _row _direction="column md:row" _justify="center lg:end" _content="center" id="links">
+              <li _font="center lg:right"><a href="documentation.html">Documentation</a></li>
+              <li _font="center lg:right"><a href="contact.html">Contact</a></li>
+              <li _font="center lg:right"><a href="changelog.html">Changelog</a></li>
+              <li class="btn-started"><a href="documentation.html">Get started</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div _container="">
+      <div _row="">
+        <div _col="12 lg:2" _font="center lg:right" id="doc-nav">
+          <div _row id="doc-nav-inner">
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="documentation.html">Overviews</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="documentation.html#get-started">Get started</a></li>
+                        <li><a class="link-navbar" href="documentation.html#modularity">Modularity</a></li>
+                        <li><a class="link-navbar" href="documentation.html#responsive">Responsive</a></li>
+                        <li><a class="link-navbar" href="documentation.html#colors">Colors</a></li>
+                        <li><a class="link-navbar" href="documentation.html#functions">Functions</a></li>
+                        <li><a class="link-navbar" href="documentation.html#mixins">Mixins</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="utilities.html">Utilities</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="utilities.html#colors">Colors</a></li>
+                        <li><a class="link-navbar" href="utilities.html#spacing">Spacing</a></li>
+                        <li><a class="link-navbar" href="utilities.html#typography">Typography</a></li>
+                        <li><a class="link-navbar" href="utilities.html#visibility">Visibility</a></li>
+                        <li><a class="link-navbar" href="utilities.html#flexbox">Flexbox</a></li>
+                        <li><a class="link-navbar" href="utilities.html#others">Others</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="layout.html">Layout</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="layout.html#container">Container</a></li>
+                        <li><a class="link-navbar" href="layout.html#container">Row</a></li>
+                        <li><a class="link-navbar" href="layout.html#container">Columns</a></li>
+                        <li><a class="link-navbar" href="layout.html#push-pull">Push &amp; Pull</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="form.html">Form</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="form.html#general">General</a></li>
+                        <li><a class="link-navbar" href="form.html#input">Input</a></li>
+                        <li><a class="link-navbar" href="form.html#textarea">Textarea</a></li>
+                        <li><a class="link-navbar" href="form.html#select">Select</a></li>
+                        <li><a class="link-navbar" href="form.html#checkbox-radio">Checkbox &amp; Radio</a></li>
+                        <li><a class="link-navbar" href="form.html#range">Range</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="components.html">Components</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="components.html#alert">Alert</a></li>
+                        <li><a class="link-navbar" href="components.html#button">Button</a></li>
+                        <li><a class="link-navbar" href="components.html#card">Card</a></li>
+                        <li><a class="link-navbar" href="components.html#navigation">Navigation</a></li>
+                        <li><a class="link-navbar" href="components.html#progress">Progress</a></li>
+                        <li><a class="link-navbar" href="components.html#table">Table</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="#">Bundles</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="bundles-pug.html">Pug</a></li>
+                        <li><a class="link-navbar" href="bundles-prismjs.html">Prism</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <dic _col="12 lg:10" id="documentation-container">
+          <section id="get-started"><h2 id="get-started">Get started</h2>
+<ul>
+<li><strong>Consistent:</strong> Its main objective is to bring together the different uses of classical frameworks, see Bubblegum as a framework accompanied by a whole logic of code and way of thinking.</li>
+<li><strong>Fast:</strong> It is fast and uses the Stylus library to compile its CSS code, as well as Babel for JS (if you use it, as it is completely optional).</li>
+<li><strong>Customizable:</strong> It comes with a bunch of variables that you can modify very simply.</li>
+<li><strong>Bundles:</strong> It comes with bundles that allow you to extend its functionalities, it will allow you to use libraries in a simpler and more intuitive way. While remaining consistent with your settings.</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<h4 id="use-npm">Use npm</h4>
+<pre _code>npm i bubblegum-css</pre>
+
+<h4 id="use-composer">Use composer</h4>
+<pre _code>composer require antharuu/bubblegum "v1.0.0"</pre>
+
+<h4 id="use-jsdelivr-cdn">Use JSdelivr cdn</h4>
+<p><a href="https://www.jsdelivr.com/package/npm/bubblegum-css">https://www.jsdelivr.com/package/npm/bubblegum-css</a></p>
+<h4 id="download-from-the-repository">Download from the repository</h4>
+<p><a href="https://github.com/antharuu/BubbleGum/tree/main/css">https://github.com/antharuu/BubbleGum/tree/main/css</a></p>
+<hr>
+<h3 id="starter-template">Starter template</h3>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta
+      name=&quot;viewport&quot;
+      content=&quot;width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0&quot;
+    /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/bubblegum.min.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div _container&gt;
+      &lt;div _row&gt;
+        &lt;div _col&gt;
+          &lt;!-- Your content --&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+          </section>
+          <hr class="big">
+          <section id="modularity"><h2 id="modularity">Modularity</h2>
+<p>The modularity is managed in two files placed in the <code>bubblegum/config</code> folder.</p>
+<pre><code class="language-stylus">$Core = {
+  prefix: &#39;_&#39; // All attributes prefix
+  breakpoint_prefix: &#39;:&#39; // Breakpoints prefix
+  logic_max: 10 // Logic for margin, padding, round etc..
+  use: { // Modules used
+    breakpoints: true
+    color_variants: true
+    size_variants: true
+  }
+  bundle: { // Bundles used
+    prism: true
+  }
+}</code></pre>
+<p>You also have a large number of variables to edit and customize according to your plans and needs.</p>
+<pre><code class="language-stylus">$Grid = {
+  columns: 12 // Amount of columns
+  gutters: 30px // Gutter width
+  ignored_breakpoint: xs // First breakpoint
+  breakpoints: { // Breakpoints
+    xs: 0,
+    sm: 580px,
+    md: 770px,
+    lg: 990px,
+    xl: 1280px
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Font = {
+  family: {
+    main: &quot;&#39;Montserrat&#39;, sans-serif&quot;
+    code: &quot;&#39;Fira code&#39;, monospace&quot;
+  }
+  size: {
+    default: 18px
+    multiplier: .38
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Sizes = {
+  margin: {
+    base: 5px
+    small: 5px
+    medium: 15px
+    large: 30px
+  }
+  padding: {
+    base: 5px
+    small: 5px
+    medium: 15px
+    large: 30px
+  }
+  round: {
+    base: 5px
+    small: 5px
+    medium: 15px
+    large: 30px
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Borders = {
+  size: 1px
+  type: solid
+  default_color: $Colors.theme.muted
+}</code></pre>
+<pre><code class="language-stylus">$Colors = {
+  variants_amount: 3
+  variation_amount: 15
+  base: {
+    &#39;red&#39;: #f24236,
+    &#39;pink&#39;: #e43f6f,
+    &#39;purple&#39;: #6564db,
+    &#39;indigo&#39;: #473bf0,
+    &#39;blue&#39;: #3169c4,
+    &#39;cyan&#39;: #1fa6c1,
+    &#39;teal&#39;: #00bfb2,
+    &#39;green&#39;: #3ccd65,
+    &#39;lime&#39;: #aad922,
+    &#39;yellow&#39;: #f7b32b,
+    &#39;amber&#39;: #ff7f11,
+    &#39;orange&#39;: #f34213,
+    &#39;brown&#39;: #823329,
+    &#39;grey&#39;: #7179ad,
+    &#39;black&#39;: #1a1d2d,
+    &#39;white&#39;: #fbfaf8,
+    &#39;transparent&#39;: transparent
+  }
+  theme:{
+    &#39;dark&#39;: #1a1d2d,
+    &#39;light&#39;: #fbfaf8,
+    &#39;primary&#39;: #00bfb2,
+    &#39;secondary&#39;: #7179ad,
+    &#39;success&#39;: #3ccd65,
+    &#39;info&#39;: #1fa6c1,
+    &#39;warning&#39;: #ff7f11,
+    &#39;danger&#39;: #f24236,
+    &#39;muted&#39;: #1a1d2d + 40%
+  }
+  all: {}
+  variants: {}
+}</code></pre>
+<pre><code class="language-stylus">$Shadows = {
+  first: {
+    x_min: 0
+    x_max: 0
+    y_min: 2
+    y_max: 24
+    blur_min: 2
+    blur_max: 38
+    spread_min: 0
+    spread_max: 3
+    color: $Colors.theme.dark
+    opacity: .14
+  }
+  second: {
+    x_min: 0
+    x_max: 0
+    y_min: 3
+    y_max: 9
+    blur_min: 1
+    blur_max: 46
+    spread_min: -2
+    spread_max: 8
+    color: $Colors.theme.dark
+    opacity: .12
+  }
+  third: {
+    x_min: 0
+    x_max: 0
+    y_min: 1
+    y_max: 11
+    blur_min: 5
+    blur_max: 15
+    spread_min: 0
+    spread_max: -7
+    color: $Colors.theme.dark
+    opacity: .2
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Form = {
+  color: $Colors.theme.muted
+  color_main: $Colors.theme.primary
+  color_font: $Colors.theme.dark
+}</code></pre>
+<pre><code class="language-stylus">$Others = {
+  nav:{
+    breadcrumb_symbol: &#39;/&#39;
+  }
+}</code></pre>
+
+          </section>
+          <hr class="big">
+          <section id="responsive"><h2 id="responsive">Responsive</h2>
+<ul>
+<li><strong>XS:</strong> Smallest size and by default, you don&#39;t need to prefix but you can, (min-width: 0)</li>
+<li><strong>SM:</strong> Mobile size (min-width: 580px)</li>
+<li><strong>MD:</strong> Tablet size (min-width: 770px)</li>
+<li><strong>LG:</strong> Laptop size (min-width: 990px)</li>
+<li><strong>XL:</strong> Large screen size (min-width: 1280px)</li>
+</ul>
+<pre><code class="language-html">&lt;script src=&quot;/__prepros.js&quot;&gt;&lt;/script&gt;
+&lt;div _margin=&quot;1 md:2 xl:5&quot;&gt;
+  &lt;!-- Default margin 1 --&gt;
+  &lt;!-- Medium margin 2 --&gt;
+  &lt;!-- Very large margin 5 --&gt;
+&lt;/div&gt;
+
+&lt;div _font=&quot;center xl:right&quot;&gt;
+  &lt;!-- Default text align center --&gt;
+  &lt;!-- Very large text align right --&gt;
+&lt;/div&gt;
+
+&lt;div _bg=&quot;red lg:blue&quot;&gt;
+  &lt;!-- Default background color red --&gt;
+  &lt;!-- Large background color blue --&gt;
+&lt;/div&gt;</code></pre>
+
+          </section>
+          <hr class="big">
+          <section id="colors"><h2 id="colors">Colors</h2>
+<h3 id="base">Base</h3>
+<p>Bubblegum have 16 base colors <em>(+ transparent)</em></p>
+<div _row>
+    <div _col='12 md:6 lg:3' _bg='red' _font='center capitalize' _padding='2'>red: <small _font='lower italic'>#f24236</small></div>
+    <div _col='12 md:6 lg:3' _bg='pink' _font='center capitalize' _padding='2'>pink: <small _font='lower italic'>#e43f6f</small></div>
+    <div _col='12 md:6 lg:3' _bg='purple' _font='center capitalize' _padding='2'>purple: <small _font='lower italic'>#6564db</small></div>
+    <div _col='12 md:6 lg:3' _bg='indigo' _font='center capitalize' _padding='2'>indigo: <small _font='lower italic'>#473bf0</small></div>
+    <div _col='12 md:6 lg:3' _bg='blue' _font='center capitalize' _padding='2'>blue: <small _font='lower italic'>#3169c4</small></div>
+    <div _col='12 md:6 lg:3' _bg='cyan' _font='center capitalize' _padding='2'>cyan: <small _font='lower italic'>#1fa6c1</small></div>
+    <div _col='12 md:6 lg:3' _bg='teal' _font='center capitalize' _padding='2'>teal: <small _font='lower italic'>#00bfb2</small></div>
+    <div _col='12 md:6 lg:3' _bg='green' _font='center capitalize' _padding='2'>green: <small _font='lower italic'>#3ccd65</small></div>
+    <div _col='12 md:6 lg:3' _bg='lime' _font='center capitalize' _padding='2'>lime: <small _font='lower italic'>#aad922</small></div>
+    <div _col='12 md:6 lg:3' _bg='yellow' _font='center capitalize' _padding='2'>yellow: <small _font='lower italic'>#f7b32b</small></div>
+    <div _col='12 md:6 lg:3' _bg='amber' _font='center capitalize' _padding='2'>amber: <small _font='lower italic'>#ff7f11</small></div>
+    <div _col='12 md:6 lg:3' _bg='orange' _font='center capitalize' _padding='2'>orange: <small _font='lower italic'>#f34213</small></div>
+    <div _col='12 md:6 lg:3' _bg='brown' _font='center capitalize' _padding='2'>brown: <small _font='lower italic'>#823329</small></div>
+    <div _col='12 md:6 lg:3' _bg='grey' _font='center capitalize' _padding='2'>grey: <small _font='lower italic'>#7179ad</small></div>
+    <div _col='12 md:6 lg:3' _bg='black' _font='center capitalize' _padding='2'>black: <small _font='lower italic'>#1a1d2d</small></div>
+    <div _col='12 md:6 lg:3' _bg='white' _font='center capitalize' _padding='2'>white: <small _font='lower italic'>#fbfaf8</small></div>
+    <div _col='12' _bg='transparent' _font='center capitalize' _padding='2'>transparent: <small _font='lower italic'>transparent</small></div>
+</div>
+
+<h3 id="theme">Theme</h3>
+<p>Bubblegum theme have 9 colors</p>
+<div _row>
+    <div _col='12 md:6 lg:3' _bg='dark' _font='center capitalize' _padding='2'>dark: <small _font='lower italic'>#1a1d2d</small></div>
+    <div _col='12 md:6 lg:3' _bg='light' _font='center capitalize' _padding='2'>light: <small _font='lower italic'>#fbfaf8</small></div>
+    <div _col='12 md:6 lg:3' _bg='primary' _font='center capitalize' _padding='2'>primary: <small _font='lower italic'>#00bfb2</small></div>
+    <div _col='12 md:6 lg:3' _bg='secondary' _font='center capitalize' _padding='2'>secondary: <small _font='lower italic'>#7179ad</small></div>
+    <div _col='12 md:6 lg:3' _bg='success' _font='center capitalize' _padding='2'>success: <small _font='lower italic'>#3ccd65</small></div>
+    <div _col='12 md:6 lg:3' _bg='info' _font='center capitalize' _padding='2'>info: <small _font='lower italic'>#1fa6c1</small></div>
+    <div _col='12 md:6 lg:3' _bg='warning' _font='center capitalize' _padding='2'>warning: <small _font='lower italic'>#ff7f11</small></div>
+    <div _col='12 md:6 lg:3' _bg='danger' _font='center capitalize' _padding='2'>danger: <small _font='lower italic'>#f24236</small></div>
+    <div _col='12' _bg='muted' _font='center capitalize' _padding='2'>muted: <small _font='lower italic'>#1a1d2d + 40%</small></div>
+</div>
+
+          </section>
+          <hr class="big">
+          <section id="functions"><h2 id="functions">Functions</h2>
+<h3 id="selector-name">selector-name</h3>
+<p>Allows you to quickly select the selector name of an element</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+<th>Exemple</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selector</td>
+<td>The named selector</td>
+<td>container</td>
+<td>[_container]</td>
+</tr>
+<tr>
+<td>value</td>
+<td>The value of attribute</td>
+<td>5</td>
+<td>[_container~=&#39;5&#39;]</td>
+</tr>
+</tbody></table>
+<h3 id="get-selectors">get-selectors</h3>
+<p>Allows you to quickly choose the different selectors you require.</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+<th>Exemple</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selector</td>
+<td>The named selector</td>
+<td>container cont</td>
+<td>[_container], [_cont]</td>
+</tr>
+<tr>
+<td>value</td>
+<td>The value of attribute</td>
+<td>5</td>
+<td>[_container~=&#39;5&#39;], [_cont~=&#39;5&#39;]</td>
+</tr>
+</tbody></table>
+<h3 id="shadow-calc">shadow-calc</h3>
+<p>Returns the value of the shadow according to the logic</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+<th>Exemple</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>start</td>
+<td>minimal value</td>
+<td>0</td>
+<td>/</td>
+</tr>
+<tr>
+<td>end</td>
+<td>maximal value</td>
+<td>5</td>
+<td>/</td>
+</tr>
+<tr>
+<td>i</td>
+<td>logic modifier</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody></table>
+<h3 id="font-url">font-url</h3>
+<p>Return the url of the font file name</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+<th>Exemple</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>file</td>
+<td>File name</td>
+<td>exemple</td>
+<td>&#39;fonts/exemple&#39;</td>
+</tr>
+</tbody></table>
+
+          </section>
+          <hr class="big">
+          <section id="mixins"><h2 id="mixins">Mixins</h2>
+<h3 id="add-selector">add-selector</h3>
+<p>Allows you to use a selector and insert content into it</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>selector</td>
+<td>Selector name</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Selector value</td>
+</tr>
+<tr>
+<td>extends</td>
+<td>Placeholders to extends</td>
+</tr>
+</tbody></table>
+<p>Exemple:</p>
+<pre><code class="language-stylus">+add-selector(&#39;container&#39;, &#39;full&#39;){
+    width: 100%;
+    background-color: white;
+}</code></pre>
+<p>Return:</p>
+<pre><code class="language-css">[_container~=&quot;full&quot;] {
+  width: 100%;
+  background-color: white;
+}</code></pre>
+<h3 id="add-value">add-value</h3>
+<p>Allow you to put value inside a selector</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>value</td>
+<td>Selector value</td>
+</tr>
+<tr>
+<td>extends</td>
+<td>Placeholders to extends</td>
+</tr>
+</tbody></table>
+<div _alert='muted'_shadow _margin='t-2'>You need to set the <code>current_selector</code> value before.</div>
+
+<p>Exemple:</p>
+<pre><code class="language-stylus">+add-selector(&#39;container&#39;){
+    _.current_selector = &#39;container&#39;;
+
+    width: 100%;
+    background-color: white;
+
+    +add-value(&#39;limited&#39;){
+        max-width: 1280px;
+    }
+}</code></pre>
+<p>Return:</p>
+<pre><code class="language-css">[_container] {
+  width: 100%;
+  background-color: white;
+}
+[_container][_container~=&quot;limited&quot;] {
+  max-width: 1280px;
+}</code></pre>
+<h3 id="add-extends">add-extends</h3>
+<p>Add a extends to created placeholders</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>Placeholders name</td>
+</tr>
+</tbody></table>
+<h3 id="get-visible-color">get-visible-color</h3>
+<p>Return the most contrasted theme color between light and dark for the given color</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>Color value</td>
+</tr>
+</tbody></table>
+<h3 id="shadow-values">shadow-values</h3>
+<p>Add automatically the box-shadow with the given modifier and the shadow variables</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>modifier</td>
+<td>Modifier value</td>
+</tr>
+</tbody></table>
+<h3 id="webfont">webfont</h3>
+<p>Use the font face with the arguments</p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>family</td>
+<td>Font family name</td>
+</tr>
+<tr>
+<td>file</td>
+<td>File name <a href="#functions">see font-url</a></td>
+</tr>
+<tr>
+<td>hack-chrome-windows</td>
+<td>if use the hack for chrome</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>Font weight</td>
+</tr>
+</tbody></table>
+
+          </section>
+        </dic>
+      </div>
+    </div>
+    <script src="../js/prism.js"></script>
+    <script src="js/main.dev.js"></script>
+    <script src="../js/bubblegum.js"></script>
+    <footer _container="">
+      <div _row="" _justify="center">
+        <div _col="10">
+          <ul id="bottom-links">
+            <li><a href="https://github.com/antharuu/BubbleGum" target="_blank">Github</a></li>
+            <li><a href="https://www.npmjs.com/package/bubblegum-css" target="_blank">Npm</a></li>
+            <li><a href="https://twitter.com/Antharuu" target="_blank">Twitter</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+          </ul>
+          <p id="credits">Designed and created by Anthony Bellancourt, with <a href='https://stylus-lang.com/' target='_blank'>stylus</a>.</p>
+          <p id="licence">Currently v1.0.0. Licence <a target='_blank' href='https://github.com/antharuu/BubbleGum/blob/main/LICENSE'>MIT</a>.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

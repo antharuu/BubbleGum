@@ -1,0 +1,21 @@
+extends src/template
+
+block title
+    title Get started #{title}
+
+block content
+    div(_container='')
+        div(_row='')
+            include src/doc-nav
+            dic(_col='12 lg:10')#documentation-container
+                section#get-started: include src/docs/overviews/get-started.html
+                hr.big
+                section#modularity: include src/docs/overviews/modularity.html
+                hr.big
+                section#responsive: include src/docs/overviews/responsive.html
+                hr.big
+                section#colors: include src/docs/overviews/colors.html
+                hr.big
+                section#functions: include src/docs/overviews/functions.html
+                hr.big
+                section#mixins: include src/docs/overviews/mixins.html

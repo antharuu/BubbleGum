@@ -1,0 +1,147 @@
+<h2 id="modularity">Modularity</h2>
+<p>The modularity is managed in two files placed in the <code>bubblegum/config</code> folder.</p>
+<pre><code class="language-stylus">$Core = {
+  prefix: &#39;_&#39; // All attributes prefix
+  breakpoint_prefix: &#39;:&#39; // Breakpoints prefix
+  logic_max: 10 // Logic for margin, padding, round etc..
+  use: { // Modules used
+    breakpoints: true
+    color_variants: true
+    size_variants: true
+  }
+  bundle: { // Bundles used
+    prism: true
+  }
+}</code></pre>
+<p>You also have a large number of variables to edit and customize according to your plans and needs.</p>
+<pre><code class="language-stylus">$Grid = {
+  columns: 12 // Amount of columns
+  gutters: 30px // Gutter width
+  ignored_breakpoint: xs // First breakpoint
+  breakpoints: { // Breakpoints
+    xs: 0,
+    sm: 580px,
+    md: 770px,
+    lg: 990px,
+    xl: 1280px
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Font = {
+  family: {
+    main: &quot;&#39;Montserrat&#39;, sans-serif&quot;
+    code: &quot;&#39;Fira code&#39;, monospace&quot;
+  }
+  size: {
+    default: 18px
+    multiplier: .38
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Sizes = {
+  margin: {
+    base: 5px
+    small: 5px
+    medium: 15px
+    large: 30px
+  }
+  padding: {
+    base: 5px
+    small: 5px
+    medium: 15px
+    large: 30px
+  }
+  round: {
+    base: 5px
+    small: 5px
+    medium: 15px
+    large: 30px
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Borders = {
+  size: 1px
+  type: solid
+  default_color: $Colors.theme.muted
+}</code></pre>
+<pre><code class="language-stylus">$Colors = {
+  variants_amount: 3
+  variation_amount: 15
+  base: {
+    &#39;red&#39;: #f24236,
+    &#39;pink&#39;: #e43f6f,
+    &#39;purple&#39;: #6564db,
+    &#39;indigo&#39;: #473bf0,
+    &#39;blue&#39;: #3169c4,
+    &#39;cyan&#39;: #1fa6c1,
+    &#39;teal&#39;: #00bfb2,
+    &#39;green&#39;: #3ccd65,
+    &#39;lime&#39;: #aad922,
+    &#39;yellow&#39;: #f7b32b,
+    &#39;amber&#39;: #ff7f11,
+    &#39;orange&#39;: #f34213,
+    &#39;brown&#39;: #823329,
+    &#39;grey&#39;: #7179ad,
+    &#39;black&#39;: #1a1d2d,
+    &#39;white&#39;: #fbfaf8,
+    &#39;transparent&#39;: transparent
+  }
+  theme:{
+    &#39;dark&#39;: #1a1d2d,
+    &#39;light&#39;: #fbfaf8,
+    &#39;primary&#39;: #00bfb2,
+    &#39;secondary&#39;: #7179ad,
+    &#39;success&#39;: #3ccd65,
+    &#39;info&#39;: #1fa6c1,
+    &#39;warning&#39;: #ff7f11,
+    &#39;danger&#39;: #f24236,
+    &#39;muted&#39;: #1a1d2d + 40%
+  }
+  all: {}
+  variants: {}
+}</code></pre>
+<pre><code class="language-stylus">$Shadows = {
+  first: {
+    x_min: 0
+    x_max: 0
+    y_min: 2
+    y_max: 24
+    blur_min: 2
+    blur_max: 38
+    spread_min: 0
+    spread_max: 3
+    color: $Colors.theme.dark
+    opacity: .14
+  }
+  second: {
+    x_min: 0
+    x_max: 0
+    y_min: 3
+    y_max: 9
+    blur_min: 1
+    blur_max: 46
+    spread_min: -2
+    spread_max: 8
+    color: $Colors.theme.dark
+    opacity: .12
+  }
+  third: {
+    x_min: 0
+    x_max: 0
+    y_min: 1
+    y_max: 11
+    blur_min: 5
+    blur_max: 15
+    spread_min: 0
+    spread_max: -7
+    color: $Colors.theme.dark
+    opacity: .2
+  }
+}</code></pre>
+<pre><code class="language-stylus">$Form = {
+  color: $Colors.theme.muted
+  color_main: $Colors.theme.primary
+  color_font: $Colors.theme.dark
+}</code></pre>
+<pre><code class="language-stylus">$Others = {
+  nav:{
+    breadcrumb_symbol: &#39;/&#39;
+  }
+}</code></pre>

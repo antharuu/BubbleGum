@@ -1,0 +1,41 @@
+## Colors
+
+### Base
+
+Bubblegum have 16 base colors _(+ transparent)_
+
+<div _row>
+    <div _col='12 md:6 lg:3' _bg='red' _font='center capitalize' _padding='2'>red: <small _font='lower italic'>#f24236</small></div>
+    <div _col='12 md:6 lg:3' _bg='pink' _font='center capitalize' _padding='2'>pink: <small _font='lower italic'>#e43f6f</small></div>
+    <div _col='12 md:6 lg:3' _bg='purple' _font='center capitalize' _padding='2'>purple: <small _font='lower italic'>#6564db</small></div>
+    <div _col='12 md:6 lg:3' _bg='indigo' _font='center capitalize' _padding='2'>indigo: <small _font='lower italic'>#473bf0</small></div>
+    <div _col='12 md:6 lg:3' _bg='blue' _font='center capitalize' _padding='2'>blue: <small _font='lower italic'>#3169c4</small></div>
+    <div _col='12 md:6 lg:3' _bg='cyan' _font='center capitalize' _padding='2'>cyan: <small _font='lower italic'>#1fa6c1</small></div>
+    <div _col='12 md:6 lg:3' _bg='teal' _font='center capitalize' _padding='2'>teal: <small _font='lower italic'>#00bfb2</small></div>
+    <div _col='12 md:6 lg:3' _bg='green' _font='center capitalize' _padding='2'>green: <small _font='lower italic'>#3ccd65</small></div>
+    <div _col='12 md:6 lg:3' _bg='lime' _font='center capitalize' _padding='2'>lime: <small _font='lower italic'>#aad922</small></div>
+    <div _col='12 md:6 lg:3' _bg='yellow' _font='center capitalize' _padding='2'>yellow: <small _font='lower italic'>#f7b32b</small></div>
+    <div _col='12 md:6 lg:3' _bg='amber' _font='center capitalize' _padding='2'>amber: <small _font='lower italic'>#ff7f11</small></div>
+    <div _col='12 md:6 lg:3' _bg='orange' _font='center capitalize' _padding='2'>orange: <small _font='lower italic'>#f34213</small></div>
+    <div _col='12 md:6 lg:3' _bg='brown' _font='center capitalize' _padding='2'>brown: <small _font='lower italic'>#823329</small></div>
+    <div _col='12 md:6 lg:3' _bg='grey' _font='center capitalize' _padding='2'>grey: <small _font='lower italic'>#7179ad</small></div>
+    <div _col='12 md:6 lg:3' _bg='black' _font='center capitalize' _padding='2'>black: <small _font='lower italic'>#1a1d2d</small></div>
+    <div _col='12 md:6 lg:3' _bg='white' _font='center capitalize' _padding='2'>white: <small _font='lower italic'>#fbfaf8</small></div>
+    <div _col='12' _bg='transparent' _font='center capitalize' _padding='2'>transparent: <small _font='lower italic'>transparent</small></div>
+</div>
+
+### Theme
+
+Bubblegum theme have 9 colors
+
+<div _row>
+    <div _col='12 md:6 lg:3' _bg='dark' _font='center capitalize' _padding='2'>dark: <small _font='lower italic'>#1a1d2d</small></div>
+    <div _col='12 md:6 lg:3' _bg='light' _font='center capitalize' _padding='2'>light: <small _font='lower italic'>#fbfaf8</small></div>
+    <div _col='12 md:6 lg:3' _bg='primary' _font='center capitalize' _padding='2'>primary: <small _font='lower italic'>#00bfb2</small></div>
+    <div _col='12 md:6 lg:3' _bg='secondary' _font='center capitalize' _padding='2'>secondary: <small _font='lower italic'>#7179ad</small></div>
+    <div _col='12 md:6 lg:3' _bg='success' _font='center capitalize' _padding='2'>success: <small _font='lower italic'>#3ccd65</small></div>
+    <div _col='12 md:6 lg:3' _bg='info' _font='center capitalize' _padding='2'>info: <small _font='lower italic'>#1fa6c1</small></div>
+    <div _col='12 md:6 lg:3' _bg='warning' _font='center capitalize' _padding='2'>warning: <small _font='lower italic'>#ff7f11</small></div>
+    <div _col='12 md:6 lg:3' _bg='danger' _font='center capitalize' _padding='2'>danger: <small _font='lower italic'>#f24236</small></div>
+    <div _col='12' _bg='muted' _font='center capitalize' _padding='2'>muted: <small _font='lower italic'>#1a1d2d + 40%</small></div>
+</div>
