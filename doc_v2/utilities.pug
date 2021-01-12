@@ -1,0 +1,18 @@
+extends src/template
+
+block content
+    div(_container='')
+        div(_row='')
+            include src/doc-nav
+            dic(_col='12 lg:10')#documentation-container
+                section#colors: include src/docs/utilities/colors.html
+                hr.big
+                section#spacing: include src/docs/utilities/spacing.html
+                hr.big
+                section#typography: include src/docs/utilities/typography.html
+                hr.big
+                section#visibility: include src/docs/utilities/visibility.html
+                hr.big
+                section#flexbox: include src/docs/utilities/flexbox.html
+                hr.big
+                section#others: include src/docs/utilities/others.html

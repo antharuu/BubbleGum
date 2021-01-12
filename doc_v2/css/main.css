@@ -335,62 +335,84 @@ footer {
 code {
   box-shadow: none !important;
 }
-#documentation-container {
+#documentation-container,
+#changelog {
   margin-bottom: 4em;
   padding: 0 1em;
   color: #4a4a4a;
   font-size: clamp(0.85em, 2vw, 1em);
 }
 #documentation-container h2,
+#changelog h2,
 #documentation-container h3,
+#changelog h3,
 #documentation-container h4,
+#changelog h4,
 #documentation-container h5,
-#documentation-container h6 {
+#changelog h5,
+#documentation-container h6,
+#changelog h6 {
   text-transform: uppercase;
 }
-#documentation-container h2 {
+#documentation-container h2,
+#changelog h2 {
   position: relative;
   margin-left: 0.3em;
   color: #f04f78;
   font-weight: bold;
   font-size: clamp(38px, 4vw, 48px);
 }
-#documentation-container h2:before {
+#documentation-container h2:before,
+#changelog h2:before {
   position: relative;
   content: '>';
   left: -0.3em;
   top: -0.06em;
 }
-#documentation-container h3 {
+#documentation-container h3,
+#changelog h3 {
   margin-top: 0.5em;
   font-size: clamp(1.5em, 3vw, 2em);
 }
-#documentation-container h4 {
+#documentation-container h4,
+#changelog h4 {
   margin-top: 0.5em;
   font-size: clamp(1.25em, 3vw, 1.5em);
 }
-#documentation-container h5 {
+#documentation-container h5,
+#changelog h5 {
   margin-top: 0.5em;
   font-size: clamp(1.1em, 2vw, 1.25em);
 }
-#documentation-container h6 {
+#documentation-container h6,
+#changelog h6 {
   font-size: clamp(1em, 2vw, 1.1em);
 }
-#documentation-container ul.no-style {
-  list-style-type: none;
+#documentation-container ul,
+#changelog ul {
+  margin-left: 1em;
+}
+#documentation-container ul ::marker,
+#changelog ul ::marker {
+  color: #4a4a4a;
+  font-size: 1.2em;
 }
 #documentation-container pre,
-#documentation-container code {
+#changelog pre,
+#documentation-container code,
+#changelog code {
   font-size: clamp(0.85em, 2vw, 1em) !important;
   margin-top: 1em;
   box-shadow: none;
   opacity: 0.95;
 }
-#documentation-container pre {
+#documentation-container pre,
+#changelog pre {
   position: relative;
   --lang: '';
 }
-#documentation-container pre:before {
+#documentation-container pre:before,
+#changelog pre:before {
   content: var(--lang);
   position: absolute;
   top: 0.5em;
@@ -400,27 +422,63 @@ code {
   color: #5a659c;
   transition: opacity 0.2s ease-in-out;
 }
-#documentation-container pre:hover:before {
+#documentation-container pre:hover:before,
+#changelog pre:hover:before {
   opacity: 1;
 }
-#documentation-container a {
+#documentation-container a,
+#changelog a {
   color: #f04f78 !important;
 }
-#documentation-container hr {
+#documentation-container hr,
+#changelog hr {
   border-color: #4a4a4a !important;
   opacity: 0.5;
   margin: 1em auto;
 }
-#documentation-container hr.big {
+#documentation-container hr.big,
+#changelog hr.big {
   margin: 2em auto;
 }
 #documentation-container table tr td,
-#documentation-container table tr th {
+#changelog table tr td,
+#documentation-container table tr th,
+#changelog table tr th {
   border: 1px solid rgba(74,74,74,0.5);
   padding: 0.5em;
 }
 [_alert] {
   padding: 1em;
+}
+#contact-page {
+  color: #4a4a4a;
+  letter-spacing: clamp(2px, 0.02vw, 5px);
+}
+#contact-page #contact-title {
+  font-size: 56px;
+}
+#contact-page .contact-link {
+  position: relative;
+  margin-top: clamp(4em, 15vh, 6em);
+}
+#contact-page .contact-link svg {
+  z-index: -1;
+  opacity: 0.3;
+  pointer-events: none;
+  position: absolute;
+  width: clamp(100px, 10vw, 200px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#contact-page a {
+  font-weight: 300;
+  font-size: clamp(32px, 5vw, 48px);
+  color: #f04f78;
+  text-decoration: none;
+}
+#contact {
+  min-height: 60vh;
 }
 @media screen and (max-width: 990px) {
   #home-container {

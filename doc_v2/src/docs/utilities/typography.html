@@ -1,0 +1,198 @@
+<h2 id="typography">Typography</h2>
+<p>You have the possibility to format your titles and texts to the desired size.</p>
+<h3 id="headers">Headers</h3>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;h1&gt;I&#39;m a header 1&lt;/h1&gt;
+&lt;p _font=&quot;h1&quot;&gt;I&#39;m a header 1 too&lt;/p&gt;
+
+&lt;h3&gt;I&#39;m a header 3&lt;/h3&gt;
+&lt;p _font=&quot;h3&quot;&gt;I&#39;m a header 3 too&lt;/p&gt;
+
+&lt;h5&gt;I&#39;m a header 5&lt;/h5&gt;
+&lt;p _font=&quot;h5&quot;&gt;I&#39;m a header 5 too&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<h1>I'm a header 1</h1>
+<p _font="h1">I'm a header 1 too</p>
+<h3>I'm a header 3</h3>
+<p _font="h3">I'm a header 3 too</p>
+<h5>I'm a header 5</h5>
+<p _font="h5">I'm a header 5 too</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h1..h6</td>
+<td>Header 1 to 6</td>
+</tr>
+</tbody></table>
+<h3 id="alignement">Alignement</h3>
+<p>You can change the text alignement</p>
+<pre><code class="language-html">&lt;p _font=&quot;left&quot;&gt;I&#39;m a left text&lt;/p&gt;
+
+&lt;p _font=&quot;right&quot;&gt;I&#39;m a right text&lt;/p&gt;
+
+&lt;p _font=&quot;center&quot;&gt;I&#39;m a centered text&lt;/p&gt;
+
+&lt;p _font=&quot;justify&quot;&gt;I&#39;m a justify text&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<p _font="left">I'm a left text</p>
+
+<p _font="right">I'm a right text</p>
+
+<p _font="center">I'm a centered text</p>
+
+<p _font="justify">I'm a justify text</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>left text alignement</td>
+</tr>
+<tr>
+<td>right</td>
+<td>right text alignement</td>
+</tr>
+<tr>
+<td>center</td>
+<td>center text alignement</td>
+</tr>
+<tr>
+<td>justify</td>
+<td>justify text alignement</td>
+</tr>
+</tbody></table>
+<h3 id="transform">Transform</h3>
+<p>You can change the text transform</p>
+<pre><code class="language-html">&lt;p _font=&quot;upper&quot;&gt;I&#39;m a uppercase text&lt;/p&gt;
+&lt;!-- can use upper and uppercase --&gt;
+
+&lt;p _font=&quot;lower&quot;&gt;I&#39;m a lowercase text&lt;/p&gt;
+&lt;!-- can use lower and lowercase --&gt;
+
+&lt;p _font=&quot;capitalize&quot;&gt;I&#39;m a capitalized text&lt;/p&gt;
+&lt;!-- can use cap, capital and capitalize --&gt;</code></pre>
+<p>Result:</p>
+<p _font="upper">I'm a uppercase text</p>
+
+<p _font="lower">I'm a lowercase text</p>
+
+<p _font="capitalize">I'm a capitalized text</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>upper, uppercase</td>
+<td>upper text transformation</td>
+</tr>
+<tr>
+<td>lower, lowercase</td>
+<td>lower text transformation</td>
+</tr>
+<tr>
+<td>cap, capital, capitalize</td>
+<td>capitalize text transformation</td>
+</tr>
+</tbody></table>
+<h3 id="weight">Weight</h3>
+<p>You can change the font weight</p>
+<pre><code class="language-html">&lt;p _font=&quot;bold&quot;&gt;I&#39;m a bold text&lt;/p&gt;
+
+&lt;p _font=&quot;bolder&quot;&gt;I&#39;m a bolder text&lt;/p&gt;
+
+&lt;p _font=&quot;lighter&quot;&gt;I&#39;m a light text&lt;/p&gt;
+
+&lt;p _font=&quot;normal&quot;&gt;I&#39;m a light text&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<p _font="bold">I'm a bold text</p>
+
+<p _font="bolder">I'm a bolder text</p>
+
+<p _font="lighter">I'm a light text</p>
+
+<p _font="normal">I'm a light text</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bold</td>
+<td>bold font weight</td>
+</tr>
+<tr>
+<td>bolder</td>
+<td>bolder font weight</td>
+</tr>
+<tr>
+<td>lighter</td>
+<td>lighter font weight</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>normal font weight</td>
+</tr>
+</tbody></table>
+<h3 id="decoration">Decoration</h3>
+<p>You can change the font decoration</p>
+<pre><code class="language-html">&lt;p _decoration=&quot;del&quot;&gt;I&#39;m a deleted text&lt;/p&gt;
+
+&lt;p _decoration=&quot;underline&quot;&gt;I&#39;m a underlined text&lt;/p&gt;
+
+&lt;a href=&quot;#&quot; _decoration=&quot;none&quot;&gt;I&#39;m a none underlined link&lt;/a&gt;</code></pre>
+<p>Result:</p>
+<p _decoration="del">I'm a deleted text</p>
+
+<p _decoration="underline">I'm a underlined text</p>
+
+<p><a href="#" _decoration="none">I&#39;m a non decorated link</a></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>del, linethrough</td>
+<td>deleted text decoration</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>underlined text decoration</td>
+</tr>
+<tr>
+<td>none</td>
+<td>none decorated text decoration</td>
+</tr>
+</tbody></table>
+<h3 id="others-transformations">Others transformations</h3>
+<p>You can change to italic</p>
+<p>Exemple:</p>
+<pre><code class="language-html">&lt;p _font=&quot;italic&quot;&gt;I&#39;m an italic text&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<p _font="italic">I'm an italic text</p>
+
+<p>You can change highlight some text</p>
+<pre><code class="language-html">I&#39;m a &lt;span _font=&quot;mark&quot;&gt;highlighted&lt;/span&gt; text
+&lt;!-- you can use highlight value too --&gt;</code></pre>
+<p>Result:</p>
+<p>I&#39;m a <span _font="mark">highlighted</span> text</p>

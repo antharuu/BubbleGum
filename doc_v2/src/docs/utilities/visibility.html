@@ -1,0 +1,19 @@
+<h2 id="visibility">Visibility</h2>
+<p>You can choose to show or hide something width some attributes</p>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;div _show=&quot;true&quot;&gt;I&#39;m a visible div&lt;/div&gt;
+&lt;div _show=&quot;false&quot;&gt;I&#39;m a non visible div&lt;/div&gt;
+
+&lt;div _hide=&quot;true&quot;&gt;I&#39;m a non visible div&lt;/div&gt;
+&lt;div _hide=&quot;false&quot;&gt;I&#39;m a visible div&lt;/div&gt;
+
+&lt;!-- More logical exemple --&gt;
+&lt;div _hide=&quot;md:false lg:true&quot;&gt;I&#39;m a non visible div&lt;/div&gt;</code></pre>
+<p>Results:</p>
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _show="true">I'm a visible div</div>
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _show="false">I'm a non visible div</div>
+
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _hide="true">I'm a non visible div</div>
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _hide="false">I'm a visible div</div>
+
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _show="md:false lg:true">I'm a non visible div between md and lg size</div>

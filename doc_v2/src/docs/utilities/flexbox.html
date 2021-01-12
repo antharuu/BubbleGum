@@ -1,0 +1,211 @@
+<h2 id="flexbox">Flexbox</h2>
+<p>Some of the most used flexbox attributes and values is available</p>
+<p>For make your container flex, you can use the attribute <code>_display</code>, see more <a href="layout.html#display">here</a> about.</p>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot;&gt;
+  &lt;!-- Your content --&gt;
+&lt;/div&gt;
+
+&lt;!-- Dont forget rows are flexboxes too --&gt;
+&lt;div _row&gt;
+  &lt;!-- Your content --&gt;
+&lt;/div&gt;</code></pre>
+<h3 id="direction">Direction</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _direction=&quot;row&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _direction=&quot;reverse&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _direction=&quot;col&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _direction=&quot;col reverse&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row</td>
+<td>flex direction: row</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>flex direction: row-reverse</td>
+</tr>
+<tr>
+<td>col, column</td>
+<td>flex direction: column</td>
+</tr>
+<tr>
+<td>col reverse</td>
+<td>flex direction: column-reverse</td>
+</tr>
+</tbody></table>
+<h3 id="wrap">Wrap</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _wrap=&quot;wrap&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _wrap=&quot;nowrap&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _wrap=&quot;reverse&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>wrap</td>
+<td>flex wrap: wrap</td>
+</tr>
+<tr>
+<td>nowrap</td>
+<td>flex wrap: nowrap</td>
+</tr>
+<tr>
+<td>reverse, wrap-reverse</td>
+<td>flex wrap: wrap-reverse</td>
+</tr>
+</tbody></table>
+<h3 id="justify">Justify</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _justify=&quot;start&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;end&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;center&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;around&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;between&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;evenly&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>start</td>
+<td>justify content: start</td>
+</tr>
+<tr>
+<td>end</td>
+<td>justify content: end</td>
+</tr>
+<tr>
+<td>center</td>
+<td>justify content: center</td>
+</tr>
+<tr>
+<td>around</td>
+<td>justify content: space-around</td>
+</tr>
+<tr>
+<td>between</td>
+<td>justify content: space-between</td>
+</tr>
+<tr>
+<td>evenly</td>
+<td>justify content: space-evenly</td>
+</tr>
+</tbody></table>
+<h3 id="items">Items</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _items=&quot;stretch&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;start&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;end&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;center&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;baseline&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stretch</td>
+<td>align items: stretch</td>
+</tr>
+<tr>
+<td>start</td>
+<td>align items: start</td>
+</tr>
+<tr>
+<td>end</td>
+<td>align items: end</td>
+</tr>
+<tr>
+<td>center</td>
+<td>align items: center</td>
+</tr>
+<tr>
+<td>baseline</td>
+<td>align items: baseline</td>
+</tr>
+</tbody></table>
+<h3 id="content">Content</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _content=&quot;normal&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;start&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;end&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;center&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;between&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;around&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;evenly&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;stretch&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>align content: normal</td>
+</tr>
+<tr>
+<td>start</td>
+<td>align content: start</td>
+</tr>
+<tr>
+<td>end</td>
+<td>align content: end</td>
+</tr>
+<tr>
+<td>center</td>
+<td>align content: center</td>
+</tr>
+<tr>
+<td>between</td>
+<td>align content: space-between</td>
+</tr>
+<tr>
+<td>around</td>
+<td>align content: space-around</td>
+</tr>
+<tr>
+<td>evenly</td>
+<td>align content: space-evenly</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>align content: stretch</td>
+</tr>
+</tbody></table>

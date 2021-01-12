@@ -282,7 +282,7 @@ footer
 code
   box-shadow none !important
 
-#documentation-container
+#documentation-container, #changelog
   margin-bottom: 4em
   padding 0 1em
   color $Color_secondary
@@ -321,8 +321,12 @@ code
   h6
     font-size: clamp(1em, 2vw, 1.1em)
 
-  ul.no-style
-    list-style-type: none;
+  ul
+    margin-left 1em
+    
+    ::marker 
+      color: $Color_secondary
+      font-size: 1.2em;
 
   pre, code
     font-size: clamp(.85em, 2vw, 1em) !important
@@ -366,6 +370,35 @@ code
 
 [_alert]
   padding 1em
+
+#contact-page
+  color $Color_secondary
+  letter-spacing: clamp(2px,.02vw,5px)
+
+  #contact-title
+    font-size 56px
+
+  .contact-link
+    position relative
+    margin-top clamp(4em, 15vh,6em)
+    svg
+      z-index -1
+      opacity .3
+      pointer-events: none
+      position absolute
+      width clamp(100px, 10vw, 200px)
+      left 50%
+      top 50%
+      transform translate(-50%, -50%)
+
+  a
+    font-weight 300
+    font-size clamp(32px, 5vw, 48px)
+    color $Color_main
+    text-decoration none  
+
+#contact
+  min-height: 60vh
 
 @require 'breakpoints/lg'
 @require 'breakpoints/md'

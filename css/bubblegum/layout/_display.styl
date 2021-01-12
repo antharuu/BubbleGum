@@ -135,6 +135,9 @@
 
   align-content: normal;
 
+  +add-value('normal') {
+    align-content: normal;
+  }
   +add-value('start') {
     align-content: start;
   }
@@ -162,6 +165,7 @@
   _.current_selector = 'show'
 
   display: block;
+
   +add-value('true') {
     display: block;
   }
@@ -173,9 +177,10 @@
 
 
 +add-selector('hide') {
-  _.current_selector = 'show'
+  _.current_selector = 'hide'
 
   display: none;
+
   +add-value('true') {
     display: none;
   }

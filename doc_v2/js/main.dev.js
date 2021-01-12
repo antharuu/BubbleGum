@@ -62,32 +62,50 @@ var i = 0;
 Array.prototype.forEach.call(section, function (e) {
   sections[e.id] = e.offsetTop;
 });
+const base_title = document.title;
 
-window.onscroll = function () {
+window.onload = function () {
+  window.onscroll = function () {
+    checkScroll();
+  };
+
   checkScroll();
-};
 
-checkScroll();
+  function checkScroll() {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-function checkScroll() {
-  var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-
-  for (i in sections) {
-    if (sections[i] <= scrollPosition) {
-      links.forEach(link => {
-        link.classList.remove("active");
-      });
-      document.querySelector("a[href*=" + i + "]").setAttribute("class", "active");
+    for (i in sections) {
+      if (sections[i] <= scrollPosition) {
+        links.forEach(link => {
+          link.classList.remove("active");
+        });
+        setTitle(i);
+        let cat = document.URL;
+        cat = cat.split('/').pop().split('#')[0];
+        document.querySelector("a[href*=\"" + cat + '#' + i + "\"]").setAttribute("class", "active");
+      }
     }
   }
-}
 
-let codeContainers = document.querySelectorAll('code');
-codeContainers.forEach(element => {
-  let lang = element.className.trim();
+  let codeContainers = document.querySelectorAll('code');
+  codeContainers.forEach(element => {
+    let lang = element.className.trim();
 
-  if (lang.length > 0 && lang !== 'language-none') {
-    lang = lang.replace('language-', '');
-    element.parentElement.style.setProperty('--lang', '"' + lang + '"');
+    if (lang.length > 0 && lang !== 'language-none') {
+      lang = lang.replace('language-', '');
+      element.parentElement.style.setProperty('--lang', '"' + lang + '"');
+    }
+  });
+
+  function setTitle(new_title) {
+    let cat = document.URL;
+    cat = capitalize(cat.split('/').pop().split('#')[0].replace('.html', ''));
+    let section = capitalize(new_title.trim().replace('-', ''));
+    document.title = section + ' - ' + cat + base_title + ' ';
   }
-});
+};
+
+function capitalize(s) {
+  if (typeof s !== 'string') return '';
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}

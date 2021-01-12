@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>- Bubblegum | Classless, flexible and modern CSS framework</title>
+    <meta name="description" content="Bubblegum is a classless CSS framework, this is more than a simple framework, this is a simple, flexible and intuitive modern framework, fast to install, easy to use, and customizable. Created with stylus.">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bubblegum.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <div id="navbar-rule"></div>
+    <div id="navbar">
+      <div _container="">
+        <div _row="" _width="100">
+          <div class="nav-part" _col="12 lg:4" _font="center lg:left"><a href="index.html" id="brand"><img src="../favicon.png">ubblegum</a></div>
+          <div class="nav-part" _col="12 lg:8">
+            <ul _width="100" _row _direction="column md:row" _justify="center lg:end" _content="center" id="links">
+              <li _font="center lg:right"><a href="documentation.html">Documentation</a></li>
+              <li _font="center lg:right"><a href="contact.html">Contact</a></li>
+              <li _font="center lg:right"><a href="changelog.html">Changelog</a></li>
+              <li class="btn-started"><a href="documentation.html">Get started</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div _container="">
+      <div _row="">
+        <div _col="12 lg:2" _font="center lg:right" id="doc-nav">
+          <div _row id="doc-nav-inner">
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="documentation.html">Overviews</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="documentation.html#get-started">Get started</a></li>
+                        <li><a class="link-navbar" href="documentation.html#modularity">Modularity</a></li>
+                        <li><a class="link-navbar" href="documentation.html#responsive">Responsive</a></li>
+                        <li><a class="link-navbar" href="documentation.html#colors">Colors</a></li>
+                        <li><a class="link-navbar" href="documentation.html#functions">Functions</a></li>
+                        <li><a class="link-navbar" href="documentation.html#mixins">Mixins</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="utilities.html">Utilities</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="utilities.html#colors">Colors</a></li>
+                        <li><a class="link-navbar" href="utilities.html#spacing">Spacing</a></li>
+                        <li><a class="link-navbar" href="utilities.html#typography">Typography</a></li>
+                        <li><a class="link-navbar" href="utilities.html#visibility">Visibility</a></li>
+                        <li><a class="link-navbar" href="utilities.html#flexbox">Flexbox</a></li>
+                        <li><a class="link-navbar" href="utilities.html#others">Others</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="layout.html">Layout</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="layout.html#container">Container</a></li>
+                        <li><a class="link-navbar" href="layout.html#container">Row</a></li>
+                        <li><a class="link-navbar" href="layout.html#container">Columns</a></li>
+                        <li><a class="link-navbar" href="layout.html#push-pull">Push &amp; Pull</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="form.html">Form</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="form.html#general">General</a></li>
+                        <li><a class="link-navbar" href="form.html#input">Input</a></li>
+                        <li><a class="link-navbar" href="form.html#textarea">Textarea</a></li>
+                        <li><a class="link-navbar" href="form.html#select">Select</a></li>
+                        <li><a class="link-navbar" href="form.html#checkbox-radio">Checkbox &amp; Radio</a></li>
+                        <li><a class="link-navbar" href="form.html#range">Range</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="components.html">Components</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="components.html#alert">Alert</a></li>
+                        <li><a class="link-navbar" href="components.html#button">Button</a></li>
+                        <li><a class="link-navbar" href="components.html#card">Card</a></li>
+                        <li><a class="link-navbar" href="components.html#navigation">Navigation</a></li>
+                        <li><a class="link-navbar" href="components.html#progress">Progress</a></li>
+                        <li><a class="link-navbar" href="components.html#table">Table</a></li>
+              </ul>
+            </div>
+            <div class="nav-part" _col="6 md:3 lg:12">
+                      <h5><a href="#">Bundles</a></h5>
+              <ul>
+                        <li><a class="link-navbar" href="bundles-pug.html">Pug</a></li>
+                        <li><a class="link-navbar" href="bundles-prismjs.html">Prism</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <dic _col="12 lg:10" id="documentation-container">
+          <section id="colors"><h2 id="colors">Colors</h2>
+<p>You have access to the colors from the html and change the background color with the <code>_bg</code> attribute.</p>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;div _bg=&quot;red&quot;&gt;I&#39;m a red div&lt;/div&gt;
+&lt;div _bg=&quot;green&quot;&gt;I&#39;m a green div&lt;/div&gt;
+&lt;div _bg=&quot;blue&quot;&gt;I&#39;m a blue div&lt;/div&gt;</code></pre>
+<p>Results:</p>
+<div _bg="red" _padding=2 _margin='t-2' _round>I'm a red div</div>
+<div _bg="green" _padding=2 _margin='t-2' _round>I'm a green div</div>
+<div _bg="blue" _padding=2 _margin='t-2' _round>I'm a blue div</div>
+
+<p>But you can also use colors in many places, such as on text, alerts etc...</p>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;h4 _font=&quot;red&quot;&gt;I&#39;m a red text&lt;/h4&gt;
+&lt;div _alert=&quot;purple&quot;&gt;I&#39;m a purple alert&lt;/div&gt;
+&lt;button _btn=&quot;amber outline&quot;&gt;I&#39;m a amber button&lt;/button&gt;</code></pre>
+<p>Results:</p>
+<h4 _font="red">I'm a red text</h4>
+<div _alert="purple" _margin='t-2'>I'm a purple alert</div>
+<button _btn="amber outline" _margin='t-2'>I'm a amber button</button>
+
+<p>For color list, refer <a href="documentation.html#colors">here</a></p>
+<h3 id="possible-values">Possible values</h3>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[color]</td>
+<td>you can use all colors</td>
+</tr>
+</tbody></table>
+
+          </section>
+          <hr class="big">
+          <section id="spacing"><h2 id="spacing">Spacing</h2>
+<h3 id="margin">Margin</h3>
+<p>You also have a way to add margins simply with _margin</p>
+<p>Exemple:</p>
+<pre><code class="language-html">&lt;div _margin=&quot;0&quot;&gt;Margin 0&lt;/div&gt;
+&lt;div _margin=&quot;1&quot;&gt;Margin 1&lt;/div&gt;
+&lt;div _margin=&quot;2&quot;&gt;Margin 2&lt;/div&gt;
+&lt;div _margin=&quot;3&quot;&gt;Margin 3&lt;/div&gt;
+&lt;div _margin=&quot;4&quot;&gt;Margin 4&lt;/div&gt;
+&lt;div _margin=&quot;5&quot;&gt;Margin 5&lt;/div&gt;
+&lt;div _margin=&quot;6&quot;&gt;Margin 6&lt;/div&gt;
+&lt;div _margin=&quot;7&quot;&gt;Margin 7&lt;/div&gt;
+&lt;div _margin=&quot;8&quot;&gt;Margin 8&lt;/div&gt;
+&lt;div _margin=&quot;9&quot;&gt;Margin 9&lt;/div&gt;
+&lt;div _margin=&quot;10&quot;&gt;Margin 10&lt;/div&gt;</code></pre>
+<p>Results:</p>
+<div _bg='muted' _padding='2' _round _margin="0">Margin 0</div>
+<div _bg='muted' _padding='2' _round _margin="1">Margin 1</div>
+<div _bg='muted' _padding='2' _round _margin="2">Margin 2</div>
+<div _bg='muted' _padding='2' _round _margin="3">Margin 3</div>
+<div _bg='muted' _padding='2' _round _margin="4">Margin 4</div>
+<div _bg='muted' _padding='2' _round _margin="5">Margin 5</div>
+<div _bg='muted' _padding='2' _round _margin="6">Margin 6</div>
+<div _bg='muted' _padding='2' _round _margin="7">Margin 7</div>
+<div _bg='muted' _padding='2' _round _margin="8">Margin 8</div>
+<div _bg='muted' _padding='2' _round _margin="9">Margin 9</div>
+<div _bg='muted' _padding='2' _round _margin="10">Margin 10</div>
+
+<p>You can precise the direction with the first letter prefix</p>
+<p>Exemple:</p>
+<pre><code class="language-html">&lt;div _margin=&quot;l-5&quot;&gt;Margin left 5&lt;/div&gt;
+&lt;div _margin=&quot;t-5&quot;&gt;Margin top 5&lt;/div&gt;
+&lt;div _margin=&quot;r-5&quot;&gt;Margin right 5&lt;/div&gt;
+&lt;div _margin=&quot;b-5&quot;&gt;Margin bottom 5&lt;/div&gt;</code></pre>
+<div _bg="muted" _padding="2" _round _margin="l-5">Margin left 5</div>
+<div _bg="muted" _padding="2" _round _margin="t-5">Margin top 5</div>
+<div _bg="muted" _padding="2" _round _margin="r-5">Margin right 5</div>
+<div _bg="muted" _padding="2" _round _margin="b-5">Margin bottom 5</div>
+</br>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0..10</td>
+<td>0 through 10 (or logic limitation)</td>
+</tr>
+<tr>
+<td>l-0..10</td>
+<td>left marge</td>
+</tr>
+<tr>
+<td>r-0..10</td>
+<td>right marge</td>
+</tr>
+<tr>
+<td>t-0..10</td>
+<td>top marge</td>
+</tr>
+<tr>
+<td>b-0..10</td>
+<td>bottom marge</td>
+</tr>
+<tr>
+<td>x-0..10</td>
+<td>left &amp; right marge</td>
+</tr>
+<tr>
+<td>y-0..10</td>
+<td>top &amp; down marge</td>
+</tr>
+<tr>
+<td>md:0..10</td>
+<td>breakpoints is available</td>
+</tr>
+</tbody></table>
+<h3 id="padding">Padding</h3>
+<p>Padding too with attribute <code>_padding</code></p>
+<p>Exemple:</p>
+<pre><code class="language-html">&lt;div _padding=&quot;0&quot;&gt;Padding 0&lt;/div&gt;
+&lt;div _padding=&quot;1&quot;&gt;Padding 1&lt;/div&gt;
+&lt;div _padding=&quot;2&quot;&gt;Padding 2&lt;/div&gt;
+&lt;div _padding=&quot;3&quot;&gt;Padding 3&lt;/div&gt;
+&lt;div _padding=&quot;4&quot;&gt;Padding 4&lt;/div&gt;
+&lt;div _padding=&quot;5&quot;&gt;Padding 5&lt;/div&gt;
+&lt;div _padding=&quot;6&quot;&gt;Padding 6&lt;/div&gt;
+&lt;div _padding=&quot;7&quot;&gt;Padding 7&lt;/div&gt;
+&lt;div _padding=&quot;8&quot;&gt;Padding 8&lt;/div&gt;
+&lt;div _padding=&quot;9&quot;&gt;Padding 9&lt;/div&gt;
+&lt;div _padding=&quot;10&quot;&gt;Padding 10&lt;/div&gt;</code></pre>
+<p>Results:</p>
+<div _bg='muted' _margin='t-2' _round _padding="0">Padding 0</div>
+<div _bg='muted' _margin='t-2' _round _padding="1">Padding 1</div>
+<div _bg='muted' _margin='t-2' _round _padding="2">Padding 2</div>
+<div _bg='muted' _margin='t-2' _round _padding="3">Padding 3</div>
+<div _bg='muted' _margin='t-2' _round _padding="4">Padding 4</div>
+<div _bg='muted' _margin='t-2' _round _padding="5">Padding 5</div>
+<div _bg='muted' _margin='t-2' _round _padding="6">Padding 6</div>
+<div _bg='muted' _margin='t-2' _round _padding="7">Padding 7</div>
+<div _bg='muted' _margin='t-2' _round _padding="8">Padding 8</div>
+<div _bg='muted' _margin='t-2' _round _padding="9">Padding 9</div>
+<div _bg='muted' _margin='t-2' _round _padding="10">Padding 10</div>
+
+<p>The value of the margin or padding is alway the value x5, so a margin 5 is a 25px marge.</p>
+<p>You can precise the direction with the first letter prefix</p>
+<p>Exemple:</p>
+<pre><code class="language-html">&lt;div _padding=&quot;l-5&quot;&gt;Padding left 5&lt;/div&gt;
+&lt;div _padding=&quot;t-5&quot;&gt;Padding top 5&lt;/div&gt;
+&lt;div _padding=&quot;r-5&quot;&gt;Padding right 5&lt;/div&gt;
+&lt;div _padding=&quot;b-5&quot;&gt;Padding bottom 5&lt;/div&gt;</code></pre>
+<div _bg="muted" _margin="t-2" _round _padding="l-5">Padding left 5</div>
+<div _bg="muted" _margin="t-2" _round _padding="t-5">Padding top 5</div>
+<div _bg="muted" _margin="t-2" _round _padding="r-5">Padding right 5</div>
+<div _bg="muted" _margin="t-2" _round _padding="b-5">Padding bottom 5</div>
+</br>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0..10</td>
+<td>0 through 10 (or logic limitation)</td>
+</tr>
+<tr>
+<td>l-0..10</td>
+<td>left marge</td>
+</tr>
+<tr>
+<td>r-0..10</td>
+<td>right marge</td>
+</tr>
+<tr>
+<td>t-0..10</td>
+<td>top marge</td>
+</tr>
+<tr>
+<td>b-0..10</td>
+<td>bottom marge</td>
+</tr>
+<tr>
+<td>x-0..10</td>
+<td>left &amp; right marge</td>
+</tr>
+<tr>
+<td>y-0..10</td>
+<td>top &amp; down marge</td>
+</tr>
+<tr>
+<td>md:0..10</td>
+<td>breakpoints is available</td>
+</tr>
+</tbody></table>
+
+          </section>
+          <hr class="big">
+          <section id="typography"><h2 id="typography">Typography</h2>
+<p>You have the possibility to format your titles and texts to the desired size.</p>
+<h3 id="headers">Headers</h3>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;h1&gt;I&#39;m a header 1&lt;/h1&gt;
+&lt;p _font=&quot;h1&quot;&gt;I&#39;m a header 1 too&lt;/p&gt;
+
+&lt;h3&gt;I&#39;m a header 3&lt;/h3&gt;
+&lt;p _font=&quot;h3&quot;&gt;I&#39;m a header 3 too&lt;/p&gt;
+
+&lt;h5&gt;I&#39;m a header 5&lt;/h5&gt;
+&lt;p _font=&quot;h5&quot;&gt;I&#39;m a header 5 too&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<h1>I'm a header 1</h1>
+<p _font="h1">I'm a header 1 too</p>
+<h3>I'm a header 3</h3>
+<p _font="h3">I'm a header 3 too</p>
+<h5>I'm a header 5</h5>
+<p _font="h5">I'm a header 5 too</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>h1..h6</td>
+<td>Header 1 to 6</td>
+</tr>
+</tbody></table>
+<h3 id="alignement">Alignement</h3>
+<p>You can change the text alignement</p>
+<pre><code class="language-html">&lt;p _font=&quot;left&quot;&gt;I&#39;m a left text&lt;/p&gt;
+
+&lt;p _font=&quot;right&quot;&gt;I&#39;m a right text&lt;/p&gt;
+
+&lt;p _font=&quot;center&quot;&gt;I&#39;m a centered text&lt;/p&gt;
+
+&lt;p _font=&quot;justify&quot;&gt;I&#39;m a justify text&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<p _font="left">I'm a left text</p>
+
+<p _font="right">I'm a right text</p>
+
+<p _font="center">I'm a centered text</p>
+
+<p _font="justify">I'm a justify text</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>left text alignement</td>
+</tr>
+<tr>
+<td>right</td>
+<td>right text alignement</td>
+</tr>
+<tr>
+<td>center</td>
+<td>center text alignement</td>
+</tr>
+<tr>
+<td>justify</td>
+<td>justify text alignement</td>
+</tr>
+</tbody></table>
+<h3 id="transform">Transform</h3>
+<p>You can change the text transform</p>
+<pre><code class="language-html">&lt;p _font=&quot;upper&quot;&gt;I&#39;m a uppercase text&lt;/p&gt;
+&lt;!-- can use upper and uppercase --&gt;
+
+&lt;p _font=&quot;lower&quot;&gt;I&#39;m a lowercase text&lt;/p&gt;
+&lt;!-- can use lower and lowercase --&gt;
+
+&lt;p _font=&quot;capitalize&quot;&gt;I&#39;m a capitalized text&lt;/p&gt;
+&lt;!-- can use cap, capital and capitalize --&gt;</code></pre>
+<p>Result:</p>
+<p _font="upper">I'm a uppercase text</p>
+
+<p _font="lower">I'm a lowercase text</p>
+
+<p _font="capitalize">I'm a capitalized text</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>upper, uppercase</td>
+<td>upper text transformation</td>
+</tr>
+<tr>
+<td>lower, lowercase</td>
+<td>lower text transformation</td>
+</tr>
+<tr>
+<td>cap, capital, capitalize</td>
+<td>capitalize text transformation</td>
+</tr>
+</tbody></table>
+<h3 id="weight">Weight</h3>
+<p>You can change the font weight</p>
+<pre><code class="language-html">&lt;p _font=&quot;bold&quot;&gt;I&#39;m a bold text&lt;/p&gt;
+
+&lt;p _font=&quot;bolder&quot;&gt;I&#39;m a bolder text&lt;/p&gt;
+
+&lt;p _font=&quot;lighter&quot;&gt;I&#39;m a light text&lt;/p&gt;
+
+&lt;p _font=&quot;normal&quot;&gt;I&#39;m a light text&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<p _font="bold">I'm a bold text</p>
+
+<p _font="bolder">I'm a bolder text</p>
+
+<p _font="lighter">I'm a light text</p>
+
+<p _font="normal">I'm a light text</p>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bold</td>
+<td>bold font weight</td>
+</tr>
+<tr>
+<td>bolder</td>
+<td>bolder font weight</td>
+</tr>
+<tr>
+<td>lighter</td>
+<td>lighter font weight</td>
+</tr>
+<tr>
+<td>normal</td>
+<td>normal font weight</td>
+</tr>
+</tbody></table>
+<h3 id="decoration">Decoration</h3>
+<p>You can change the font decoration</p>
+<pre><code class="language-html">&lt;p _decoration=&quot;del&quot;&gt;I&#39;m a deleted text&lt;/p&gt;
+
+&lt;p _decoration=&quot;underline&quot;&gt;I&#39;m a underlined text&lt;/p&gt;
+
+&lt;a href=&quot;#&quot; _decoration=&quot;none&quot;&gt;I&#39;m a none underlined link&lt;/a&gt;</code></pre>
+<p>Result:</p>
+<p _decoration="del">I'm a deleted text</p>
+
+<p _decoration="underline">I'm a underlined text</p>
+
+<p><a href="#" _decoration="none">I&#39;m a non decorated link</a></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>del, linethrough</td>
+<td>deleted text decoration</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>underlined text decoration</td>
+</tr>
+<tr>
+<td>none</td>
+<td>none decorated text decoration</td>
+</tr>
+</tbody></table>
+<h3 id="others-transformations">Others transformations</h3>
+<p>You can change to italic</p>
+<p>Exemple:</p>
+<pre><code class="language-html">&lt;p _font=&quot;italic&quot;&gt;I&#39;m an italic text&lt;/p&gt;</code></pre>
+<p>Result:</p>
+<p _font="italic">I'm an italic text</p>
+
+<p>You can change highlight some text</p>
+<pre><code class="language-html">I&#39;m a &lt;span _font=&quot;mark&quot;&gt;highlighted&lt;/span&gt; text
+&lt;!-- you can use highlight value too --&gt;</code></pre>
+<p>Result:</p>
+<p>I&#39;m a <span _font="mark">highlighted</span> text</p>
+
+          </section>
+          <hr class="big">
+          <section id="visibility"><h2 id="visibility">Visibility</h2>
+<p>You can choose to show or hide something width some attributes</p>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;div _show=&quot;true&quot;&gt;I&#39;m a visible div&lt;/div&gt;
+&lt;div _show=&quot;false&quot;&gt;I&#39;m a non visible div&lt;/div&gt;
+
+&lt;div _hide=&quot;true&quot;&gt;I&#39;m a non visible div&lt;/div&gt;
+&lt;div _hide=&quot;false&quot;&gt;I&#39;m a visible div&lt;/div&gt;
+
+&lt;!-- More logical exemple --&gt;
+&lt;div _hide=&quot;md:false lg:true&quot;&gt;I&#39;m a non visible div&lt;/div&gt;</code></pre>
+<p>Results:</p>
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _show="true">I'm a visible div</div>
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _show="false">I'm a non visible div</div>
+
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _hide="true">I'm a non visible div</div>
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _hide="false">I'm a visible div</div>
+
+<div _padding="2" _margin='t-2' _bg='amber' _round _shadow _show="md:false lg:true">I'm a non visible div between md and lg size</div>
+
+          </section>
+          <hr class="big">
+          <section id="flexbox"><h2 id="flexbox">Flexbox</h2>
+<p>Some of the most used flexbox attributes and values is available</p>
+<p>For make your container flex, you can use the attribute <code>_display</code>, see more <a href="layout.html#display">here</a> about.</p>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot;&gt;
+  &lt;!-- Your content --&gt;
+&lt;/div&gt;
+
+&lt;!-- Dont forget rows are flexboxes too --&gt;
+&lt;div _row&gt;
+  &lt;!-- Your content --&gt;
+&lt;/div&gt;</code></pre>
+<h3 id="direction">Direction</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _direction=&quot;row&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _direction=&quot;reverse&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _direction=&quot;col&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _direction=&quot;col reverse&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row</td>
+<td>flex direction: row</td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>flex direction: row-reverse</td>
+</tr>
+<tr>
+<td>col, column</td>
+<td>flex direction: column</td>
+</tr>
+<tr>
+<td>col reverse</td>
+<td>flex direction: column-reverse</td>
+</tr>
+</tbody></table>
+<h3 id="wrap">Wrap</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _wrap=&quot;wrap&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _wrap=&quot;nowrap&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _wrap=&quot;reverse&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>wrap</td>
+<td>flex wrap: wrap</td>
+</tr>
+<tr>
+<td>nowrap</td>
+<td>flex wrap: nowrap</td>
+</tr>
+<tr>
+<td>reverse, wrap-reverse</td>
+<td>flex wrap: wrap-reverse</td>
+</tr>
+</tbody></table>
+<h3 id="justify">Justify</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _justify=&quot;start&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;end&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;center&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;around&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;between&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _justify=&quot;evenly&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>start</td>
+<td>justify content: start</td>
+</tr>
+<tr>
+<td>end</td>
+<td>justify content: end</td>
+</tr>
+<tr>
+<td>center</td>
+<td>justify content: center</td>
+</tr>
+<tr>
+<td>around</td>
+<td>justify content: space-around</td>
+</tr>
+<tr>
+<td>between</td>
+<td>justify content: space-between</td>
+</tr>
+<tr>
+<td>evenly</td>
+<td>justify content: space-evenly</td>
+</tr>
+</tbody></table>
+<h3 id="items">Items</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _items=&quot;stretch&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;start&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;end&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;center&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _items=&quot;baseline&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>stretch</td>
+<td>align items: stretch</td>
+</tr>
+<tr>
+<td>start</td>
+<td>align items: start</td>
+</tr>
+<tr>
+<td>end</td>
+<td>align items: end</td>
+</tr>
+<tr>
+<td>center</td>
+<td>align items: center</td>
+</tr>
+<tr>
+<td>baseline</td>
+<td>align items: baseline</td>
+</tr>
+</tbody></table>
+<h3 id="content">Content</h3>
+<pre><code class="language-html">&lt;div _display=&quot;flex&quot; _content=&quot;normal&quot;&gt;&lt;/div&gt;
+&lt;!-- This is the default value--&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;start&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;end&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;center&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;between&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;around&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;evenly&quot;&gt;&lt;/div&gt;
+
+&lt;div _display=&quot;flex&quot; _content=&quot;stretch&quot;&gt;&lt;/div&gt;</code></pre>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>align content: normal</td>
+</tr>
+<tr>
+<td>start</td>
+<td>align content: start</td>
+</tr>
+<tr>
+<td>end</td>
+<td>align content: end</td>
+</tr>
+<tr>
+<td>center</td>
+<td>align content: center</td>
+</tr>
+<tr>
+<td>between</td>
+<td>align content: space-between</td>
+</tr>
+<tr>
+<td>around</td>
+<td>align content: space-around</td>
+</tr>
+<tr>
+<td>evenly</td>
+<td>align content: space-evenly</td>
+</tr>
+<tr>
+<td>stretch</td>
+<td>align content: stretch</td>
+</tr>
+</tbody></table>
+
+          </section>
+          <hr class="big">
+          <section id="others"><h2 id="others">Others</h2>
+<h3 id="round">Round</h3>
+<p>Your can add some border-radius with attribute <code>_round</code></p>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;div _round&gt;I&#39;am a default rounded div&lt;/div&gt;
+&lt;div _round=&quot;0&quot;&gt;I&#39;am a none rounded div&lt;/div&gt;
+&lt;div _round=&quot;1&quot;&gt;I&#39;am a 1 rounded div&lt;/div&gt;
+&lt;div _round=&quot;2&quot;&gt;I&#39;am a 2 rounded div&lt;/div&gt;
+&lt;div _round=&quot;3&quot;&gt;I&#39;am a 3 rounded div&lt;/div&gt;
+&lt;div _round=&quot;4&quot;&gt;I&#39;am a 4 rounded div&lt;/div&gt;
+&lt;div _round=&quot;5&quot;&gt;I&#39;am a 5 rounded div&lt;/div&gt;
+&lt;div _round=&quot;6&quot;&gt;I&#39;am a 6 rounded div&lt;/div&gt;
+&lt;div _round=&quot;7&quot;&gt;I&#39;am a 7 rounded div&lt;/div&gt;
+&lt;div _round=&quot;8&quot;&gt;I&#39;am a 8 rounded div&lt;/div&gt;
+&lt;div _round=&quot;9&quot;&gt;I&#39;am a 9 rounded div&lt;/div&gt;
+&lt;div _round=&quot;10&quot;&gt;I&#39;am a 10 rounded div&lt;/div&gt;
+&lt;div _round=&quot;full&quot;&gt;I&#39;am a full rounded div&lt;/div&gt;</code></pre>
+<p>Results:</p>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round>I'am a default rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="0">I'am a none rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="1">I'am a 1 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="2">I'am a 2 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="3">I'am a 3 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="4">I'am a 4 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="5">I'am a 5 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="6">I'am a 6 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="7">I'am a 7 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="8">I'am a 8 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="9">I'am a 9 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="10">I'am a 10 rounded div</div>
+<div _bg="muted" _padding="2" _margin='t-2' _shadow _round="full">I'am a full rounded div</div>
+
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0..10</td>
+<td>5px x size border-radius</td>
+</tr>
+<tr>
+<td>full, circle</td>
+<td>100% border-radius</td>
+</tr>
+</tbody></table>
+<h3 id="shadow">Shadow</h3>
+<p>Your can add some shadows with attribute <code>_shadow</code></p>
+<p>Exemples:</p>
+<pre><code class="language-html">&lt;div _shadow&gt;I&#39;am a default shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;0&quot;&gt;I&#39;am a none shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;1&quot;&gt;I&#39;am a 1 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;2&quot;&gt;I&#39;am a 2 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;3&quot;&gt;I&#39;am a 3 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;4&quot;&gt;I&#39;am a 4 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;5&quot;&gt;I&#39;am a 5 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;6&quot;&gt;I&#39;am a 6 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;7&quot;&gt;I&#39;am a 7 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;8&quot;&gt;I&#39;am a 8 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;9&quot;&gt;I&#39;am a 9 shadowed div&lt;/div&gt;
+&lt;div _shadow=&quot;10&quot;&gt;I&#39;am a 10 shadowed div&lt;/div&gt;</code></pre>
+<p>Results:</p>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow>I'am a default shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="0">I'am a none shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="1">I'am a 1 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="2">I'am a 2 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="3">I'am a 3 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="4">I'am a 4 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="5">I'am a 5 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="6">I'am a 6 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="7">I'am a 7 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="8">I'am a 8 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="9">I'am a 9 shadowed div</div>
+<div _bg="muted" _padding="2" _margin='t-10' _round _shadow="10">I'am a 10 shadowed div</div>
+
+<h3 id="responsive">Responsive</h3>
+<p>You can add <code>_responsive</code> attribute to your images for make them responsive</p>
+<pre><code class="language-html">&lt;img src=&quot;https://picsum.photos/600/300&quot; /&gt;
+
+&lt;img _responsive src=&quot;https://picsum.photos/600/300&quot; /&gt;</code></pre>
+<img src="https://picsum.photos/600/300">
+
+<img _responsive src="https://picsum.photos/600/300">
+
+          </section>
+        </dic>
+      </div>
+    </div>
+    <script src="../js/prism.js"></script>
+    <script src="js/main.dev.js"></script>
+    <script src="../js/bubblegum.js"></script>
+    <footer _container="">
+      <div _row="" _justify="center">
+        <div _col="10">
+          <ul id="bottom-links">
+            <li><a href="https://github.com/antharuu/BubbleGum" target="_blank">Github</a></li>
+            <li><a href="https://www.npmjs.com/package/bubblegum-css" target="_blank">Npm</a></li>
+            <li><a href="https://twitter.com/Antharuu" target="_blank">Twitter</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+          </ul>
+          <p id="credits">Designed and created by Anthony Bellancourt, with <a href='https://stylus-lang.com/' target='_blank'>stylus</a>.</p>
+          <p id="licence">Currently v1.0.0. Licence <a target='_blank' href='https://github.com/antharuu/BubbleGum/blob/main/LICENSE'>MIT</a>.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
