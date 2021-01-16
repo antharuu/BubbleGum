@@ -6,7 +6,7 @@
   border-radius: $Sizes.round.small
 
   > * {
-    text-decoration: none;
+    text-decoration: none
     color: $Colors.theme.primary
     display: inline
 
@@ -45,7 +45,7 @@
     z-index: 9999
   }
 
-  +add-value('row') {
+  +add-selector('row') {
     justify-content: space-between
     flex-wrap: nowrap
     margin: 0 $Sizes.margin.large
@@ -116,126 +116,6 @@
         margin: 0;
         display: block !important;
         text-align: center;
-      }
-    }
-  }
-}
-
-
-+add-selector('pagination') {
-  _.current_selector = 'pagination'
-
-  > a {
-    padding: $Sizes.margin.large $Sizes.margin.medium
-    background-color: $Colors.theme.muted + 40%
-    text-decoration: none
-    color: $Colors.theme.primary
-    display: inline
-    margin: 0
-    border: $Borders.size $Borders.type $Borders.default_color + 30%
-
-    &:hover {
-      background-color: $Colors.theme.muted + 30%;
-    }
-
-    &:not(:first-child) {
-      margin-left: (0 - $Sizes.margin.small - 1);
-    }
-
-    &:first-child {
-      border-radius: $Sizes.margin.small 0 0 $Sizes.margin.small;
-    }
-
-    &:last-child {
-      border-radius: 0 $Sizes.margin.small $Sizes.margin.small 0;
-
-      &:first-child {
-        border-radius: $Sizes.round.small;
-      }
-    }
-  }
-
-  +add-value('lg' 'large') {
-    padding: $Sizes.margin.large $Sizes.margin.medium
-    font-size: $Font.size.default * 1.25
-  }
-
-  +add-value('sm' 'small') {
-    padding: $Sizes.margin.small ($Sizes.margin.small / 2)
-    font-size: $Font.size.default * .8
-  }
-
-  +add-value('block' 'full') {
-    width: 100%
-    display: flex;
-    flex-wrap: nowrap;
-
-    > * {
-      width: 100%
-      text-align: center;
-    }
-  }
-
-  for $color-name, $color-value in $Colors.all {
-    add-value($color-name, 'color-background-' + $color-name)
-  }
-}
-
-
-+add-selector('list') {
-  _.current_selector = 'list'
-
-  > li {
-    padding: $Sizes.padding.small $Sizes.padding.medium
-    background-color: $Colors.theme.muted + 40%
-    text-decoration: none
-    color: $Colors.theme.primary
-    display: block;
-    margin: 0;
-    border: $Borders.size $Borders.type $Borders.default_color + 30%
-
-    &:hover {
-      background-color: $Colors.theme.muted + 30%
-    }
-
-    &:first-child {
-      border-radius: $Sizes.padding.small $Sizes.padding.small 0 0
-    }
-
-    &:last-child {
-      border-radius: 0 0 $Sizes.padding.small $Sizes.padding.small
-
-      &:first-child {
-        border-radius: $Sizes.padding.small
-      }
-    }
-
-    +add-value('lg' 'large') {
-      padding: $Sizes.margin.medium $Sizes.margin.large
-      font-size: $Font.size.default * 1.25
-    }
-
-    +add-value('sm' 'small') {
-      padding: ($Sizes.margin.small / 2) $Sizes.margin.small
-      font-size: $Font.size.default * .8
-    }
-
-    +add-value('block' 'full') {
-      width: 100%
-      display: flex;
-      flex-wrap: nowrap;
-
-      > * {
-        width: 100%
-        text-align: center;
-      }
-    }
-  }
-
-  +add-value('hoverable' 'hover') {
-    > li {
-      &:hover {
-        background-color: $Colors.theme.muted + 30%
       }
     }
   }

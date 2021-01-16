@@ -1,0 +1,8 @@
+extends src/template
+
+block content
+    div(_container='')
+        div(_row='')
+            include src/doc-nav
+            dic(_col='12 lg:10')#documentation-container
+                section#prismjs: include src/docs/bundles/prismjs.html

@@ -90,102 +90,39 @@
           </div>
         </div>
         <dic _col="12 lg:10" id="documentation-container">
-          <section id="container"><h2 id="container">Container</h2>
-<p>Containers are blocks that limit the size of your page so that it respects responsive sizes and is always centered.</p>
-<pre><code class="language-html">&lt;div _container&gt;&lt;/div&gt;
-&lt;!-- Basic container --&gt;
+          <section id="prismjs"><h2 id="prismjs">Prism.js</h2>
+<p>Prism.js is a code hilighter, it is the most used and complete. </p>
+<p>You can find its documentation here: <a href="https://prismjs.com/index.html">prismjs.com</a></p>
+<pre><code class="language-html">&lt;!-- Classic usage --&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
+    &lt;code&gt;
+#my-super-code {
+    width: 100%;
+    outline: 5px solid #212121;
+    border-radius: 15px;
+}
+    &lt;/code&gt;
+&lt;/pre&gt;
 
-&lt;div _container=&quot;full&quot;&gt;&lt;/div&gt;
-&lt;!-- Full width container --&gt;
 
-&lt;div _container=&quot;limited&quot;&gt;&lt;/div&gt;
-&lt;!-- limited width container --&gt;</code></pre>
-<p>Basic size is 100%, but limited to 1280px, but you can remove this limitation by adding &quot;full&quot;, or give it back with &quot;limited&quot;.</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>limited 1280px width</td>
-</tr>
-<tr>
-<td>limited</td>
-<td>limited 1280px width</td>
-</tr>
-<tr>
-<td>full</td>
-<td>full width</td>
-</tr>
-</tbody></table>
+&lt;!-- Bubblegum usage --&gt;
+&lt;pre _code=&quot;css&quot;&gt;
+#my-super-code {
+    width: 100%;
+    outline: 5px solid #212121;
+    border-radius: 15px;
+}
+&lt;/pre&gt;</code></pre>
+<p>Render:</p>
+<pre _code="css">
+#my-super-code {
+    width: 100%;
+    outline: 5px solid #212121;
+    border-radius: 15px;
+}
+</pre>
 
-          </section>
-          <hr class="big">
-          <section id="row"><h2 id="row">Row</h2>
-<p>Rows, are simply flexboxes with a basic configuration</p>
-<pre><code class="language-html">&lt;div _row&gt;&lt;/div&gt;</code></pre>
-<p>Rows cant have any values</p>
-
-          </section>
-          <hr class="big">
-          <section id="columns"><h2 id="columns">Columns</h2>
-<p>The columns are 12 by default, and take the width according to the number of columns.</p>
-<pre><code class="language-html">&lt;div _col&gt;&lt;/div&gt;
-&lt;!-- Basic full width column --&gt;
-
-&lt;div _col=&quot;6&quot;&gt;&lt;/div&gt;
-&lt;!-- 50% width column --&gt;
-
-&lt;div _col=&quot;2&quot;&gt;&lt;/div&gt;
-&lt;!-- 16,666..% width column --&gt;</code></pre>
-<p>Here too it uses its full potential when mixed with breakpoints.</p>
-<pre><code class="language-html">&lt;div _col=&quot;12 md:6 lg:4 xl:3&quot;&gt;&lt;/div&gt;</code></pre>
-<p>Here you can also change the number of columns in the configuration.</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td></td>
-<td>100% width</td>
-</tr>
-<tr>
-<td>1..12</td>
-<td>(100 / 12) * $ width</td>
-</tr>
-</tbody></table>
-
-          </section>
-          <hr class="big">
-          <section id="push-pull"><h2 id="push--pull">Push &amp; Pull</h2>
-<p>You can also push and pull your columns.</p>
-<pre><code class="language-html">&lt;div _col=&quot;3 push-2&quot;&gt;&lt;/div&gt;
-&lt;!-- Usage with _col --&gt;
-
-&lt;div _col=&quot;3&quot; _push=&quot;2&quot;&gt;&lt;/div&gt;
-&lt;!-- Usage with _push attribute --&gt;
-
-&lt;div _col=&quot;2&quot; _pull=&quot;2&quot;&gt;&lt;/div&gt;
-&lt;!-- It&#39;s the same with _pull --&gt;</code></pre>
-<p>Here you can also change the number of columns in the configuration.</p>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1..12</td>
-<td>push or pull (100 / 12) * $ left</td>
-</tr>
-</tbody></table>
+<p>Bubblegum makes prism use as easy as possible</p>
 
           </section>
         </dic>
