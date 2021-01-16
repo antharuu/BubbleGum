@@ -1,16 +1,13 @@
 <p align="center">
-  <img width="200" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png" alt="Bubblegum icon">
+  <img width="600" src="https://i.postimg.cc/mrNwgZNF/Bubblegum-full.png">
 </p>
 
+Simple and efficiency Css framework
 
-Bubblegum is a classless CSS framework, this is more than a simple framework, this is a simple, flexible and intuitive modern framework, fast to install, easy to use, and customizable. 
-
-Created with [stylus](https://stylus-lang.com/).
-
-[![GitHub issues](https://img.shields.io/badge/Version-1.0.0-green)](https://github.com/antharuu/BubbleGum/issues)
+[![GitHub issues](https://img.shields.io/badge/Version-0.8%20alpha-orange)](https://github.com/antharuu/BubbleGum/issues)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/bubblegum-css.svg)](https://openbase.io/js/bubblegum-css?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
-A complete html documentation is in the folder.
+A complete documentation will be done once I have completed the version 1.0.
 
 ## INSTALLATION
 
@@ -25,14 +22,14 @@ npm i bubblegum-css
 ### With composer
 
 ```
-composer require antharuu/bubblegum "v1.0.0"
+composer require antharuu/bubblegum "v0.8.0-alpha"
 ```
 
 ### With CDN
 
 ```html
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@1.0.0/css/bubblegum.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@0.8.0/css/bubblegum.min.css">
 ```
 
 ## USAGE
@@ -92,5 +89,5 @@ to use.
 ```
 
 <p align="center">
-  <img width="120" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png">
+  <img width="300" src="https://i.postimg.cc/zXc2sf0z/Bubblegum.png">
 </p>

@@ -1,11 +1,9 @@
-+add-selector('table',) {
++add-selector('table', '', 'width-100') {
   _.current_selector = 'table'
 
-  width: 100%
   max-width: 100%
   margin-bottom: $Sizes.margin.large
   border-collapse: collapse
-  border none
   thead {
     th {
       vertical-align: bottom;
@@ -16,7 +14,6 @@
   tr {
     td,
     th {
-      border none
       padding: ($Sizes.margin.medium / 2);
       vertical-align: top;
     }

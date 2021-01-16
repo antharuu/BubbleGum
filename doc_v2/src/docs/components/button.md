@@ -73,7 +73,7 @@ You can set the full width
 Of course the usual attributes are available
 
 ```html
-<button _btn="primary" _font="upper bold" _round="5" _shadow>Primary</button>
+<button _btn="primary" _font="upper bold" _round _shadow>Primary</button>
 ```
 
-<button _btn="primary" _font="upper bold" _round="5" _shadow>Primary</button>
+<button _btn="primary" _font="upper bold" _round="2" _shadow="2">Primary</button>
