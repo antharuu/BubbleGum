@@ -1,0 +1,16 @@
+extends src/template
+
+block content
+    div(_container='')
+        div(_row='')
+            include src/doc-nav
+            dic(_col='12 lg:10')#documentation-container
+                section#input: include src/docs/form/input.html
+                hr.big
+                section#textarea: include src/docs/form/textarea.html
+                hr.big
+                section#select: include src/docs/form/select.html
+                hr.big
+                section#checkbox-radio: include src/docs/form/checkbox-radio.html
+                hr.big
+                section#range: include src/docs/form/range.html

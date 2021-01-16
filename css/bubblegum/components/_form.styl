@@ -5,41 +5,45 @@
   position: relative
 
   for $color-name, $color-value in $Colors.all {
-    input[type=radio] {
-      &:checked {
-        & + label {
-          &::before {
-            border-color: $color-value;
-          }
+    &[_form-group~={$color-name}] {
+      input[type=radio] {
+        &:checked {
+          & + label {
+            &::before {
+              border-color: $color-value;
+            }
 
-          &::after {
-            background-color: $color-value !important;
-          }
-        }
-      }
-    }
-    input[type=checkbox] {
-      &:checked {
-        & + label {
-          &::before {
-            border-color: $color-value !important;
-            background-color: $color-value !important;
+            &::after {
+              background-color: $color-value !important;
+            }
           }
         }
       }
-    }
-    input[type=range] {
-      &:focus {
-        &::-webkit-slider-thumb {
-          background: $color-value !important;
-        }
 
-        &::-moz-range-thumb {
-          background: $color-value !important;
+      input[type=checkbox] {
+        &:checked {
+          & + label {
+            &::before {
+              border-color: $color-value !important;
+              background-color: $color-value !important;
+            }
+          }
         }
+      }
 
-        &::-ms-thumb {
-          background: $color-value !important;
+      input[type=range] {
+        &:focus {
+          &::-webkit-slider-thumb {
+            background: $color-value !important;
+          }
+
+          &::-moz-range-thumb {
+            background: $color-value !important;
+          }
+
+          &::-ms-thumb {
+            background: $color-value !important;
+          }
         }
       }
     }
@@ -109,11 +113,11 @@
         content: ''
         position: absolute
         left: 0
-        top: -1px
-        height: 16px
-        width: 16px
+        top: .3em
+        height: 1em
+        width: 1em
         border: 1px solid $Form.color
-        border-radius: $Sizes.round.small
+        border-radius: .3em
         background-color: $Colors.theme.light
       }
     }
@@ -151,11 +155,11 @@
         content: ''
         position: absolute
         left: 0
-        top: -1px
-        height: 16px
-        width: 16px
+        top: .3em
+        height: 1em
+        width: 1em
         border: $Borders.size $Borders.type $Form.color
-        border-radius: 50%
+        border-radius: 100%
         background-color: $Colors.theme.light
       }
     }
@@ -172,10 +176,10 @@
           color: $Colors.theme.light
           font-weight: bold
           background-color: $Form.color_main !important
-          left: 3px
-          top: 2px
-          height: 12px
-          width: 12px
+          left: .25em
+          top: .5em
+          height: .65em
+          width: .65em
           border-radius: 50%
         }
       }
@@ -295,4 +299,43 @@
     }
   }
 
+}
+
++add-selector('select-group') {
+  select {
+    display: block;
+    width: 100%;
+    border: 1px solid $Colors.theme.muted;
+    padding: $Sizes.margin.small $Sizes.margin.small * 2;
+    border-radius: $Sizes.margin.small;
+    color: $Colors.theme.dark;
+    position: relative;
+    appearance: none;
+    box-shadow: none;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    option {
+      border: 1px solid $Colors.theme.muted;
+    }
+  }
+
+  &::before {
+    content: '▼';
+    position: absolute;
+    color: $Colors.theme.muted;
+    top: 28px;
+    right: 1em;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    pointer-events: none;
+    transform: scale(.8);
+  }
 }

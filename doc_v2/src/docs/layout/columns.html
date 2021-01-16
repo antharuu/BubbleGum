@@ -1,0 +1,29 @@
+<h2 id="columns">Columns</h2>
+<p>The columns are 12 by default, and take the width according to the number of columns.</p>
+<pre><code class="language-html">&lt;div _col&gt;&lt;/div&gt;
+&lt;!-- Basic full width column --&gt;
+
+&lt;div _col=&quot;6&quot;&gt;&lt;/div&gt;
+&lt;!-- 50% width column --&gt;
+
+&lt;div _col=&quot;2&quot;&gt;&lt;/div&gt;
+&lt;!-- 16,666..% width column --&gt;</code></pre>
+<p>Here too it uses its full potential when mixed with breakpoints.</p>
+<pre><code class="language-html">&lt;div _col=&quot;12 md:6 lg:4 xl:3&quot;&gt;&lt;/div&gt;</code></pre>
+<p>Here you can also change the number of columns in the configuration.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>100% width</td>
+</tr>
+<tr>
+<td>1..12</td>
+<td>(100 / 12) * $ width</td>
+</tr>
+</tbody></table>

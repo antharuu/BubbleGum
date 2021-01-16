@@ -1,0 +1,14 @@
+extends src/template
+
+block content
+    div(_container='')
+        div(_row='')
+            include src/doc-nav
+            dic(_col='12 lg:10')#documentation-container
+                section#container: include src/docs/layout/container.html
+                hr.big
+                section#row: include src/docs/layout/row.html
+                hr.big
+                section#columns: include src/docs/layout/columns.html
+                hr.big
+                section#push-pull: include src/docs/layout/push-pull.html

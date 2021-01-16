@@ -1,0 +1,10 @@
+extends src/template
+
+block content
+    div(_container='')
+        div(_row='')
+            include src/doc-nav
+            dic(_col='12 lg:10')#documentation-container
+                section#alert: include src/docs/components/alert.html
+                hr.big
+                section#button: include src/docs/components/button.html
