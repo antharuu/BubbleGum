@@ -1,3 +1,5 @@
+/* ----------------- RESET */
+
 html,
 body,
 object,
@@ -131,9 +133,13 @@ dfn[title] {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+<<<<<<< HEAD:css/bubblegum/utilities/_reset.css
 }
 input,
 select {
   vertical-align: middle;
   outline-offset: 0;
 }
+=======
+}
+>>>>>>> 1ef195b65407768172f168919b3ca703e98416fd:css/bubblegum/utilities/_reset.styl
