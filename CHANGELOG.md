@@ -1,3 +1,12 @@
+## 1.1.0
+
+- Great file cleaning
+- Adding Webpack configuration
+- Using now Autoprefixer for CSS
+- Using now Babel for JS
+
+---
+
 ## 1.0.0
 
 - Adding a changelog

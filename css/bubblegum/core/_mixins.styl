@@ -48,8 +48,8 @@ webfont(family, file, hack-chrome-windows = false, weight = 'normal')
     src url(font-url(file + '.eot'))
     src url(font-url(file + '.eot?#iefix')) format('embedded-opentype'),
     url(font-url(file + '.woff')) format('woff'),
-    url(font-url(file + '.ttf')) format('truetype'),
-    url(font-url(file + '.svg#' + family)) format('svg')
+    url(font-url(file + '.woff2')) format('woff2'),
+    url(font-url(file + '.ttf')) format('truetype')
     font-weight weight
     font-style normal
   if hack-chrome-windows

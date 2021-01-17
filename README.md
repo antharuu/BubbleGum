@@ -7,7 +7,7 @@ Bubblegum is a classless CSS framework, this is more than a simple framework, th
 
 Created with [stylus](https://stylus-lang.com/).
 
-[![GitHub issues](https://img.shields.io/badge/Version-1.0.0-green)](https://github.com/antharuu/BubbleGum/issues)
+[![GitHub issues](https://img.shields.io/badge/Version-1.1.0-green)](https://github.com/antharuu/BubbleGum/issues)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/bubblegum-css.svg)](https://openbase.io/js/bubblegum-css?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
 A complete html documentation is in the folder.
@@ -25,14 +25,14 @@ npm i bubblegum-css
 ### With composer
 
 ```
-composer require antharuu/bubblegum "v1.0.0"
+composer require antharuu/bubblegum "v1.1.0"
 ```
 
 ### With CDN
 
 ```html
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@1.0.0/css/bubblegum.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@1.1.0/dist/css/bubblegum.min.css">
 ```
 
 ## USAGE
