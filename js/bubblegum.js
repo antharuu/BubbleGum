@@ -1,5 +1,4 @@
 import Prism from "prismjs";
-import CSS from "./../css/bubblegum.styl";
 
 /**
  * Bubblegum: elegant syntax framework
