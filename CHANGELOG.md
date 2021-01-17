@@ -1,3 +1,10 @@
+## 1.1.1
+
+- Fixing the css file size
+- Fonts are now repaired
+
+---
+
 ## 1.1.0
 
 - Great file cleaning
