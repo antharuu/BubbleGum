@@ -27,14 +27,14 @@ npm i bubblegum-css
 ### With composer
 
 ```
-composer require antharuu/bubblegum "v1.1.1"
+composer require antharuu/bubblegum "v1.1.2"
 ```
 
 ### With CDN
 
 ```html
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@1.1.1/dist/bubblegum.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bubblegum-css@1.1.2/dist/bubblegum.min.css">
 ```
 
 ## USAGE
