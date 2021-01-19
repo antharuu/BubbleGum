@@ -12,6 +12,8 @@ Created with [stylus](https://stylus-lang.com/).
 
 A complete html documentation is in the folder.
 
+#### LOVE LOGIC BUT WANT TO USE BOOTSTRAP OR WHAT YOU WANT ? USE "[BUBBLEGUMED](https://github.com/antharuu/Bubblegumed)"!
+
 ## INSTALLATION
 
 You can simply download the project or the css on this github repository. Easier and cleaner ways to come.

@@ -1,3 +1,16 @@
+## 1.1.2
+
+- Extends logic to [bubblegumed](https://github.com/antharuu/Bubblegumed)
+
+---
+
+## 1.1.1
+
+- File size fix
+- Font fix
+
+---
+
 ## 1.1.0
 
 - Great file cleaning
@@ -7,7 +20,7 @@
 
 ---
 
-## 1.0.0
+# 1.0.0
 
 - Adding a changelog
 - New documentation
