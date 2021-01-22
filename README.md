@@ -8,6 +8,8 @@ Bubblegum is a classless CSS framework, this is more than a simple framework, th
 Created with [stylus](https://stylus-lang.com/).
 
 [![GitHub issues](https://img.shields.io/badge/Version-1.1.1-green)](https://github.com/antharuu/BubbleGum/issues)
+![npm](https://img.shields.io/npm/v/bubblegum-css)
+![npm](https://img.shields.io/npm/dm/bubblegum-css)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/bubblegum-css.svg)](https://openbase.io/js/bubblegum-css?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
 A complete html documentation is in the folder or here: https://github.com/antharuu/BubbleGum/wiki.
