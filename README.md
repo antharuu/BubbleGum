@@ -10,7 +10,7 @@ Created with [stylus](https://stylus-lang.com/).
 [![GitHub issues](https://img.shields.io/badge/Version-1.1.1-green)](https://github.com/antharuu/BubbleGum/issues)
 [![Rate on Openbase](https://badges.openbase.io/js/rating/bubblegum-css.svg)](https://openbase.io/js/bubblegum-css?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
-A complete html documentation is in the folder.
+A complete html documentation is available here https://bubblegum.vercel.app/ or in the `doc` folder.
 
 #### LOVE LOGIC BUT WANT TO USE BOOTSTRAP OR WHAT YOU WANT ? USE "[BUBBLEGUMED](https://github.com/antharuu/Bubblegumed)"!
 

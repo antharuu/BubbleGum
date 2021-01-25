@@ -1,4 +1,4 @@
-## 1.1.2
+## 1.1.2 
 
 - Extends logic to [bubblegumed](https://github.com/antharuu/Bubblegumed)
 
