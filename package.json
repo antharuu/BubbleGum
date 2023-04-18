@@ -1,6 +1,6 @@
 {
   "name": "bubblegum-css",
-  "version": "1.1.2",
+  "version": "1.2.0,
   "description": "Bubblegum is a classless CSS framework, this is more than a simple framework, this is a simple, flexible and intuitive modern framework, fast to install, easy to use, and customizable. Created with stylus.",
   "main": "js/bubblegum.js",
   "keywords": [
